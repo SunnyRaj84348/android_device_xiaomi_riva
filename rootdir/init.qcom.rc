@@ -503,6 +503,7 @@ service irsc_util /system/bin/irsc_util "/etc/sec_config"
 service rmt_storage /system/bin/rmt_storage
     class core
     user root
+    group wakelock
 
 service rfs_access /system/bin/rfs_access
    class core
@@ -557,11 +558,11 @@ service port-bridge /system/bin/port-bridge
 service qmuxd /system/bin/qmuxd
     class main
     user root
-    group radio audio bluetooth gps nfc qcom_diag
+    group radio audio bluetooth gps nfc qcom_diag wakelock
 
 service netmgrd /system/bin/netmgrd
     class main
-    group system
+    group system wakelock
 
 service qti /system/vendor/bin/qti
     class main

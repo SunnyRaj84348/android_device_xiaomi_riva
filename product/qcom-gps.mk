@@ -8,12 +8,12 @@ PRODUCT_BOOT_JARS += \
     com.qti.location.sdk
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
-    $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
-    $(LOCAL_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
-    $(LOCAL_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
-    $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
-    $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
+    $(DEVICE_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
+    $(DEVICE_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
+    $(DEVICE_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
+    $(DEVICE_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
+    $(DEVICE_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
+    $(DEVICE_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \

@@ -450,7 +450,8 @@ on property:hw.fm.init=1
 
 service netmgrd /system/bin/netmgrd
     class main
-    group system wakelock
+    user root
+    group root wifi wakelock radio inet
     writepid /dev/cpuset/system-background/tasks
 
 service qti /system/vendor/bin/qti

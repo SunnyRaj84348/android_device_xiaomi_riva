@@ -1,6 +1,7 @@
 # Snap
 PRODUCT_PACKAGES += \
     libshims_camera \
+    libshim_ims_camera \
     Snap
 
 # ZRAM

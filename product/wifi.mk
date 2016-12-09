@@ -13,6 +13,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libQWiFiSoftApCfg
 
+# Wi-Fi HIDL
+PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service
+
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0

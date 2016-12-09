@@ -134,6 +134,9 @@ on boot
     chown root system /sys/class/leds/green/blink
     chown root system /sys/class/leds/blue/blink
 
+    # Wifi firmware reload path
+    chown wifi wifi /sys/module/wlan/parameters/fwpath
+
 # msm specific files that need to be created on /data
 on post-fs-data
     #Create directories for Fingerprint

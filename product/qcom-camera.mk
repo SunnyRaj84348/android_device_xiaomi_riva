@@ -11,4 +11,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.is_type=1 \
     vidc.debug.perf.mode=2 \
     vidc.enc.dcvs.extra-buff-count=2 \
-    vidc.enc.disable.pq=true
+    vidc.enc.disable.pq=true \
+    media.stagefright.legacyencoder=true \
+    media.stagefright.less-secure=true

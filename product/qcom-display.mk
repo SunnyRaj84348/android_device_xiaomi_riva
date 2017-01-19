@@ -1,3 +1,11 @@
+# Display
+PRODUCT_PACKAGES += \
+    copybit.msm8937 \
+    gralloc.msm8937 \
+    hwcomposer.msm8937 \
+    libtinyxml \
+    memtrack.msm8937
+
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.enable_fb_ubwc=1 \

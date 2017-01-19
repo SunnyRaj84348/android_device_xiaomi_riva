@@ -15,6 +15,10 @@ PRODUCT_AAPT_PREBUILT_DPI := hdpi
 PRODUCT_PACKAGES += \
     CMDoze
 
+# Display calibration
+PRODUCT_PACKAGES += \
+    libjni_livedisplay
+
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapgrowthlimit=192m \

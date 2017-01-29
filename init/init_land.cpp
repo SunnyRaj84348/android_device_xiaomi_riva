@@ -27,117 +27,47 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <fcntl.h>
-#include <stdlib.h>
+#include <cstdlib>
+#include <fstream>
+#include <string>
 
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
 
-static char board_id[PROP_VALUE_MAX];
-
-static int read_file2(const char *fname, char *data, int max_size)
-{
-    int fd, rc;
-
-    if (max_size < 1)
-        return 0;
-
-    fd = open(fname, O_RDONLY);
-    if (fd < 0) {
-        ERROR("failed to open '%s'\n", fname);
-        return 0;
-    }
-
-    rc = read(fd, data, max_size - 1);
-    if ((rc > 0) && (rc < max_size))
-        data[rc] = '\0';
-    else
-        data[0] = '\0';
-    close(fd);
-
-    return 1;
-}
-
-static void import_cmdline(char *name, int for_emulator)
-{
-    char *value = strchr(name, '=');
-    int name_len = strlen(name);
-    const char s[2] = ":";
-
-    if (value == 0) return;
-    *value++ = 0;
-    if (name_len == 0) return;
-
-    if (!strcmp(name, "board_id")) {
-        value = strtok(value, s);
-        strlcpy(board_id, value, sizeof(board_id));
-    }
-}
-
-static void init_alarm_boot_properties()
-{
-    char const *alarm_file = "/proc/sys/kernel/boot_reason";
-    char buf[64];
-    char tmp[PROP_VALUE_MAX];
-
-    property_get("ro.boot.alarmboot", tmp);
-
-    if (read_file2(alarm_file, buf, sizeof(buf))) {
-        /*
-         * Setup ro.alarm_boot value to true when it is RTC triggered boot up
-         * For existing PMIC chips, the following mapping applies
-         * for the value of boot_reason:
-         *
-         * 0 -> unknown
-         * 1 -> hard reset
-         * 2 -> sudden momentary power loss (SMPL)
-         * 3 -> real time clock (RTC)
-         * 4 -> DC charger inserted
-         * 5 -> USB charger insertd
-         * 6 -> PON1 pin toggled (for secondary PMICs)
-         * 7 -> CBLPWR_N pin toggled (for external power supply)
-         * 8 -> KPDPWR_N pin toggled (power key pressed)
-         */
-        if (buf[0] == '3' || !strcmp(tmp,"true"))
-            property_set("ro.alarm_boot", "true");
-        else
-            property_set("ro.alarm_boot", "false");
-    }
-}
-
 void vendor_load_properties()
 {
-    std::string device;
+    std::ifstream fin;
+    std::string buf;
 
-    device = property_get("ro.cm.device");
-    if (device != "land")
+    std::string product = property_get("ro.product.name");
+    if (product.find("land") == std::string::npos)
         return;
 
-    import_kernel_cmdline(0, import_cmdline);
+    fin.open("/proc/cmdline");
+    while (std::getline(fin, buf, ' '))
+        if (buf.find("board_id") != std::string::npos)
+            break;
+    fin.close();
 
-    property_set("ro.product.wt.boardid", board_id);
-
-    if (!strcmp(board_id, "S88537AA1")) {
+    if (buf.find("S88537AA1") != std::string::npos) {
         property_set("ro.build.display.wtid", "SW_S88537AA1_V071_M20_MP_XM");
-    } else if (!strcmp(board_id, "S88537AB1")) {
+    } else if (buf.find("S88537AB1") != std::string::npos) {
         property_set("ro.build.display.wtid", "SW_S88537AB1_V071_M20_MP_XM");
-    } else if (!strcmp(board_id, "S88537AC1")) {
+    } else if (buf.find("S88537AC1") != std::string::npos) {
         property_set("ro.build.display.wtid", "SW_S88537AC1_V071_M20_MP_XM");
-    } else if (!strcmp(board_id, "S88537BA1")) {
+    } else if (buf.find("S88537BA1") != std::string::npos) {
         property_set("ro.build.display.wtid", "SW_S88537BA1_V071_M20_MP_XM");
-    } else if (!strcmp(board_id, "S88537CA1")) {
+    } else if (buf.find("S88537CA1") != std::string::npos) {
         property_set("ro.build.display.wtid", "SW_S88537CA1_V071_M20_MP_XM");
-    } else if (!strcmp(board_id, "S88537EC1")) {
+    } else if (buf.find("S88537EC1") != std::string::npos) {
         property_set("ro.build.display.wtid", "SW_S88537EC1_V071_M20_MP_XM");
     }
 
-    if (!strcmp(board_id, "S88537AB1")) {
+    if (buf.find("S88537AB1") != std::string::npos) {
         property_set("ro.product.model", "Redmi 3X");
     } else {
         property_set("ro.product.model", "Redmi 3S");
     }
-
-    init_alarm_boot_properties();
 }

@@ -220,6 +220,12 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     netutils-wrapper-1.0
 
+# OMNI Charger Images
+PRODUCT_PACKAGES += \
+    omni_charger_res_images \
+    animation.txt \
+    font_charger.png
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \

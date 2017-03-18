@@ -33,4 +33,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PACKAGES += \
     libcnefeatureconfig \
-    librmnetctl
+    librmnetctl \
+    libxml2

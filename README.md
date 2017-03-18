@@ -1,5 +1,12 @@
 # Common device configuration for Xiaomi Redmi 3S
 
+## Bug List
+* Ril
+* Storage
+* Camera
+* BT
+* Audio
+
 ## Spec Sheet
 
 | Feature                 | Specification                     |

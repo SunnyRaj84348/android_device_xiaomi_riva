@@ -824,7 +824,7 @@ service qseecomd /system/bin/qseecomd
 service perfd /system/vendor/bin/perfd
     class main
     user root
-    group readproc
+    group root readproc
     socket perfd seqpacket 0666 root system
     disabled
     writepid /dev/cpuset/system-background/tasks

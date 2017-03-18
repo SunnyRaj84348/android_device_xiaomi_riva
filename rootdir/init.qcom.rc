@@ -286,6 +286,9 @@ on boot
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
 
+    # Prevents permission denied error for telephony
+    chmod 0644 /proc/cmdline
+
     #NULL lixiuzhen 2016\04\03 add ota prop for mbn update
     setprop persist.radio.start_ota_daemon 1
     setprop persist.radio.sw_mbn_openmkt 1

@@ -1,10 +1,10 @@
 # Common device configuration for Xiaomi Redmi 3S
 
 ## Bug List
-* Camera
-* Audio
 * VoLTE
 * FingerPrint
+* Sensors
+* GPS
 
 ## Spec Sheet
 

@@ -143,7 +143,6 @@ on boot
 
 # msm specific files that need to be created on /data
 on post-fs-data
-    mkdir /data/vendor 0770 system system
     mkdir /data/vendor/misc 0770 system system
 
     # Create directory used by display clients

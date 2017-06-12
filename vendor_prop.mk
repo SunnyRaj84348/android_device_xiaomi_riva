@@ -126,11 +126,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.qcom_parser=4176895 \
     media.stagefright.audio.sink=280 \
+    vendor.vidc.disable.split.mode=1 \
     vendor.vidc.enc.disable_bframes=1 \
     vendor.vidc.enc.disable_pframes=1 \
-    vendor.vidc.enc.narrow.searchrange=1 \
-    vendor.vidc.disable.split.mode=1 \
-    vidc.enc.disable.pq=true
+    vendor.vidc.enc.disable.pq=true \
+    vendor.vidc.enc.narrow.searchrange=1
 
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \

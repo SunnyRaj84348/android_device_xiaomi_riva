@@ -100,6 +100,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=0 \
+    debug.sf.enable_hwc_vds=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
     vendor.video.disable.ubwc=1 \
     debug.enable.sglscale=1 \

@@ -35,8 +35,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR_PRODUCT_NAME := land
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=Xiaomi/land/land:6.0.1/MMB29M/7.2.9:user/release-keys \
-    PRIVATE_BUILD_DESC="land-user 6.0.1 MMB29M 7.2.9 release-keys"
+    BUILD_FINGERPRINT=Xiaomi/land/land:6.0.1/MMB29M/V8.2.5.0.MALMIDL:user/release-keys \
+    PRIVATE_BUILD_DESC="land-user 6.0.1 MMB29M V8.2.5.0.MALMIDL release-keys"
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model

@@ -1,6 +1,7 @@
 # GPS
 PRODUCT_PACKAGES += \
-    gps.default \
+    gps.msm8937 \
+    gps.conf \
     libcurl
 
 PRODUCT_BOOT_JARS += \

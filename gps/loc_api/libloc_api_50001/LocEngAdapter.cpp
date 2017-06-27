@@ -81,6 +81,7 @@ LocEngAdapter::LocEngAdapter(LOC_API_ADAPTER_EVENT_MASK_T mask,
 {
     memset(&mFixCriteria, 0, sizeof(mFixCriteria));
     mFixCriteria.mode = LOC_POSITION_MODE_INVALID;
+    clearGnssSvUsedListData();
     LOC_LOGD("LocEngAdapter created");
 }
 
@@ -194,11 +195,9 @@ void LocEngAdapter::setXtraUserAgent() {
                 fclose(file);
 
                 // remove trailing spaces
-                char *s;
-                s = buf + strlen(buf);
-                while (--s >= buf) {
-                    if (!isspace(*s)) break;
-                    *s = 0;
+                size_t len = strlen(buf);
+                while (--len >= 0 && isspace(buf[len])) {
+                    buf[len] = '\0';
                 }
             }
 
@@ -377,14 +376,14 @@ void LocEngAdapter::reportPosition(UlpLocation &location,
     }
 }
 
-void LocInternalAdapter::reportSv(QcomSvStatus &svStatus,
+void LocInternalAdapter::reportSv(GnssSvStatus &svStatus,
                                   GpsLocationExtended &locationExtended,
                                   void* svExt){
     sendMsg(new LocEngReportSv(mLocEngAdapter, svStatus,
                                locationExtended, svExt));
 }
 
-void LocEngAdapter::reportSv(QcomSvStatus &svStatus,
+void LocEngAdapter::reportSv(GnssSvStatus &svStatus,
                              GpsLocationExtended &locationExtended,
                              void* svExt)
 {
@@ -394,6 +393,23 @@ void LocEngAdapter::reportSv(QcomSvStatus &svStatus,
     // any modifications
     if (! mUlp->reportSv(svStatus, locationExtended, svExt)) {
         mInternalAdapter->reportSv(svStatus, locationExtended, svExt);
+    }
+}
+
+
+void LocEngAdapter::reportSvMeasurement(GnssSvMeasurementSet &svMeasurementSet)
+{
+    // We send SvMeasurementSet to AmtProxy/ULPProxy to be forwarded as necessary.
+    if (! mUlp->reportSvMeasurement(svMeasurementSet)) {
+        //Send to Internal Adapter later if needed by LA
+    }
+}
+
+void LocEngAdapter::reportSvPolynomial(GnssSvPolynomial &svPolynomial)
+{
+    // We send SvMeasurementSet to AmtProxy/ULPProxy to be forwarded as necessary.
+    if (! mUlp->reportSvPolynomial(svPolynomial)) {
+       //Send to Internal Adapter later if needed by LA
     }
 }
 
@@ -534,9 +550,8 @@ enum loc_api_adapter_err LocEngAdapter::setTime(GpsUtcTime time,
     if (mSupportsTimeInjection) {
         LOC_LOGD("%s:%d]: Injecting time", __func__, __LINE__);
         result = mLocApi->setTime(time, timeReference, uncertainty);
-    } else {
-        mSupportsTimeInjection = true;
     }
+
     return result;
 }
 
@@ -566,26 +581,10 @@ enum loc_api_adapter_err LocEngAdapter::setXtraVersionCheck(int check)
     return ret;
 }
 
-void LocEngAdapter::reportGpsMeasurementData(GpsData &gpsMeasurementData)
+void LocEngAdapter::reportGnssMeasurementData(GnssData &gnssMeasurementData)
 {
-    sendMsg(new LocEngReportGpsMeasurement(mOwner,
-                                           gpsMeasurementData));
-}
-
-/*
-  Update Registration Mask
- */
-void LocEngAdapter::updateRegistrationMask(LOC_API_ADAPTER_EVENT_MASK_T event,
-                                           loc_registration_mask_status isEnabled)
-{
-    LOC_LOGD("entering %s", __func__);
-    int result = LOC_API_ADAPTER_ERR_FAILURE;
-    result = mLocApi->updateRegistrationMask(event, isEnabled);
-    if (result == LOC_API_ADAPTER_ERR_SUCCESS) {
-        LOC_LOGD("%s] update registration mask succeed.", __func__);
-    } else {
-        LOC_LOGE("%s] update registration mask failed.", __func__);
-    }
+    sendMsg(new LocEngReportGnssMeasurement(mOwner,
+                                           gnssMeasurementData));
 }
 
 /*

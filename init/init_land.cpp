@@ -87,17 +87,17 @@ void vendor_load_properties()
     init_alarm_boot_properties();
 
     if (buf.find("S88537AA1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537AA1_V071_M20_MP_XM");
+        property_set("ro.build.display.wtid", "SW_S88537AA1_V077_M20_MP_XM");
     } else if (buf.find("S88537AB1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537AB1_V071_M20_MP_XM");
+        property_set("ro.build.display.wtid", "SW_S88537AB1_V077_M20_MP_XM");
     } else if (buf.find("S88537AC1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537AC1_V071_M20_MP_XM");
+        property_set("ro.build.display.wtid", "SW_S88537AC1_V077_M20_MP_XM");
     } else if (buf.find("S88537BA1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537BA1_V071_M20_MP_XM");
+        property_set("ro.build.display.wtid", "SW_S88537BA1_V077_M20_MP_XM");
     } else if (buf.find("S88537CA1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537CA1_V071_M20_MP_XM");
+        property_set("ro.build.display.wtid", "SW_S88537CA1_V077_M20_MP_XM");
     } else if (buf.find("S88537EC1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537EC1_V071_M20_MP_XM");
+        property_set("ro.build.display.wtid", "SW_S88537EC1_V077_M20_MP_XM");
     }
 
     if (buf.find("S88537AB1") != std::string::npos) {

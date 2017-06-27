@@ -2,8 +2,6 @@
 
 ## Bug List
 * VoLTE
-* FingerPrint
-* Sensors
 * GPS
 
 ## Spec Sheet

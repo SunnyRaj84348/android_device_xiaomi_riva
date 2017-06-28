@@ -228,7 +228,6 @@ on post-fs-data
 
     mkdir /data/misc/sensors
     chmod 0775 /data/misc/sensors
-    restorecon_recursive /data/misc/sensor
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB

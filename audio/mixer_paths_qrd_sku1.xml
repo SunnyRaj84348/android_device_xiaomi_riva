@@ -206,6 +206,7 @@
     <ctl name="MI2S_DL_HL Switch" value="1" />
     <ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="0" />
     <ctl name="MultiMedia2 Mixer INTERNAL_FM_TX" value="0" />
+    <ctl name="MultiMedia5 Mixer INTERNAL_FM_TX" value="0" />
     <ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia5" value="0" />
     <!-- fm end -->
@@ -1049,8 +1050,17 @@
         <path name="dmic-endfire" />
     </path>
 
+     <path name="dmic-endfire-invert">
+        <ctl name="DEC2 MUX" value="ADC1"/>
+	<ctl name="DEC1 MUX" value="ADC2"/>
+	<ctl name="MI2S_TX Channels" value="Two" />
+	<ctl name="ADC2 MUX" value="INP3" />
+	<ctl name="ADC1 Volume" value="6" />
+	<ctl name="ADC3 Volume" value="6" />
+    </path>
+
     <path name="voice-speaker-dmic-ef">
-        <path name="dmic-endfire" />
+        <path name="dmic-endfire-invert" />
     </path>
 
     <path name="voice-rec-dmic-ef">

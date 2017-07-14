@@ -156,10 +156,6 @@ on post-fs-data
     mkdir /data/shared 0755
     chown system system /data/shared
 
-    #Create directory for FOTA
-    mkdir /data/fota 0771
-    chown system system /data/fota
-
     #Create directory for hostapd
     mkdir /data/hostapd 0770 system wifi
 
@@ -193,10 +189,6 @@ on post-fs-data
     mkdir /data/system/perfd 0770 root system
     chmod 2770 /data/system/perfd
 
-    # NFC local data and nfcee xml storage
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
-
     #Create IOP  deamon related dirs
     mkdir /data/misc/iop 0770 root system
 
@@ -220,6 +212,10 @@ on post-fs-data
     mkdir /data/misc/qti-logkit/socket-privileged/ 2770 system system
     mkdir /data/misc/qti-logkit/socket-public/ 2750 system qcom_diag
     mkdir /data/misc/qti-logkit/logdata/ 2750 system shell
+
+    # Fingerprint
+    mkdir /data/fpc 0770 system system
+    mkdir /data/fpc/s 0770 system system
 
     # Sensors
     chmod 0775 /persist/sensors
@@ -588,24 +584,24 @@ service qmuxd /system/bin/qmuxd
     class main
     user root
     group radio audio bluetooth gps nfc qcom_diag wakelock
-    writepid /dev/cpuset/system-background/tasks
+#    writepid /dev/cpuset/system-background/tasks
 
 service netmgrd /system/bin/netmgrd
     class main
     group system wakelock
-    writepid /dev/cpuset/system-background/tasks
+#   writepid /dev/cpuset/system-background/tasks
 
 service qti /system/vendor/bin/qti
     class main
     user radio
     group radio net_raw qcom_diag usb net_admin
-    writepid /dev/cpuset/system-background/tasks
+#    writepid /dev/cpuset/system-background/tasks
 
 service sensors /system/bin/sensors.qcom
     class core
     user root
     group root
-    writepid /dev/cpuset/system-background/tasks
+#    writepid /dev/cpuset/system-background/tasks
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
 # but only if ro.data.large_tcp_window_size property is set.
@@ -781,7 +777,7 @@ service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqb
     class late_start
     user root
     group root
-    writepid /dev/cpuset/system-background/tasks
+#    writepid /dev/cpuset/system-background/tasks
 
 service wfdservice /system/bin/wfdservice
     class main
@@ -824,20 +820,24 @@ service fingerprintd /system/bin/fingerprintd
     group system sdcard_rw
     disabled
 
+on property:ro.boot.fpsensor=fpc
+    setprop persist.sys.fp.goodix 0
+    setprop ro.hardware.fingerprint fpc
+
+on property:ro.boot.fpsensor=gdx
+    setprop persist.sys.fp.goodix 1
+    setprop ro.hardware.fingerprint gdx
+
 service gx_fpd /system/bin/gx_fpd
      class core
      user root
      group system system
      disabled
-
-on property:persist.sys.fp.vendor=switchf
+on property:persist.sys.fp.goodix=0
     stop gx_fpd
-    setprop persist.sys.fp.vendor searchf
-    start fingerprintd
-    setprop ro.boot.fpsensor fpc
 
-on property:persist.sys.fp.vendor=goodix
-    setprop ro.boot.fpsensor gdx
+on property:persist.sys.fp.goodix=1
+    start gx_fpd
 
 on property:persist.sys.fp.onstart=1
    start fingerprintd
@@ -847,7 +847,7 @@ service qcamerasvr /system/bin/mm-qcamera-daemon
     class late_start
     user camera
     group camera system inet input graphics
-    writepid /dev/cpuset/system-background/tasks
+#    writepid /dev/cpuset/system-background/tasks
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -867,7 +867,7 @@ service perfd /system/vendor/bin/perfd
     group root readproc
     socket perfd seqpacket 0666 root system
     disabled
-    writepid /dev/cpuset/system-background/tasks
+#    writepid /dev/cpuset/system-background/tasks
 
 service thermal-engine /system/vendor/bin/thermal-engine
     class main

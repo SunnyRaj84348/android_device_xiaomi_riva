@@ -1399,16 +1399,24 @@ vendor/lib64/libqti-wl.so
 vendor/lib64/libquipc_os_api.so
 vendor/lib64/libsmemlog.so
 
+# QtiTelephonyService
+-app/QtiTelephonyService/QtiTelephonyService.apk
+-framework/qti-telephony-common.jar
+-framework/QtiTelephonyServicelibrary.jar
+vendor/bin/qti
+
 # Radio - from land
 -app/datastatusnotification/datastatusnotification.apk
 -app/fastdormancy/fastdormancy.apk
--app/QtiTelephonyService/QtiTelephonyService.apk
 -app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
 bin/radish
 bin/rmt_storage
 bin/tftp_server
+etc/data/dsi_config.xml
+etc/data/netmgr_config.xml
+etc/data/qmi_config.xml
 etc/permissions/embms.xml
 etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
@@ -1416,10 +1424,7 @@ etc/permissions/telephonyservice.xml
 -framework/embmslibrary.jar
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
--framework/qti-telephony-common.jar
--framework/QtiTelephonyServicelibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-vendor/bin/qti
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
 vendor/lib64/libconfigdb.so
@@ -1438,6 +1443,7 @@ bin/imscmservice
 bin/imsdatadaemon
 bin/imsqmidaemon
 etc/permissions/imscm.xml
+etc/permissions/qti-vzw-ims-internal.xml
 framework/imscmlibrary.jar
 framework/rcsimssettings.jar
 -vendor/app/ims/ims.apk

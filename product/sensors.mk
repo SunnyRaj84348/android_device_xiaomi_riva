@@ -10,8 +10,8 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 # Sensors
-#PRODUCT_PACKAGES += \
-#    sensors.msm8937
+PRODUCT_PACKAGES += \
+    sensors.msm8937
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \

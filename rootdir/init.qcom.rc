@@ -27,7 +27,6 @@
 
 import init.qcom.power.rc
 import init.qcom.usb.rc
-import init.qcom.factory.rc
 
 on early-init
     mkdir /firmware 0771 system system
@@ -213,10 +212,6 @@ on post-fs-data
     mkdir /data/misc/qti-logkit/socket-public/ 2750 system qcom_diag
     mkdir /data/misc/qti-logkit/logdata/ 2750 system shell
 
-    # Fingerprint
-    mkdir /data/fpc 0770 system system
-    mkdir /data/fpc/s 0770 system system
-
     # Sensors
     chmod 0775 /persist/sensors
     chmod 0664 /persist/sensors/sensors_settings
@@ -355,34 +350,18 @@ on boot
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
     # Goodix Fingerprint
     chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp
-
+    chmod 0644 /dev/goodix_fp        
+    
     setprop persist.sys.fp.vendor none
     start gx_fpd
 
-    write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
-    write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/update_fw 1
+    #xuchao,add the fp sensor infomation,20161107,start
+    on property:persist.sys.fp.vendor=switchf
+	setprop ro.boot.fpsensor fpc
 
-    restorecon /dev/block/mmcblk0p13
-    restorecon /dev/block/mmcblk0p14
-    restorecon /dev/block/mmcblk0p16
-    restorecon /dev/block/mmcblk0p2
-    restorecon /dev/block/mmcblk0p3
-    restorecon /dev/block/mmcblk0p27
-    restorecon /dev/block/mmcblk0p33
-    restorecon /dev/block/mmcblk0p34
-
-    start rmt_storage
-
-    # access permission for secure touch
-    chmod 0660 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
-    chmod 0440 /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
-    chmod 0660 /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
-    chmod 0440 /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
-    chown system drmrpc /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch_enable
-    chown system drmrpc /sys/devices/soc.0/78b7000.i2c/i2c-3/3-0020/input/input0/secure_touch
-    chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch_enable
-    chown system drmrpc /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/secure_touch
+    on property:persist.sys.fp.vendor=goodix
+	setprop ro.boot.fpsensor gdx
+    #xuchao,add the fp sensor infomation,20161107,end
 
     chown root system /sys/class/leds/red/blink
     chown root system /sys/class/leds/green/blink
@@ -391,12 +370,6 @@ on boot
     # IR blaster
     chown root system /sys/class/leds/infrared/transmit
     chown root system /sys/class/leds/infrared/brightness
-
-    # Subsystem restart
-    write /sys/bus/msm_subsys/devices/subsys0/restart_level related
-    write /sys/bus/msm_subsys/devices/subsys1/restart_level related
-    write /sys/bus/msm_subsys/devices/subsys2/restart_level related
-    write /sys/bus/msm_subsys/devices/subsys3/restart_level related
 
 on class_start:late_start
     write /proc/sys/net/ipv6/conf/default/accept_ra_defrtr 1
@@ -416,42 +389,6 @@ service qcomsysd /system/bin/qcom-system-daemon
     class main
     user root
     group root qcom_diag
-
-service ssr_setup /system/bin/ssr_setup
-    oneshot
-    disabled
-
-service ss_ramdump /system/bin/subsystem_ramdump
-    class main
-    user system
-    group system
-    disabled
-
-on property:hw.fm.init=*
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
-
-on property:persist.sys.ssr.enable_debug=*
-    write /sys/module/subsystem_restart/parameters/enable_debug ${persist.sys.ssr.enable_debug}
-
-on property:persist.sys.mba_boot_timeout=*
-    write /sys/module/pil_msa/parameters/pbl_mba_boot_timeout_ms ${persist.sys.mba_boot_timeout}
-
-on property:persist.sys.modem_auth_timeout=*
-    write /sys/module/pil_msa/parameters/modem_auth_timeout_ms ${persist.sys.modem_auth_timeout}
-
-on property:persist.sys.pil_proxy_timeout=*
-    write /sys/module/peripheral_loader/parameters/proxy_timeout_ms ${persist.sys.pil_proxy_timeout}
-
-on property:persist.sys.ssr.restart_level=*
-    start ssr_setup
-
-on property:persist.sys.ssr.enable_ramdumps=1
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
-    mkdir /data/ramdump 770 system system
-    start ss_ramdump
-
-on property:persist.sys.ssr.enable_ramdumps=0
-    write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
@@ -818,29 +755,23 @@ service fingerprintd /system/bin/fingerprintd
     socket fpce stream 0666 system system
     user  system
     group system sdcard_rw
+    system system
     disabled
 
-on property:ro.boot.fpsensor=fpc
-    setprop persist.sys.fp.goodix 0
-    setprop ro.hardware.fingerprint fpc
-
-on property:ro.boot.fpsensor=gdx
-    setprop persist.sys.fp.goodix 1
-    setprop ro.hardware.fingerprint gdx
 
 service gx_fpd /system/bin/gx_fpd
      class core
      user root
      group system system
      disabled
-on property:persist.sys.fp.goodix=0
-    stop gx_fpd
 
-on property:persist.sys.fp.goodix=1
-    start gx_fpd
+on property:persist.sys.fp.vendor=switchf
+    stop gx_fpd
+    setprop persist.sys.fp.vendor searchf
+    start fingerprintd  
 
 on property:persist.sys.fp.onstart=1
-   start fingerprintd
+   start fingerprintd 
 
 # Start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon

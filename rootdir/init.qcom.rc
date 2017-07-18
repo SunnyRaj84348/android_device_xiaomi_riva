@@ -154,7 +154,7 @@ on post-fs-data
     #Create directory from IMS services
     mkdir /data/shared 0755
     chown system system /data/shared
-
+    
     #Create directory for hostapd
     mkdir /data/hostapd 0770 system wifi
 
@@ -350,18 +350,10 @@ on boot
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
     # Goodix Fingerprint
     chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp        
-    
+    chmod 0644 /dev/goodix_fp
+
     setprop persist.sys.fp.vendor none
     start gx_fpd
-
-    #xuchao,add the fp sensor infomation,20161107,start
-    on property:persist.sys.fp.vendor=switchf
-	setprop ro.boot.fpsensor fpc
-
-    on property:persist.sys.fp.vendor=goodix
-	setprop ro.boot.fpsensor gdx
-    #xuchao,add the fp sensor infomation,20161107,end
 
     chown root system /sys/class/leds/red/blink
     chown root system /sys/class/leds/green/blink
@@ -526,7 +518,7 @@ service qmuxd /system/bin/qmuxd
 service netmgrd /system/bin/netmgrd
     class main
     group system wakelock
-#   writepid /dev/cpuset/system-background/tasks
+#    writepid /dev/cpuset/system-background/tasks
 
 service qti /system/vendor/bin/qti
     class main
@@ -755,9 +747,7 @@ service fingerprintd /system/bin/fingerprintd
     socket fpce stream 0666 system system
     user  system
     group system sdcard_rw
-    system system
     disabled
-
 
 service gx_fpd /system/bin/gx_fpd
      class core
@@ -768,10 +758,14 @@ service gx_fpd /system/bin/gx_fpd
 on property:persist.sys.fp.vendor=switchf
     stop gx_fpd
     setprop persist.sys.fp.vendor searchf
-    start fingerprintd  
+    start fingerprintd
+    setprop ro.boot.fpsensor fpc
+
+on property:persist.sys.fp.vendor=goodix
+    setprop ro.boot.fpsensor gdx
 
 on property:persist.sys.fp.onstart=1
-   start fingerprintd 
+   start fingerprintd
 
 # Start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon

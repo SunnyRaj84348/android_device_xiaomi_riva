@@ -371,7 +371,7 @@ service netmgrd /vendor/bin/netmgrd
 service qti /vendor/bin/qti
     class main
     user radio
-    group radio qcom_diag usb
+    group radio oem_2901 usb
     writepid /dev/cpuset/system-background/tasks
 
 service sensors /vendor/bin/sensors.qcom

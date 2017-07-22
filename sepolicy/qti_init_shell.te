@@ -1,0 +1,2 @@
+allow qti_init_shell bluetooth_data_file:file r_file_perms;
+allow qti_init_shell bluetooth_loader_exec:file { read open };

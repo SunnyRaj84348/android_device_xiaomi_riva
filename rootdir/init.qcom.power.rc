@@ -86,6 +86,9 @@ on enable-low-power
     write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled N
     write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/suspend_enabled N
 
+    # Enable power_efficient workqueue
+    write /sys/module/workqueue/parameters/power_efficient 1
+
     # Enable low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 

@@ -1,9 +1,5 @@
 # Common device configuration for Xiaomi Redmi 3S
 
-## Bug List
-* VoLTE
-* GPS
-
 ## Spec Sheet
 
 | Feature                 | Specification                     |

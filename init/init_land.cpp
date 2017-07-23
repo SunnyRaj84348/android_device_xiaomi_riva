@@ -105,4 +105,15 @@ void vendor_load_properties()
     } else {
         property_set("ro.product.model", "Redmi 3S");
     }
+    if (buf.find("S88537AA1") != std::string::npos) {
+        property_set("persist.sys.fp.goodix", "1");
+        property_set("persist.sys.fp.onstart", "1");
+        property_set("persist.sys.fp.vendor", "goodix");
+        property_set("ro.boot.fpsensor", "gdx");
+    } else {
+        property_set("persist.sys.fp.goodix", "0");
+        property_set("persist.sys.fp.onstart", "1");
+        property_set("persist.sys.fp.vendor", "searchf");
+        property_set("ro.boot.fpsensor", "fpc");
+    }
 }

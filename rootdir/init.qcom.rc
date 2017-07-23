@@ -348,6 +348,9 @@ on boot
 
     # bond0 used by FST Manager
     chown wifi wifi /sys/class/net/bond0/bonding/queue_id
+    # Goodix Fingerprint
+    chown system system /dev/goodix_fp
+    chmod 0644 /dev/goodix_fp
 
     chown root system /sys/class/leds/red/blink
     chown root system /sys/class/leds/green/blink
@@ -743,12 +746,19 @@ service fingerprintd /system/bin/fingerprintd
     group system sdcard_rw
     disabled
 
-    setprop persist.sys.fp.vendor searchf
-    start fingerprintd
-    setprop ro.boot.fpsensor fpc
+service gx_fpd /system/bin/gx_fpd
+    class core
+    user root
+    group system system
+    disabled
 
-on property:persist.sys.fp.onstart=1
-   start fingerprintd
+on property:persist.sys.fp.vendor=goodix
+       stop fingerprintd
+       start gx_fpd
+
+on property:persist.sys.fp.vendor=searchf
+        stop gx_fpd
+        start fingerprintd
 
 # Start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon

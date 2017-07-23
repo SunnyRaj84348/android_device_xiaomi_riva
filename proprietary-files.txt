@@ -61,20 +61,6 @@ vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
 # Audio ACDB - from santoni
-etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Bluetooth_cal.acdb
-etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_General_cal.acdb
-etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Global_cal.acdb
-etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Handset_cal.acdb
-etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Hdmi_cal.acdb
-etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Headset_cal.acdb
-etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Speaker_cal.acdb
-etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
-etc/acdbdata/MTP/MTP_General_cal.acdb
-etc/acdbdata/MTP/MTP_Global_cal.acdb
-etc/acdbdata/MTP/MTP_Handset_cal.acdb
-etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
-etc/acdbdata/MTP/MTP_Headset_cal.acdb
-etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Bluetooth_cal.acdb
 etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_General_cal.acdb
 etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Global_cal.acdb
@@ -92,7 +78,6 @@ etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 
 # Bluetooth - from santoni
 bin/btnvtool
-bin/dun-server
 bin/hci_qcomm_init
 bin/wcnss_filter
 vendor/lib/libbtnv.so
@@ -1103,7 +1088,7 @@ vendor/lib64/libtzdrmgenprov.so
 -etc/qdcm_calib_data_ili9881c_HD720p_video_Tianma.xml
 -etc/qdcm_calib_data_nt35521s_HD720p_video_EBBG.xml
 
-# Fingerprint - from land
+# Fingerprint - from santoni
 bin/gx_fpcmd
 bin/gx_fpd
 lib/hw/fingerprint.default.so:lib/hw/fingerprint.msm8937.so
@@ -1334,14 +1319,12 @@ vendor/lib/libQtiTether.so
 vendor/lib64/libconnctrl.so
 vendor/lib64/libQtiTether.so
 
-# Perf - from santoni & vendor/lib64/libqti-gt.so - from land
+# Perf - from santoni
 bin/iop
 bin/msm_irqbalance
 vendor/bin/perfd
 vendor/lib/libqti-iop-client.so
 vendor/lib/libqti-perfd-client.so
-vendor/lib64/libqti-at.so
-vendor/lib64/libqti-gt.so
 vendor/lib64/libqti-iop-client.so
 vendor/lib64/libqti-perfd-client.so
 
@@ -1357,32 +1340,12 @@ vendor/bin/mm-pp-dpps
 vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
 
-# QMI - from land
+
+# QMI - from garlic
+bin/ATFWD-daemon
 bin/irsc_util
-etc/data/dsi_config.xml
-etc/data/netmgr_config.xml
-etc/data/qmi_config.xml
 etc/permissions/qti_permissions.xml
-vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so
-vendor/lib/libdsutils.so
-vendor/lib/libidl.so
-vendor/lib/libqcci_legacy.so
-vendor/lib/libqcmaputils.so
-vendor/lib/libqdi.so
-vendor/lib/libqdp.so
-vendor/lib/libqmi.so
-vendor/lib/libqmi_cci.so
-vendor/lib/libqmi_client_helper.so
-vendor/lib/libqmi_client_qmux.so
-vendor/lib/libqmi_common_so.so
-vendor/lib/libqmi_csi.so
-vendor/lib/libqmi_encdec.so
-vendor/lib/libqmiservices.so
-vendor/lib/libqti-wl.so
-vendor/lib/libquipc_os_api.so
-vendor/lib/libsmemlog.so
-vendor/lib/libvqzip.so
+vendor/lib64/lib_rsu.so
 vendor/lib64/libdiag.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/libdsutils.so
@@ -1402,47 +1365,74 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libqti-wl.so
 vendor/lib64/libquipc_os_api.so
 vendor/lib64/libsmemlog.so
+vendor/lib/lib_rsu.so
+vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsutils.so
+vendor/lib/libidl.so
+vendor/lib/libqcci_legacy.so
+vendor/lib/libqcmaputils.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
+vendor/lib/libqmi.so
+vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_helper.so
+vendor/lib/libqmi_client_qmux.so
+vendor/lib/libqmi_common_so.so
+vendor/lib/libqmi_csi.so
+vendor/lib/libqmi_encdec.so
+vendor/lib/libqmiservices.so
+vendor/lib/libquipc_os_api.so
+vendor/lib/libsmemlog.so
 
-# Radio - from land
+# Radio - from garlic
 -app/datastatusnotification/datastatusnotification.apk
 -app/fastdormancy/fastdormancy.apk
+-app/QtiTelephonyService/QtiTelephonyService.apk
 -app/shutdownlistener/shutdownlistener.apk
+-framework/embmslibrary.jar
+-framework/qcrilhook.jar
+-framework/qti-telephony-common.jar|37d692fb171d0ee3269676a9e9998d2e3bfd9488
+-framework/QtiTelephonyServicelibrary.jar
+-priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 bin/netmgrd
-bin/qmuxd
 bin/radish
 bin/rmt_storage
 bin/tftp_server
-etc/permissions/qcnvitems.xml
+etc/data/dsi_config.xml
+etc/data/netmgr_config.xml
+etc/permissions/embms.xml
 etc/permissions/qcrilhook.xml
--framework/qcnvitems.jar
--framework/qcrilhook.jar
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+etc/permissions/telephonyservice.xml
 vendor/bin/qti
-vendor/lib/liblqe.so
-vendor/lib/libmdmdetect.so
 vendor/lib64/libconfigdb.so
+vendor/lib64/libdatactrl.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so
+vendor/lib64/libril-qc-ltedirectdisc.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libril-qcril-hook-oem.so
+vendor/lib64/librilqmiservices.so
+vendor/lib64/libsettings.so
 vendor/lib64/libsystem_health_mon.so
+vendor/lib/libmdmdetect.so
 vendor/qcril.db
 
-# Radio - IMS - from santoni
+# Radio - IMS - from garlic
+-framework/imscmlibrary.jar
+-priv-app/ims/ims.apk|66fa3ab695d7be55a334cbee6e9c94d60089ac2a
+-vendor/app/imssettings/imssettings.apk
+-vendor/framework/qti-vzw-ims-internal.jar
 bin/ims_rtp_daemon
 bin/imscmservice
 bin/imsdatadaemon
 bin/imsqmidaemon
 etc/permissions/imscm.xml
--framework/imscmlibrary.jar
--framework/rcsimssettings.jar
--vendor/app/ims/ims.apk
--vendor/app/imssettings/imssettings.apk
+etc/permissions/qti-vzw-ims-internal.xml
 vendor/lib64/lib-dplmedia.so
 vendor/lib64/lib-ims-rcscmjni.so
-vendor/lib64/lib-imsSDP.so
 vendor/lib64/lib-imscamera.so
 vendor/lib64/lib-imsdpl.so
 vendor/lib64/lib-imsqimf.so
@@ -1451,6 +1441,7 @@ vendor/lib64/lib-imsrcscm.so
 vendor/lib64/lib-imsrcscmclient.so
 vendor/lib64/lib-imsrcscmservice.so
 vendor/lib64/lib-imss.so
+vendor/lib64/lib-imsSDP.so
 vendor/lib64/lib-imsvt.so
 vendor/lib64/lib-imsxml.so
 vendor/lib64/lib-rcsimssjni.so
@@ -1512,15 +1503,10 @@ etc/ft5336_biel_720p.ini
 etc/ft5336_lens_720p.ini
 etc/ft5336_oufei_720p.ini
 
-# USB - from santoni
-etc/firmware/ice40.bin
-
 # Widevine - from mido
 vendor/lib/libWVStreamControlAPI_L3.so|61673304827483d44b735a3dd08f0783d10ce92d
 vendor/lib/libwvdrm_L3.so|7e77482481197997294a834bfbc817a01b6075cd
 vendor/lib/mediadrm/libwvdrmengine.so|70419ce1f8eb6bd3aa36234f8d7e8003569efc9c
 
 # Wi-Fi - from santoni
-bin/cnss-daemon
-bin/cnss_diag
 bin/wcnss_service

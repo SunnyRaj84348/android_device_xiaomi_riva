@@ -62,8 +62,7 @@ $(LOCAL_BUILT_MODULE):
 	$(hide) touch $@
 
 IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
-
-IMS_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR_APPS)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
+IMS_SYMLINKS := $(addprefix $(TARGET_OUT)/priv-app/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
 $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "IMS lib link: $@"
 	@mkdir -p $(dir $@)
@@ -86,8 +85,8 @@ $(GOODIX_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += $(GOODIX_SYMLINKS)
 
 FPC_IMAGES := \
-    fpctzapp.b00 fpctzapp.b01 fpctzapp.b02 fpctzapp.b03 \
-    fpctzapp.b04 fpctzapp.b05 fpctzapp.b06 fpctzapp.mdt
+    fpcta.b00 fpcta.b01 fpcta.b02 fpcta.b03 \
+    fpcta.b04 fpcta.b05 fpcta.b06 fpcta.mdt
 
 FPC_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FPC_IMAGES)))
 $(FPC_SYMLINKS): $(LOCAL_INSTALLED_MODULE)

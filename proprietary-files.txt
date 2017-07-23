@@ -1098,7 +1098,6 @@ lib64/hw/fingerprint.goodix.so
 lib64/hw/gxfingerprint.default.so
 lib64/libcom_fingerprints_service.so
 lib64/libfp_client.so
-lib64/libfpnav.so
 lib64/libfpservice.so
 
 # Gatekeeper - from santoni
@@ -1471,7 +1470,7 @@ etc/firmware/modem_config/S88537CA1/row_mcfg_sw.mbn
 etc/firmware/modem_config/S88537EC1/reliance_mcfg_sw.mbn
 etc/firmware/modem_config/S88537EC1/row_mcfg_sw.mbn
 
-# Sensors - from land
+# Sensors - from santoni
 bin/sensors.qcom
 vendor/lib/hw/activity_recognition.msm8937.so
 vendor/lib/libsensor1.so

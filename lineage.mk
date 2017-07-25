@@ -40,3 +40,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
     ro.product.model
+
+# Unofficial Build ID
+TARGET_UNOFFICIAL_BUILD_ID := HyperTeam

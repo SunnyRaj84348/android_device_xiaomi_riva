@@ -3,10 +3,20 @@ on boot
     # Set RPS mask
     write /sys/class/net/rmnet0/queues/rx-0/rps_cpus 2
 
+    # Update foreground and background cpusets
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 0-3
+    write /dev/cpuset/background/cpus 4-5
+    write /dev/cpuset/system-background/cpus 4-7
+
 on enable-low-power
     # HMP scheduler settings
     write /proc/sys/kernel/sched_window_stats_policy 3
     write /proc/sys/kernel/sched_ravg_hist_size 3
+    write /proc/sys/kernel/sched_ravg_window 20000000
+
+    #disable sched_boost in 8937
+    write /proc/sys/kernel/sched_boost 0
 
     # HMP Task packing settings
     write /proc/sys/kernel/sched_small_task 20
@@ -54,6 +64,7 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "1 960000:85 1094400:90 1344000:80"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/sampling_down_factor 40000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 960000
 
     # Enable governor for power cluster
@@ -66,10 +77,14 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 768000:90"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 768000
 
-    # Re-enable thermal core_control
-    write /sys/module/msm_thermal/core_control/enabled 1
+    # Disable L2-GDHS low power modes
+    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled N
+    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/suspend_enabled N
+    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled N
+    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/suspend_enabled N
 
     # Bring all cores online
     write /sys/devices/system/cpu/cpu1/online 1
@@ -79,12 +94,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
-
-    # Disable L2-GDHS low power modes
-    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/idle_enabled N
-    write /sys/module/lpm_levels/system/pwr/pwr-l2-gdhs/suspend_enabled N
-    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/idle_enabled N
-    write /sys/module/lpm_levels/system/perf/perf-l2-gdhs/suspend_enabled N
 
     # Enable power_efficient workqueue
     write /sys/module/workqueue/parameters/power_efficient 1
@@ -104,12 +113,34 @@ on enable-low-power
     write /proc/sys/kernel/sched_freq_inc_notify 50000
     write /proc/sys/kernel/sched_freq_dec_notify 50000
 
+    # Enable core control
+    write /sys/devices/system/cpu/cpu0/core_ctl/min_cpus 2
+    write /sys/devices/system/cpu/cpu0/core_ctl/max_cpus 4
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres 68
+    write /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres 40
+    write /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms 100
+    write /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster 1
+
+    # Re-enable thermal core_control
+    write /sys/module/msm_thermal/core_control/enabled 1
+
+    # Enable dynamic clock gating
+    write /sys/module/lpm_levels/lpm_workarounds/dynamic_clock_gating 1
+
+    # Enable timer migration to little cluster
+    write /proc/sys/kernel/power_aware_timer_migration 1
+
     # Set per_process_reclaim tuning parameters
     write /sys/module/process_reclaim/parameters/enable_process_reclaim 1
     write /sys/module/process_reclaim/parameters/pressure_max 70
     write /sys/module/process_reclaim/parameters/swap_opt_eff 30
-    write /sys/module/process_reclaim/parameters/pressure_min 10
-    write /sys/module/process_reclaim/parameters/per_swap_size 1024
+    write /sys/module/process_reclaim/parameters/pressure_min 50
+    write /sys/module/process_reclaim/parameters/per_swap_size 512
+
+    # Set lowmemorykiller tuning parameters
+    write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
+    write /sys/module/lowmemorykiller/parameters/minfree "15360,19200,23040,26880,34415,43737"
+    write /sys/module/lowmemorykiller/parameters/vmpressure_file_min 53059
 
     # Set ZCache parameters
     write /sys/module/zcache/parameters/clear_percent 3

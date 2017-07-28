@@ -595,7 +595,7 @@ service poweroffhandler /system/bin/poweroffhandler
 service fingerprintd /system/bin/fingerprintd
     class late_start
     socket fpce stream 0666 system system
-    user  system
+    user system
     group system sdcard_rw
     disabled
 

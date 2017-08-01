@@ -21,9 +21,7 @@ def FullOTA_InstallEnd(info):
   ReplaceDeviceConfig(info)
 
 def ReplaceDeviceConfig(info):
-  info.script.Mount("/firmware")
   info.script.Mount("/system")
   info.script.AppendExtra('ui_print("Checking FP support");')
   info.script.AppendExtra('run_program("/sbin/sh", "/tmp/install/bin/check_features.sh");')
-  info.script.Unmount("/firmware")
   info.script.Unmount("/system")

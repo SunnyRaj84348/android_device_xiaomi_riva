@@ -1088,7 +1088,7 @@ vendor/lib64/libtzdrmgenprov.so
 -etc/qdcm_calib_data_ili9881c_HD720p_video_Tianma.xml
 -etc/qdcm_calib_data_nt35521s_HD720p_video_EBBG.xml
 
-# Fingerprint - from santoni
+# Fingerprint - from land
 bin/gx_fpcmd
 bin/gx_fpd
 lib/hw/fingerprint.default.so:lib/hw/fingerprint.msm8937.so
@@ -1099,6 +1099,7 @@ lib64/hw/gxfingerprint.default.so
 lib64/libcom_fingerprints_service.so
 lib64/libfp_client.so
 lib64/libfpservice.so
+lib64/libfpnav.so
 
 # Gatekeeper - from santoni
 vendor/lib/hw/gatekeeper.msm8937.so

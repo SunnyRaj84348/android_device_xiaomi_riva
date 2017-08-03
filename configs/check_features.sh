@@ -22,4 +22,5 @@ if [ "$board_id" = "S88537AC1" ]; || [ "$board_id" = "S88537EC1"]; then
     rm /system/lib64/libcom_fingerprints_service.so
     rm /system/lib64/libfp_client.so
     rm /system/lib64/libfpservice.so
+    rm /system/lib64/libfpnav.so
 fi

@@ -47,3 +47,4 @@ allow gx_fpd self:capability dac_override;
 allow gx_fpd storage_file:dir search;
 allow gx_fpd storage_file:lnk_file read;
 r_dir_file(gx_fpd, firmware_file)
+allow gx_fpd tmpfs:dir search;

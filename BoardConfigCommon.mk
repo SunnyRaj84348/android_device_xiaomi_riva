@@ -16,8 +16,6 @@
 
 VENDOR_PATH := device/xiaomi/msm8937-common
 
-TARGET_SPECIFIC_HEADER_PATH += $(VENDOR_PATH)/include
-
 # Inherit device-specific board fragments
 include $(VENDOR_PATH)/board/*.mk
 

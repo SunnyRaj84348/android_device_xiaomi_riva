@@ -206,7 +206,6 @@
     <ctl name="MI2S_DL_HL Switch" value="1" />
     <ctl name="MultiMedia1 Mixer INTERNAL_FM_TX" value="0" />
     <ctl name="MultiMedia2 Mixer INTERNAL_FM_TX" value="0" />
-    <ctl name="MultiMedia5 Mixer INTERNAL_FM_TX" value="0" />
     <ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia1" value="0" />
     <ctl name="INTERNAL_FM_RX Audio Mixer MultiMedia5" value="0" />
     <!-- fm end -->
@@ -486,6 +485,8 @@
     </path>
 
     <path name="voice-call">
+	<ctl name="DEC1 Volume" value="84" />
+	<ctl name="DEC2 Volume" value="84" />
         <ctl name="PRI_MI2S_RX_Voice Mixer CSVoice" value="1" />
         <ctl name="Voice_Tx Mixer TERT_MI2S_TX_Voice" value="1" />
     </path>
@@ -905,13 +906,15 @@
     <path name="handset">
         <ctl name="RX1 MIX1 INP1" value="RX1" />
         <ctl name="RDAC2 MUX" value="RX1" />
-        <ctl name="RX1 Digital Volume" value="92" />
+        <ctl name="RX1 Digital Volume" value="84" />
         <ctl name="EAR PA Gain" value="POS_6_DB" />
         <ctl name="EAR_S" value="Switch" />
     </path>
 
     <path name="handset-mic">
         <path name="adc1" />
+	<ctl name="DEC1 Volume" value="84" />
+	<ctl name="DEC2 Volume" value="84" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
     </path>
 
@@ -1050,17 +1053,8 @@
         <path name="dmic-endfire" />
     </path>
 
-     <path name="dmic-endfire-invert">
-        <ctl name="DEC2 MUX" value="ADC1"/>
-	<ctl name="DEC1 MUX" value="ADC2"/>
-	<ctl name="MI2S_TX Channels" value="Two" />
-	<ctl name="ADC2 MUX" value="INP3" />
-	<ctl name="ADC1 Volume" value="6" />
-	<ctl name="ADC3 Volume" value="6" />
-    </path>
-
     <path name="voice-speaker-dmic-ef">
-        <path name="dmic-endfire-invert" />
+        <path name="dmic-endfire" />
     </path>
 
     <path name="voice-rec-dmic-ef">
@@ -1072,6 +1066,8 @@
     </path>
 
     <path name="handset-stereo-dmic-ef">
+        <ctl name="DEC1 Volume" value="84" />
+        <ctl name="DEC2 Volume" value="84" />
         <path name="speaker-dmic-endfire" />
     </path>
 

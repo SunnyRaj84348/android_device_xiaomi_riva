@@ -400,11 +400,13 @@ on property:persist.env.fastdorm.enabled=true
 service cnd /system/bin/cnd
     class main
     socket cnd stream 660 root inet
+    writepid /dev/cpuset/system-background/tasks
 
 service dpmd /system/bin/dpmd
     class late_start
     socket dpmd stream 660 root system
     group system readproc
+    writepid /dev/cpuset/system-background/tasks
 
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class core
@@ -415,10 +417,12 @@ service rmt_storage /system/bin/rmt_storage
     class core
     user root
     group wakelock
+    writepid /dev/cpuset/system-background/tasks
 
 service tftp_server /system/bin/tftp_server
-   class main
-   user root
+    class main
+    user root
+    writepid /dev/cpuset/system-background/tasks
 
 service config_bt_addr /system/bin/btnvtool -O
     class core
@@ -447,19 +451,19 @@ on property:hw.fm.init=1
 service netmgrd /system/bin/netmgrd
     class main
     group system wakelock
-#    writepid /dev/cpuset/system-background/tasks
+    writepid /dev/cpuset/system-background/tasks
 
 service qti /system/vendor/bin/qti
     class main
     user radio
     group radio net_raw qcom_diag usb net_admin
-#    writepid /dev/cpuset/system-background/tasks
+    writepid /dev/cpuset/system-background/tasks
 
 service sensors /system/bin/sensors.qcom
     class core
     user root
     group root
-#    writepid /dev/cpuset/system-background/tasks
+    writepid /dev/cpuset/system-background/tasks
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
 # but only if ro.data.large_tcp_window_size property is set.
@@ -500,6 +504,7 @@ service loc_launcher /system/bin/loc_launcher
     #loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet net_raw qcom_diag net_admin wifi
+    writepid /dev/cpuset/system-background/tasks
 
 service qcom-sh /system/bin/sh /init.qcom.sh
     class late_start
@@ -530,6 +535,7 @@ service charger /charger
     class charger
     group graphics system
     seclabel u:r:healthd:s0
+    writepid /dev/cpuset/system-background/tasks
 
 #+first boot,jiangtao.wt,add 20150810
 on property:sys.installed.running=1
@@ -563,6 +569,7 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     class late_start
     user system
     group system
+    writepid /dev/cpuset/system-background/tasks
 
 # Add poweroffhandler
 service poweroffhandler /system/bin/poweroffhandler
@@ -639,6 +646,7 @@ service time_daemon /system/bin/time_daemon
     class late_start
     user root
     group root
+    writepid /dev/cpuset/system-background/tasks
 
 service audiod /system/bin/audiod
     class late_start
@@ -666,6 +674,7 @@ service imsdatadaemon /system/bin/imsdatadaemon
     user system
     socket ims_datad stream 0660 system radio
     group system wifi radio inet net_raw log diag net_admin
+    writepid /dev/cpuset/system-background/tasks
     disabled
 
 on property:sys.ims.QMI_DAEMON_STATUS=1
@@ -682,6 +691,7 @@ service imscmservice /system/bin/imscmservice
     class main
     user system
     group radio net_raw diag diag log
+    writepid /dev/cpuset/system-background/tasks
     disabled
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
@@ -736,6 +746,7 @@ service per_mgr /system/bin/pm-service
     class core
     user system
     group system net_raw
+    writepid /dev/cpuset/system-background/tasks
 
 service hvdcp_opti /system/bin/hvdcp_opti
     class main

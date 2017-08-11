@@ -257,11 +257,13 @@ service vendor.rmt_storage /vendor/bin/rmt_storage
     user root
     shutdown critical
     ioprio rt 0
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.tftp_server /vendor/bin/tftp_server
     class main
     user root
     group root system
+    writepid /dev/cpuset/system-background/tasks
 
 # FM
 on property:hw.fm.init=0
@@ -277,6 +279,7 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     # Grants the ability for this daemon to bind IPC router ports so it can
     # register QMI services
     capabilities NET_BIND_SERVICE
+    writepid /dev/cpuset/system-background/tasks
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
@@ -301,6 +304,7 @@ service loc_launcher /vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
+    writepid /dev/cpuset/system-background/tasks
 
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
@@ -339,6 +343,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     class late_start
     user root
     group root
+    writepid /dev/cpuset/system-background/tasks
 
 service time_daemon /vendor/bin/time_daemon
     class main

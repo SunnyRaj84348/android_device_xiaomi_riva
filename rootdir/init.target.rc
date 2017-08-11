@@ -58,6 +58,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class main
     user camera
     group camera system inet input graphics
+    writepid /dev/cpuset/system-background/tasks
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -139,12 +140,14 @@ service vendor.per_mgr /vendor/bin/pm-service
     class core
     user system
     group system net_raw
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.per_proxy /vendor/bin/pm-proxy
     class core
     user system
     group system
     disabled
+    writepid /dev/cpuset/system-background/tasks
 
 on property:init.svc.vendor.per_mgr=running
     start vendor.per_proxy

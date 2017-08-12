@@ -663,17 +663,13 @@ service imsqmidaemon /system/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
-    group radio net_raw log diag
-    disabled
-
-on property:service.qti.ims.enabled=1
-    start imsqmidaemon
+    group radio log diag
 
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
-    group system wifi radio inet net_raw log diag net_admin
+    group system wifi radio inet log diag
     writepid /dev/cpuset/system-background/tasks
     disabled
 
@@ -684,13 +680,13 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
     class main
     user system
     socket ims_rtpd stream 0660 system radio
-    group radio net_raw diag diag inet log
+    group radio diag diag inet log
     disabled
 
 service imscmservice /system/bin/imscmservice
     class main
     user system
-    group radio net_raw diag diag log
+    group radio diag inet log
     writepid /dev/cpuset/system-background/tasks
     disabled
 

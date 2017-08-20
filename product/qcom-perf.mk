@@ -1,8 +1,7 @@
-# Init scripts
+# Power
 PRODUCT_PACKAGES += \
-    init.qcom.power.rc
+    power.msm8937
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.am.reschedule_service=true \
     ro.vendor.extension_library=libqti-perfd-client.so

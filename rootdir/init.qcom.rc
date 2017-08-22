@@ -417,13 +417,6 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
     group system
     writepid /dev/cpuset/system-background/tasks
 
-service fingerprintd /system/bin/fingerprintd
-    class late_start
-    socket fpce stream 0666 system system
-    user system
-    group system sdcard_rw
-    disabled
-
 service gx_fpd /system/bin/gx_fpd
     class core
     user root

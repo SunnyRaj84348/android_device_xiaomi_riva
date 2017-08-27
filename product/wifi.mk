@@ -17,9 +17,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
 
 PRODUCT_COPY_FILES += \
-    $(VENDOR_PATH)/wifi/hostapd.accept:system/etc/hostapd/hostapd.accept \
-    $(VENDOR_PATH)/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf \
-    $(VENDOR_PATH)/wifi/hostapd.deny:system/etc/hostapd/hostapd.deny \
     $(VENDOR_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
     $(VENDOR_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 

@@ -206,9 +206,6 @@ on post-fs-data
     mkdir /data/shared 0755
     chown system system /data/shared
 
-    # Create directory for hostapd
-    mkdir /data/hostapd 0770 system wifi
-
     # Create /data/time folder for time-services
     mkdir /data/time/ 0700 system system
 
@@ -396,13 +393,6 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     class late_start
     user root
     oneshot
-
-service hostapd /system/bin/hostapd -dd /data/hostapd/hostapd.conf
-    class late_start
-    user root
-    group root
-    oneshot
-    disabled
 
 service ril-daemon2 /vendor/bin/hw/rild -c 2
     class main

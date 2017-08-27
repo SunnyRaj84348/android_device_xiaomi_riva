@@ -128,9 +128,9 @@ BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8917
+TARGET_COMPILE_WITH_MSM_KERNEL	:= true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -139,7 +139,6 @@ TARGET_PROVIDES_LIBLIGHT := true
 JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(VENDOR_PATH)/lineagehw|**/*.java
 
 # Tap2Wake
-
 TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
 
 # Malloc

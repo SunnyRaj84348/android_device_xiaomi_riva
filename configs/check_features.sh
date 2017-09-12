@@ -8,7 +8,7 @@ do
     fi
 done
 
-if [ "$board_id" = "S88537AC1" ]; || [ "$board_id" = "S88537EC1"]; then
+if [ "$board_id" = "S88537AC1" ]; | [ "$board_id" = "S88537EC1"]; then
     # Redmi 3S Don't have FP
     rm /system/bin/fingerprintd
     rm /system/bin/gx_fpcmd

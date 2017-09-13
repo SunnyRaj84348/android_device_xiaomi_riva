@@ -1,7 +1,8 @@
 # Camera
 PRODUCT_PACKAGES += \
     libshims_camera \
-    libshim_ims_camera
+    libshim_ims_camera \
+    Snap
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \

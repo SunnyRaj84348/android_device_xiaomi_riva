@@ -1,4 +1,4 @@
-# ADSP - from santoni
+# ADSP - from santoni (Redmi 4X)
 bin/adsprpcd
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
@@ -9,7 +9,7 @@ vendor/lib64/libadsprpc.so
 vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
 
-# ADSP modules - from santoni
+# ADSP modules - from santoni (Redmi 4X)
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
@@ -23,7 +23,7 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libscveTextReco_skel.so
 
-# Audio - from land
+# Audio
 etc/drc/drc_cfg_5.1.txt
 etc/drc/drc_cfg_AZ.txt
 etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
@@ -56,7 +56,7 @@ vendor/lib64/libaudioalsa.so
 vendor/lib64/libaudiodevarb.so
 vendor/lib64/libswvdec.so
 
-# Audio ACDB - from land
+# Audio ACDB
 etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
 etc/acdbdata/MTP/MTP_General_cal.acdb
 etc/acdbdata/MTP/MTP_Global_cal.acdb
@@ -79,26 +79,13 @@ etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 etc/acdbdata/QRD/QRD_Headset_cal.acdb
 etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 
-# Bluetooth - from santoni
+# Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init
-bin/wcnss_filter
 vendor/lib/libbtnv.so
 vendor/lib64/libbtnv.so
 
-# BT Firmware - from santoni
-etc/firmware/nvm_tlv.bin
-etc/firmware/nvm_tlv_1.3.bin
-etc/firmware/nvm_tlv_2.1.bin
-etc/firmware/nvm_tlv_3.0.bin
-etc/firmware/nvm_tlv_3.2.bin
-etc/firmware/rampatch_tlv.img
-etc/firmware/rampatch_tlv_1.3.tlv
-etc/firmware/rampatch_tlv_2.1.tlv
-etc/firmware/rampatch_tlv_3.0.tlv
-etc/firmware/rampatch_tlv_3.2.tlv
-
-# CNE - from santoni
+# CNE - from santoni (Redmi 4X)
 -priv-app/CNEService/CNEService.apk
 bin/cnd
 etc/cne/SwimConfig.xml
@@ -137,7 +124,7 @@ vendor/lib64/libvendorconn.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 
-# Camera - from land
+# Camera
 bin/mm-qcamera-daemon
 etc/camera/ofilm_s5k5e8_chromatix.xml
 etc/camera/ov13853_q13853a_chromatix.xml
@@ -290,7 +277,7 @@ vendor/lib/libts_face_beautify_hal.so
 vendor/lib/libtrueportrait.so
 vendor/lib/libubifocus.so
 
-# Camera actuators - from land
+# Camera actuators
 vendor/lib/libactuator_ad5816g.so
 vendor/lib/libactuator_ad5823.so
 vendor/lib/libactuator_bu64291gwz.so
@@ -307,7 +294,7 @@ vendor/lib/libactuator_dw9718s.so
 vendor/lib/libactuator_dw9763.so
 vendor/lib/libactuator_dw9763_ov13853.so
 
-# Camera chromatix - from land
+# Camera chromatix
 vendor/lib/libchromatix_ov5670_f5670bq_a3_default_preview.so
 vendor/lib/libchromatix_ov5670_f5670bq_a3_default_video.so
 vendor/lib/libchromatix_ov5670_f5670bq_a3_hfr_120.so
@@ -990,7 +977,7 @@ vendor/lib/libchromatix_s5k3m2xx_video_4k.so
 vendor/lib/libchromatix_s5k3m2xx_zsl_preview_ad5816g.so
 vendor/lib/libchromatix_s5k3m2xx_zsl_video_ad5816g.so
 
-# Camera firmware - from land
+# Camera firmware
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_10_0.fw
@@ -1001,7 +988,7 @@ etc/firmware/cpp_firmware_v1_5_2.fw
 etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
 
-# Camera sensors - from land
+# Camera sensors
 vendor/lib/libmmcamera_isp_wb40.so
 vendor/lib/libmmcamera_isp_abf40.so
 vendor/lib/libmmcamera_isp_bcc40.so
@@ -1037,14 +1024,14 @@ vendor/lib/libmmcamera_isp_fovcrop_viewfinder40.so
 vendor/lib/libmmcamera_isp_color_xform_encoder40.so
 vendor/lib/libmmcamera_isp_color_xform_viewfinder40.so
 
-# Charger - from santoni
+# Charger - from santoni (Redmi 4X)
 bin/hvdcp_opti
 
-# Consumer IR - from santoni
+# Consumer IR - from santoni (Redmi 4X)
 lib/hw/consumerir.default.so
 lib64/hw/consumerir.default.so
 
-# DPM - from santoni
+# DPM - from santoni (Redmi 4X)
 bin/dpmd
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
@@ -1064,7 +1051,7 @@ vendor/lib64/libdpmframework.so
 vendor/lib64/libdpmnsrm.so
 vendor/lib64/libdpmtcm.so
 
-# DRM - from santoni
+# DRM - from santoni (Redmi 4X)
 bin/qseecomd
 vendor/bin/qseeproxydaemon
 vendor/lib/libQSEEComAPI.so
@@ -1086,12 +1073,12 @@ vendor/lib64/libsecureuisvc_jni.so
 vendor/lib64/libssd.so
 vendor/lib64/libtzdrmgenprov.so
 
-# Display calibration - from land
+# Display calibration
 -etc/qdcm_calib_data_hx8394F_HD720p_video_BOE.xml
 -etc/qdcm_calib_data_ili9881c_HD720p_video_Tianma.xml
 -etc/qdcm_calib_data_nt35521s_HD720p_video_EBBG.xml
 
-# Fingerprint - from land
+# Fingerprint
 bin/gx_fpcmd
 bin/gx_fpd
 lib/hw/fingerprint.default.so:lib/hw/fingerprint.msm8937.so
@@ -1104,11 +1091,11 @@ lib64/libfp_client.so
 lib64/libfpservice.so
 lib64/libfpnav.so
 
-# Gatekeeper - from santoni
+# Gatekeeper - from santoni (Redmi 4X)
 vendor/lib/hw/gatekeeper.msm8937.so
 vendor/lib64/hw/gatekeeper.msm8937.so
 
-# GPS - from garlic
+# GPS - from garlic (YUREKA BLACK)
 -framework/com.qti.location.sdk.jar
 -framework/com.qualcomm.location.vzw_library.jar
 -framework/izat.xt.srv.jar
@@ -1153,7 +1140,7 @@ vendor/lib64/libxt_native.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 
-# Graphics - from santoni
+# Graphics - from santoni (Redmi 4X)
 -vendor/lib/libsdm-disp-apis.so
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/eglSubDriverAndroid.so
@@ -1244,7 +1231,7 @@ vendor/lib64/libsdm-diag.so
 vendor/lib64/libsdmextension.so
 vendor/lib64/libuiblur.so|4b3fabf5ded7c4af531abde681676fc5e9248494
 
-# Graphics firmware - from santoni
+# Graphics firmware - from santoni (Redmi 4X)
 etc/firmware/a530_gpmu.fw2
 etc/firmware/a530_pfp.fw
 etc/firmware/a530_pm4.fw
@@ -1255,16 +1242,16 @@ etc/firmware/a530v3_gpmu.fw2
 etc/firmware/a530v3_seq.fw2
 etc/firmware/a540_gpmu.fw2
 
-# Keystore - from santoni
+# Keystore - from santoni (Redmi 4X)
 vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8937.so
 
-# Listen - from santoni
+# Listen - from santoni (Redmi 4X)
 vendor/lib/hw/sound_trigger.primary.msm8937.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 
-# Media - from santoni
+# Media - from santoni (Redmi 4X)
 lib/libOmxVpp.so
 lib/libstagefright_soft_flacdec.so
 lib/libvpplibrary.so
@@ -1299,18 +1286,18 @@ vendor/lib64/libOmxQcelp13Dec.so
 vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libmmosal.so
 
-# Modem - from santoni
+# Modem - from santoni (Redmi 4X)
 vendor/lib/libwms.so
 vendor/lib64/libwms.so
 
-# Network - from santoni
+# Network - from santoni (Redmi 4X)
 -priv-app/QtiTetherService/QtiTetherService.apk
 vendor/lib/libconnctrl.so
 vendor/lib/libQtiTether.so
 vendor/lib64/libconnctrl.so
 vendor/lib64/libQtiTether.so
 
-# Perf - from santoni
+# Perf - from santoni (Redmi 4X)
 bin/iop
 bin/msm_irqbalance
 vendor/bin/perfd
@@ -1319,19 +1306,19 @@ vendor/lib/libqti-perfd-client.so
 vendor/lib64/libqti-iop-client.so
 vendor/lib64/libqti-perfd-client.so
 
-# Peripheral manager - from santoni
+# Peripheral manager - from santoni (Redmi 4X)
 bin/pm-proxy
 bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
-# Postprocessing - from santoni
+# Postprocessing - from santoni (Redmi 4X)
 framework/com.qti.snapdragon.sdk.display.jar
 vendor/bin/mm-pp-dpps
 vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
 
-# QMI - from garlic
+# QMI - from garlic (YUREKA BLACK)
 bin/ATFWD-daemon
 bin/irsc_util
 etc/permissions/qti_permissions.xml
@@ -1375,7 +1362,7 @@ vendor/lib/libqmiservices.so
 vendor/lib/libquipc_os_api.so
 vendor/lib/libsmemlog.so
 
-# Radio - from garlic
+# Radio - from garlic (YUREKA BLACK)
 -app/datastatusnotification/datastatusnotification.apk
 -app/fastdormancy/fastdormancy.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk
@@ -1410,7 +1397,7 @@ vendor/lib64/libsystem_health_mon.so
 vendor/lib/libmdmdetect.so
 vendor/qcril.db
 
-# Radio - IMS - from garlic
+# Radio - IMS - from garlic (YUREKA BLACK)
 -framework/imscmlibrary.jar
 -priv-app/ims/ims.apk|66fa3ab695d7be55a334cbee6e9c94d60089ac2a
 -vendor/app/imssettings/imssettings.apk
@@ -1445,7 +1432,7 @@ vendor/lib64/libimsmedia_jni.so
 vendor/lib64/librcc.so
 vendor/lib64/libvoice-svc.so
 
-# Radio - MBN - from land
+# Radio - MBN
 etc/firmware/modem_config/S88537AA1/cmcc_mcfg_sw.mbn
 etc/firmware/modem_config/S88537AA1/ct_mcfg_sw.mbn
 etc/firmware/modem_config/S88537AA1/cu_mcfg_sw.mbn
@@ -1461,7 +1448,7 @@ etc/firmware/modem_config/S88537CA1/row_mcfg_sw.mbn
 etc/firmware/modem_config/S88537EC1/reliance_mcfg_sw.mbn
 etc/firmware/modem_config/S88537EC1/row_mcfg_sw.mbn
 
-# Sensors - from santoni
+# Sensors - from santoni (Redmi 4X)
 bin/sensors.qcom
 vendor/lib/hw/activity_recognition.msm8937.so
 vendor/lib/libsensor1.so
@@ -1474,13 +1461,13 @@ vendor/lib64/libsensor_reg.so
 vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.ssc.so
 
-# Thermal - from santoni
+# Thermal - from santoni (Redmi 4X)
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services - from santoni
+# Time services - from santoni (Redmi 4X)
 -app/TimeService/TimeService.apk
 bin/time_daemon
 -vendor/lib/libtime_genoff.so
@@ -1488,10 +1475,10 @@ vendor/lib/libTimeService.so
 -vendor/lib64/libtime_genoff.so
 vendor/lib64/libTimeService.so
 
-# Widevine - from mido
+# Widevine - from oneplus3 (OnePlus3)
 vendor/lib/libWVStreamControlAPI_L3.so|61673304827483d44b735a3dd08f0783d10ce92d
 vendor/lib/libwvdrm_L3.so|7e77482481197997294a834bfbc817a01b6075cd
 vendor/lib/mediadrm/libwvdrmengine.so|70419ce1f8eb6bd3aa36234f8d7e8003569efc9c
 
-# Wi-Fi - from santoni
+# Wi-Fi - from santoni (Redmi 4X)
 bin/wcnss_service

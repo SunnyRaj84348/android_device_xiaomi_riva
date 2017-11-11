@@ -42,6 +42,10 @@ setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
 # Copyright headers and guards
 write_headers
 
+# Common QC blobs
+write_makefiles "$MY_DIR"/proprietary-files-qc.txt
+
+# Device blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt
 
 # Finish

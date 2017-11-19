@@ -531,10 +531,8 @@ vendor/lib64/libthermalioctl.so
 # Time services - from santoni (Redmi 4X)
 -app/TimeService/TimeService.apk
 bin/time_daemon:vendor/bin/time_daemon
--vendor/lib/libtime_genoff.so
-vendor/lib/libTimeService.so
--vendor/lib64/libtime_genoff.so
 vendor/lib64/libTimeService.so
+vendor/lib64/libtime_genoff.so
 
 # Widevine - from vince 8.1.0 OPM1.171019.019
 vendor/bin/hw/android.hardware.drm@1.0-service.widevine

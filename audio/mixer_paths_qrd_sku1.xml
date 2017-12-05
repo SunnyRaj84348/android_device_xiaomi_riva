@@ -291,6 +291,16 @@
         <path name="deep-buffer-playback bt-sco" />
     </path>
 
+    <path name="deep-buffer-playback speaker-and-bt-sco">
+         <path name="deep-buffer-playback bt-sco" />
+         <path name="deep-buffer-playback" />
+    </path>
+
+   <path name="deep-buffer-playback speaker-and-bt-sco-wb">
+        <path name="deep-buffer-playback bt-sco-wb" />
+        <path name="deep-buffer-playback" />
+   </path>
+
     <path name="deep-buffer-playback afe-proxy">
         <ctl name="AFE_PCM_RX Audio Mixer MultiMedia1" value="1" />
     </path>
@@ -325,6 +335,16 @@
         <path name="low-latency-playback bt-sco" />
     </path>
 
+    <path name="low-latency-playback speaker-and-bt-sco">
+         <path name="low-latency-playback bt-sco" />
+         <path name="low-latency-playback" />
+    </path>
+
+    <path name="low-latency-playback speaker-and-bt-sco-wb">
+         <path name="low-latency-playback bt-sco-wb" />
+         <path name="low-latency-playback" />
+    </path>
+
     <path name="low-latency-playback afe-proxy">
         <ctl name="AFE_PCM_RX Audio Mixer MultiMedia5" value="1" />
     </path>
@@ -356,6 +376,16 @@
     <path name="compress-offload-playback bt-sco-wb">
         <ctl name="Internal BTSCO SampleRate" value="BTSCO_RATE_16KHZ" />
         <path name="compress-offload-playback bt-sco" />
+    </path>
+
+    <path name="compress-offload-playback speaker-and-bt-sco">
+         <path name="compress-offload-playback bt-sco" />
+         <path name="compress-offload-playback" />
+    </path>
+
+    <path name="compress-offload-playback speaker-and-bt-sco-wb">
+         <path name="compress-offload-playback bt-sco-wb" />
+         <path name="compress-offload-playback" />
     </path>
 
     <path name="compress-offload-playback afe-proxy">
@@ -1014,6 +1044,16 @@
     </path>
 
     <path name="bt-sco-mic">
+    </path>
+
+    <path name="speaker-and-bt-sco">
+         <path name="speaker" />
+         <path name="bt-sco-headset" />
+    </path>
+
+    <path name="speaker-and-bt-sco-wb">
+         <path name="speaker" />
+         <path name="bt-sco-headset-wb" />
     </path>
 
     <path name="bt-sco-headset-wb">

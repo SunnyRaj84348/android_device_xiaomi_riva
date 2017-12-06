@@ -322,9 +322,10 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
-    init.qcom.early_boot.sh \
-    init.qcom.post_boot.sh \
     init.qcom.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.graphics.sh \
+    init.qcom.post_boot.sh \
     init.qcom.usb.sh
 
 # RenderScript

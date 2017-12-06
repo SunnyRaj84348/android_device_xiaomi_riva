@@ -398,41 +398,6 @@ case "$product" in
         *)
         ;;
 esac
-# Setup display nodes & permissions
-# HDMI can be fb1 or fb2
-# Loop through the sysfs nodes and determine
-# the HDMI(dtv panel)
-
-function set_perms() {
-    #Usage set_perms <filename> <ownership> <permission>
-    chown -h $2 $1
-    chmod $3 $1
-}
-
-# check for the type of driver FB or DRM
-fb_driver=/sys/class/graphics/fb0
-if [ -e "$fb_driver" ]
-then
-    # check for mdp caps
-    file=/sys/class/graphics/fb0/mdp/caps
-    if [ -f "$file" ]
-    then
-        setprop vendor.gralloc.disable_ubwc 1
-        cat $file | while read line; do
-          case "$line" in
-                    *"ubwc"*)
-                    setprop vendor.gralloc.enable_fb_ubwc 1
-                    setprop vendor.gralloc.disable_ubwc 0
-                esac
-        done
-    fi
-else
-    set_perms /sys/devices/virtual/hdcp/msm_hdcp/min_level_change system.graphics 0660
-fi
-
-# allow system_graphics group to access pmic secure_mode node
-set_perms /sys/class/lcd_bias/secure_mode system.graphics 0660
-set_perms /sys/class/leds/wled/secure_mode system.graphics 0660
 
 boot_reason=`cat /proc/sys/kernel/boot_reason`
 reboot_reason=`getprop ro.boot.alarmboot`

@@ -1,6 +1,6 @@
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_msm8937
 
 # Permissions
 PRODUCT_COPY_FILES += \

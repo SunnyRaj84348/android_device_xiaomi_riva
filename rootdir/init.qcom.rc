@@ -417,17 +417,14 @@ service gx_fpd /vendor/bin/gx_fpd
 on property:persist.sys.fp.vendor=switchf
     stop gx_fpd
     setprop persist.sys.fp.vendor searchf
-    start fingerprintd
     setprop ro.boot.fpsensor fpc
+    start fps_hal
 
 on property:persist.sys.fp.vendor=goodix
+    setprop persist.sys.fp.onstart 1
     setprop ro.boot.fpsensor gdx
-
-on property:persist.sys.fp.onstart=1
-    start fingerprintd
-
-on property:ro.boot.fpsensor=gdx
     setprop ro.hardware.fingerprint goodix
+    start fps_hal
 
 service time_daemon /vendor/bin/time_daemon
     class main

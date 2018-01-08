@@ -1,20 +1,18 @@
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl \
-    gps.msm8937 \
+    android.hardware.gnss@1.0-impl-qti \
     libcurl \
+    libgnss \
     libgnsspps
 
-PRODUCT_BOOT_JARS += \
-    com.qti.location.sdk
-
 PRODUCT_COPY_FILES += \
-    $(VENDOR_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
-    $(VENDOR_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
-    $(VENDOR_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
-    $(VENDOR_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
-    $(VENDOR_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
-    $(VENDOR_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
+    $(VENDOR_PATH)/gps/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
+    $(VENDOR_PATH)/gps/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
+    $(VENDOR_PATH)/gps/etc/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
+    $(VENDOR_PATH)/gps/etc/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
+    $(VENDOR_PATH)/gps/etc/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
+    $(VENDOR_PATH)/gps/etc/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
+    $(VENDOR_PATH)/gps/etc/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
 # Permissions
 PRODUCT_COPY_FILES += \

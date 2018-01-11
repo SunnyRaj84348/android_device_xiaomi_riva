@@ -2,7 +2,6 @@
 PRODUCT_PACKAGES += \
     camera.msm8937 \
     libshims_camera \
-    libshim_ims_camera \
     Snap
 
 # Properties

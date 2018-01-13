@@ -21,7 +21,7 @@ set -e
 DEVICE=land
 VENDOR=xiaomi
 
-INITIAL_COPYRIGHT_YEAR=2016
+INITIAL_COPYRIGHT_YEAR=2018
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"

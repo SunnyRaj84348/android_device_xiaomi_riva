@@ -342,9 +342,9 @@ vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
 vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
 
-# Peripheral manager - from santoni (Redmi 4X)
-bin/pm-proxy:vendor/bin/pm-proxy
-bin/pm-service:vendor/bin/pm-service
+# Peripheral manager - from vince 8.1.0 OPM1.171019.019
+vendor/bin/pm-proxy
+vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 

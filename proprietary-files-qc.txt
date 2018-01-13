@@ -318,14 +318,35 @@ vendor/lib64/libmmosal.so
 vendor/lib/libwms.so|7df491e58c43b1274e9e7ef540aa6d2b3c1dd0d0
 vendor/lib64/libwms.so|2a629122412cf6157945a629a8bb5d63292bf4df
 
-# Perf - from santoni (Redmi 4X)
-bin/iop:vendor/bin/iop
-bin/msm_irqbalance:vendor/bin/msm_irqbalance
-vendor/bin/perfd
-vendor/lib/libqti-iop-client.so
+# Perf - from TA-1025_00WW 8.1.0 OPR1.170623.026
+-lib/vendor.qti.hardware.iop@1.0.so
+lib/vendor.qti.hardware.perf@1.0.so
+-lib64/vendor.qti.hardware.iop@1.0.so
+lib64/vendor.qti.hardware.perf@1.0.so
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service
+vendor/bin/msm_irqbalance
+vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc
+vendor/etc/perf/perfboostsconfig.xml
+vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so
+vendor/lib/libfeedbackhandler.so
+vendor/lib/libperfgluelayer.so
+vendor/lib/libqti-iopd-client.so
+vendor/lib/libqti-iopd.so
 vendor/lib/libqti-perfd-client.so
-vendor/lib64/libqti-iop-client.so
+vendor/lib/libqti-perfd.so
+vendor/lib/libqti-util.so
+vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so
+vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so
+vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so
+vendor/lib64/libfeedbackhandler.so
+vendor/lib64/libperfgluelayer.so
+vendor/lib64/libqti-iopd-client.so
+vendor/lib64/libqti-iopd.so
 vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-perfd.so
+vendor/lib64/libqti-util.so
+vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so
+vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so
 
 # Peripheral manager - from santoni (Redmi 4X)
 bin/pm-proxy:vendor/bin/pm-proxy

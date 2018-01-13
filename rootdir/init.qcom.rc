@@ -281,13 +281,6 @@ service perfd /system/vendor/bin/perfd
     disabled
     socket perfd seqpacket 0666 root system
 
-service iop /vendor/bin/iop
-    class main
-    user root
-    group root
-    disabled
-    socket iop seqpacket 0666 root system
-
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
     # Reset read ahead for dm-0 and dm-1 to 512kb
@@ -419,7 +412,7 @@ service charger /charger
     group system graphics
     seclabel u:r:healthd:s0
 
-service msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
     class late_start
     user root
     group root

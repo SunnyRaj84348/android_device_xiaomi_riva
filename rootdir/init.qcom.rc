@@ -319,6 +319,7 @@ service rmt_storage /vendor/bin/rmt_storage
 service tftp_server /vendor/bin/tftp_server
     class main
     user root
+    group root system
     writepid /dev/cpuset/system-background/tasks
 
 service hciattach /vendor/bin/hci_qcomm_init -e

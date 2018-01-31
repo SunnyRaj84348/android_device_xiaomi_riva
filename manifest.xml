@@ -74,16 +74,18 @@
     <hal format="hidl">
         <name>android.hardware.drm</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>1.1</version>
         <interface>
             <name>ICryptoFactory</name>
             <instance>widevine</instance>
+            <instance>clearkey</instance>
             <instance>default</instance>
             <instance>widevine</instance>
         </interface>
         <interface>
             <name>IDrmFactory</name>
             <instance>widevine</instance>
+            <instance>clearkey</instance>
             <instance>default</instance>
             <instance>widevine</instance>
         </interface>

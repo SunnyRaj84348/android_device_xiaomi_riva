@@ -1,5 +1,5 @@
 # ADSP - from santoni (Redmi 4X)
-bin/adsprpcd
+bin/adsprpcd:vendor/bin/adsprpcd
 vendor/lib/libadsp_default_listener.so
 vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
@@ -59,7 +59,7 @@ vendor/lib64/soundfx/libqcvirt.so
 
 # CNE - from santoni (Redmi 4X)
 -priv-app/CNEService/CNEService.apk
-bin/cnd
+bin/cnd:vendor/bin/cnd
 etc/cne/SwimConfig.xml
 etc/cne/andsfCne.xml
 etc/cne/wqeclient/ATT/ATT_profile1.xml
@@ -97,14 +97,14 @@ vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 
 # Charger - from santoni (Redmi 4X)
-bin/hvdcp_opti
+bin/hvdcp_opti:vendor/bin/hvdcp_opti
 
 # Consumer IR - from santoni (Redmi 4X)
 lib/hw/consumerir.default.so
 lib64/hw/consumerir.default.so
 
 # DPM - from santoni (Redmi 4X)
-bin/dpmd
+bin/dpmd:vendor/bin/dpmd
 etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
@@ -124,7 +124,7 @@ vendor/lib64/libdpmnsrm.so
 vendor/lib64/libdpmtcm.so
 
 # DRM - from santoni (Redmi 4X)
-bin/qseecomd
+bin/qseecomd:vendor/bin/qseecomd
 vendor/bin/qseeproxydaemon
 vendor/lib/libQSEEComAPI.so
 vendor/lib/libcppf.so
@@ -156,10 +156,10 @@ vendor/lib64/hw/gatekeeper.msm8937.so
 -lib64/libloc_api_v02.so
 -lib64/libloc_ds_api.so
 -priv-app/com.qualcomm.location/com.qualcomm.location.apk
-bin/loc_launcher
-bin/lowi-server
-bin/xtwifi-client
-bin/xtwifi-inet-agent
+bin/loc_launcher:vendor/bin/loc_launcher
+bin/lowi-server:vendor/bin/lowi-server
+bin/xtwifi-client:vendor/bin/xtwifi-client
+bin/xtwifi-inet-agent:vendor/bin/xtwifi-inet-agent
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.vzw_library.xml
 etc/permissions/com.qualcomm.location.xml
@@ -348,8 +348,8 @@ vendor/lib64/libconnctrl.so
 vendor/lib64/libQtiTether.so
 
 # Perf - from santoni (Redmi 4X)
-bin/iop
-bin/msm_irqbalance
+bin/iop:vendor/bin/iop
+bin/msm_irqbalance:vendor/bin/msm_irqbalance
 vendor/bin/perfd
 vendor/lib/libqti-iop-client.so
 vendor/lib/libqti-perfd-client.so
@@ -357,8 +357,8 @@ vendor/lib64/libqti-iop-client.so
 vendor/lib64/libqti-perfd-client.so
 
 # Peripheral manager - from santoni (Redmi 4X)
-bin/pm-proxy
-bin/pm-service
+bin/pm-proxy:vendor/bin/pm-proxy
+bin/pm-service:vendor/bin/pm-service
 vendor/lib/libperipheral_client.so
 vendor/lib64/libperipheral_client.so
 
@@ -369,8 +369,8 @@ vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
 
 # QMI - from santoni (Redmi 4X)
-bin/ATFWD-daemon
-bin/irsc_util
+bin/ATFWD-daemon:vendor/bin/ATFWD-daemon
+bin/irsc_util:vendor/bin/irsc_util
 etc/permissions/qti_permissions.xml
 vendor/lib64/lib_rsu.so
 vendor/lib64/libdiag.so
@@ -422,10 +422,10 @@ vendor/lib/libsmemlog.so
 -framework/qti-telephony-common.jar|6a8b6e3b0240429bc9b947bcc4246c837aff06f1
 -framework/QtiTelephonyServicelibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-bin/netmgrd
-bin/radish
-bin/rmt_storage
-bin/tftp_server
+bin/netmgrd:vendor/bin/netmgrd
+bin/radish:vendor/bin/radish
+bin/rmt_storage:vendor/bin/rmt_storage
+bin/tftp_server:vendor/bin/tftp_server
 etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
 etc/permissions/embms.xml
@@ -452,10 +452,10 @@ vendor/qcril.db
 -vendor/app/ims/ims.apk
 -vendor/app/imssettings/imssettings.apk
 -vendor/framework/qti-vzw-ims-internal.jar
-bin/ims_rtp_daemon
-bin/imscmservice
-bin/imsdatadaemon
-bin/imsqmidaemon
+bin/ims_rtp_daemon:vendor/bin/ims_rtp_daemon
+bin/imscmservice:vendor/bin/imscmservice
+bin/imsdatadaemon:vendor/bin/imsdatadaemon
+bin/imsqmidaemon:vendor/bin/imsqmidaemon
 etc/permissions/imscm.xml
 etc/permissions/qti-vzw-ims-internal.xml
 vendor/lib64/lib-dplmedia.so
@@ -483,7 +483,7 @@ vendor/lib64/librcc.so
 vendor/lib64/libvoice-svc.so
 
 # Sensors - from santoni (Redmi 4X)
-bin/sensors.qcom
+bin/sensors.qcom:vendor/bin/sensors.qcom
 vendor/lib/hw/activity_recognition.msm8937.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
@@ -503,7 +503,7 @@ vendor/lib64/libthermalioctl.so
 
 # Time services - from santoni (Redmi 4X)
 -app/TimeService/TimeService.apk
-bin/time_daemon
+bin/time_daemon:vendor/bin/time_daemon
 -vendor/lib/libtime_genoff.so
 vendor/lib/libTimeService.so
 -vendor/lib64/libtime_genoff.so
@@ -515,4 +515,4 @@ vendor/lib/libwvdrm_L3.so|7e77482481197997294a834bfbc817a01b6075cd
 vendor/lib/mediadrm/libwvdrmengine.so|70419ce1f8eb6bd3aa36234f8d7e8003569efc9c
 
 # Wi-Fi - from santoni (Redmi 4X)
-bin/wcnss_service
+bin/wcnss_service:vendor/bin/wcnss_service

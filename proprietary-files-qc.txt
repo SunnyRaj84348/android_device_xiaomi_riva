@@ -268,9 +268,9 @@ vendor/firmware/a530v2_seq.fw2
 vendor/firmware/a530v3_gpmu.fw2
 vendor/firmware/a530v3_seq.fw2
 
-# Keystore - from santoni (Redmi 4X)
-vendor/lib/hw/keystore.msm8937.so
-vendor/lib64/hw/keystore.msm8937.so
+# Keystore - from vince 8.1.0 OPM1.171019.019
+vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8937.so
+vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so
 
 # Listen - from santoni (Redmi 4X)
 vendor/lib/hw/sound_trigger.primary.msm8937.so
@@ -511,17 +511,17 @@ vendor/lib64/lib-uceservice.so|3d782c0bbcc3727541ffa63a887060cdf559d916
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|f6113715ce15dd8c1400d8017e0e033b75e0faf3
 vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so|cda7a4da8436db7a71496fbc6b75136d99af0658
 
-# Sensors - from santoni (Redmi 4X)
-bin/sensors.qcom:vendor/bin/sensors.qcom
-vendor/lib/hw/activity_recognition.msm8937.so
+# Sensors - from vince 8.1.0 OPM1.171019.019
+vendor/bin/sensors.qcom
+vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
-vendor/lib/sensor_calibrate.so
+vendor/lib/libsensor_user_cal.so
 vendor/lib/sensors.ssc.so
-vendor/lib64/hw/activity_recognition.msm8937.so
+vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so
 vendor/lib64/libsensor1.so
 vendor/lib64/libsensor_reg.so
-vendor/lib64/sensor_calibrate.so
+vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 
 # Thermal - from santoni (Redmi 4X)

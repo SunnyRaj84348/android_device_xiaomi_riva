@@ -277,36 +277,39 @@ vendor/lib/hw/sound_trigger.primary.msm8937.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 
-# Media - from santoni (Redmi 4X)
-lib/libOmxVpp.so
-lib/libstagefright_soft_flacdec.so
-lib/libvpplibrary.so
-lib64/libstagefright_soft_flacdec.so
-lib64/libvpplibrary.so
-vendor/lib/libAlacSwDec.so
-vendor/lib/libApeSwDec.so
-vendor/lib/libFlacSwDec.so
+# Media - from vince 8.1.0 OPM1.171019.019
+-vendor/lib/libgpustats.so
+vendor/lib/libI420colorconvert.so
+vendor/lib/libmm-color-convertor.so
 vendor/lib/libOmxAacDec.so
 vendor/lib/libOmxAlacDec.so
 vendor/lib/libOmxAlacDecSw.so
+vendor/lib/libOmxAmrDec.so
 vendor/lib/libOmxAmrwbplusDec.so
 vendor/lib/libOmxApeDec.so
 vendor/lib/libOmxApeDecSw.so
 vendor/lib/libOmxEvrcDec.so
-vendor/lib/libOmxMux.so
 vendor/lib/libOmxQcelp13Dec.so
+vendor/lib/libOmxVideoDSMode.so
+vendor/lib/libOmxVpp.so
 vendor/lib/libOmxWmaDec.so
-vendor/lib/libmmosal.so
-vendor/lib/libmmsw_detail_enhancement.so
-vendor/lib/libmmsw_math.so
-vendor/lib/libmmsw_opencl.so
-vendor/lib/libmmsw_platform.so
+vendor/lib/libvpplibrary.so
 vendor/lib/libvqzip.so
-vendor/lib64/libFlacSwDec.so
+-vendor/lib64/libgpustats.so
+vendor/lib64/libI420colorconvert.so
+vendor/lib64/libmm-color-convertor.so
 vendor/lib64/libOmxAacDec.so
+vendor/lib64/libOmxAlacDec.so
+vendor/lib64/libOmxAlacDecSw.so
+vendor/lib64/libOmxAmrDec.so
+vendor/lib64/libOmxAmrwbplusDec.so
+vendor/lib64/libOmxApeDec.so
+vendor/lib64/libOmxApeDecSw.so
 vendor/lib64/libOmxEvrcDec.so
 vendor/lib64/libOmxQcelp13Dec.so
-vendor/lib64/libmmosal.so
+vendor/lib64/libOmxVpp.so
+vendor/lib64/libOmxWmaDec.so
+vendor/lib64/libvpplibrary.so
 
 # Modem - from tissot - OPR1.170623.026
 vendor/lib/libwms.so|7df491e58c43b1274e9e7ef540aa6d2b3c1dd0d0

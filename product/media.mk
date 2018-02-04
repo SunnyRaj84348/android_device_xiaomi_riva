@@ -11,8 +11,12 @@ PRODUCT_COPY_FILES += \
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    mm.enable.smoothstreaming=true \
+    drm.service.enabled=true \
     media.aac_51_output_enabled=true \
+    mm.enable.smoothstreaming=true \
+    vendor.audio.hw.aac.encoder=true \
+    vendor.vidc.disable.split.mode=1 \
+    vendor.vidc.enc.disable.pq=true \
+    vendor.vidc.enc.disable_bframes=1 \
     vidc.enc.narrow.searchrange=1 \
-    vidc.disable.split.mode=1 \
-    drm.service.enabled=true
+    vidc.disable.split.mode=1

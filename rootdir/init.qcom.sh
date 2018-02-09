@@ -1,5 +1,5 @@
 #!/system/bin/sh
-# Copyright (c) 2009-2015, The Linux Foundation. All rights reserved.
+# Copyright (c) 2009-2017, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -30,6 +30,12 @@
 chown -LR system.system /proc/touchpanel
 
 #
+# Copy qcril.db if needed for RIL
+#
+start_copying_prebuilt_qcril_db
+echo 1 > /data/misc/radio/db_check_done
+
+#
 # Make modem config folder and copy firmware config to that folder for RIL
 #
 if [ -f /data/misc/radio/ver_info.txt ]; then
@@ -39,7 +45,7 @@ else
 fi
 
 cur_version_info=`cat /firmware/verinfo/ver_info.txt`
-if [ "$prev_version_info" != "$cur_version_info" ]; then
+if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_version_info" ]; then
     rm -rf /data/misc/radio/modem_config
     mkdir /data/misc/radio/modem_config
     chmod 770 /data/misc/radio/modem_config
@@ -48,4 +54,6 @@ if [ "$prev_version_info" != "$cur_version_info" ]; then
     cp /firmware/verinfo/ver_info.txt /data/misc/radio/ver_info.txt
     chown radio.radio /data/misc/radio/ver_info.txt
 fi
+cp /firmware/image/modem_pr/mbn_ota.txt /data/misc/radio/modem_config
+chown radio.radio /data/misc/radio/modem_config/mbn_ota.txt
 echo 1 > /data/misc/radio/copy_complete

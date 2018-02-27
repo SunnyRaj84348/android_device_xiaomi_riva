@@ -2,14 +2,17 @@
 # The filesystem that contains the filesystem e2fsck binary (typically /system) cannot
 # specify 'check', and must come before any filesystems that do specify 'check'
 
-# NOTE: /system partition is now early-mounted and the fstab entry is specified in device tree:
-#       /proc/device-tree/firmware/android/fstab/system
+# NOTE: /system and /vendor (/cust mounted as /vendor) partitions are now early-mounted and the fstab entry is specified in device tree (duplicated below for recovery image purposes only):
+ #       /proc/device-tree/firmware/android/fstab/system
+ #       /proc/device-tree/firmware/android/fstab/vendor
 
 #<src>                                       <mnt_point>        <type>  <mnt_flags and options>                             <fs_mgr_flags>
 /dev/block/bootdevice/by-name/boot           /boot              emmc    defaults                                            defaults
 /dev/block/bootdevice/by-name/recovery       /recovery          emmc    defaults                                            defaults
 /dev/block/bootdevice/by-name/userdata       /data              f2fs    rw,nosuid,nodev,noatime                             wait,formattable,check,encryptable=footer
 /dev/block/bootdevice/by-name/userdata       /data              ext4    rw,nosuid,nodev,noatime,noauto_da_alloc             wait,formattable,check,encryptable=footer
+/dev/block/bootdevice/by-name/system         /system            ext4    ro,barrier=1                                        wait,recoveryonly
+/dev/block/bootdevice/by-name/cust           /vendor            ext4    ro,barrier=1                                        wait,recoveryonly
 /dev/block/bootdevice/by-name/cache          /cache             f2fs    nosuid,nodev,noatime,inline_xattr                   wait,formattable,check
 /dev/block/bootdevice/by-name/cache          /cache             ext4    nosuid,nodev,noatime                                wait,formattable,check
 /dev/block/bootdevice/by-name/persist        /persist           ext4    nosuid,nodev                                        wait,check

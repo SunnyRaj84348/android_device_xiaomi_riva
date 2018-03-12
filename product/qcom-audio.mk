@@ -21,7 +21,7 @@ PRODUCT_COPY_FILES += \
 	$(VENDOR_PATH)/audio/mixer_paths_qrd_sku1.xml:system/etc/mixer_paths_qrd_sku1.xml \
 	$(VENDOR_PATH)/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
 	$(VENDOR_PATH)/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
-        $(VENDOR_PATH)/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt
+        $(VENDOR_PATH)/audio/audio_tuning_mixer.txt:system/etc/audio_tuning_mixer.txt
 
 # XML Audio configuration files
 PRODUCT_COPY_FILES += \

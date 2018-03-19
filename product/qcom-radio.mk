@@ -1,6 +1,6 @@
 # IRSC
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/configs/sec_config:system/etc/sec_config
+    $(VENDOR_PATH)/configs/sec_config:system/etc/sec_config
 
 # Permissions
 PRODUCT_COPY_FILES += \

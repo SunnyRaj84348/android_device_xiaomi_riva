@@ -14,10 +14,15 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/land
+VENDOR_PATH := device/xiaomi/msm8937-common
 
-# Inherit device-specific board fragments
-include $(DEVICE_PATH)/board/*.mk
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(VENDOR_PATH)/overlay \
+    $(VENDOR_PATH)/overlay-lineage
 
-# Inherit the proprietary files
--include vendor/xiaomi/land/BoardConfigVendor.mk
+# Include device-specific product fragments
+include $(VENDOR_PATH)/product/*.mk
+
+# Inherit common proprietary files
+$(call inherit-product-if-exists, vendor/xiaomi/msm8937-common/msm8937-common-vendor.mk)

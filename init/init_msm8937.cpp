@@ -35,12 +35,14 @@
 #include <string.h>
 #include <sys/sysinfo.h>
 
-#include <android-base/strings.h> 
+#include <android-base/strings.h>
 
 #include "vendor_init.h"
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
+
+#include "init_msm8937.h"
 
 using android::base::Trim;
 
@@ -50,6 +52,9 @@ char const *heapsize;
 char const *heapminfree;
 char const *heapmaxfree;
 char const *large_cache_height;
+
+__attribute__ ((weak))
+void init_target_properties() {}
 
 static void init_alarm_boot_properties()
 {
@@ -112,19 +117,6 @@ void check_device()
 
 void vendor_load_properties()
 {
-    std::ifstream fin;
-    std::string buf;
-
-    std::string product = property_get("ro.product.name");
-    if (product.find("land") == std::string::npos)
-        return;
-
-    fin.open("/proc/cmdline");
-    while (std::getline(fin, buf, ' '))
-        if (buf.find("board_id") != std::string::npos)
-            break;
-    fin.close();
-
     init_alarm_boot_properties();
     check_device();
 
@@ -147,23 +139,5 @@ void vendor_load_properties()
     property_set("ro.hwui.text_large_cache_width", "2048");
     property_set("ro.hwui.text_large_cache_height", large_cache_height);
 
-    if (buf.find("S88537AA1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537AA1_V080_M20_MP_XM");
-    } else if (buf.find("S88537AB1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537AB1_V080_M20_MP_XM");
-    } else if (buf.find("S88537AC1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537AC1_V080_M20_MP_XM");
-    } else if (buf.find("S88537BA1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537BA1_V080_M20_MP_XM");
-    } else if (buf.find("S88537CA1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537CA1_V080_M20_MP_XM");
-    } else if (buf.find("S88537EC1") != std::string::npos) {
-        property_set("ro.build.display.wtid", "SW_S88537EC1_V080_M20_MP_XM");
-    }
-
-    if (buf.find("S88537AB1") != std::string::npos) {
-        property_set("ro.product.model", "Redmi 3X");
-    } else {
-        property_set("ro.product.model", "Redmi 3S");
-    }
+    init_target_properties();
 }

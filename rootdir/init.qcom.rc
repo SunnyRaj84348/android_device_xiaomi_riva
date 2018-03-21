@@ -279,7 +279,7 @@ service graphics-sh /vendor/bin/init.qcom.graphics.sh
     disabled
     oneshot
 
-service sensors /vendor/bin/sensors.qcom
+service vendor.sensors /vendor/bin/sensors.qcom
     class core
     user root
     group root

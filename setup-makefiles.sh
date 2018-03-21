@@ -40,7 +40,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" true
 
 # Copyright headers and guards
-write_headers "land"
+write_headers "land santoni"
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt

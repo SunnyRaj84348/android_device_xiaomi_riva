@@ -32,32 +32,6 @@ on enable-low-power
 
     # HMP Task packing settings
     write /proc/sys/kernel/sched_small_task 20
-    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu4/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu5/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu6/sched_mostly_idle_load 30
-    write /sys/devices/system/cpu/cpu7/sched_mostly_idle_load 30
-
-    write /sys/devices/system/cpu/cpu0/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu1/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu2/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu3/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu4/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu5/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu6/sched_mostly_idle_nr_run 3
-    write /sys/devices/system/cpu/cpu7/sched_mostly_idle_nr_run 3
-
-    write /sys/devices/system/cpu/cpu0/sched_prefer_idle 0
-    write /sys/devices/system/cpu/cpu1/sched_prefer_idle 0
-    write /sys/devices/system/cpu/cpu2/sched_prefer_idle 0
-    write /sys/devices/system/cpu/cpu3/sched_prefer_idle 0
-    write /sys/devices/system/cpu/cpu4/sched_prefer_idle 0
-    write /sys/devices/system/cpu/cpu5/sched_prefer_idle 0
-    write /sys/devices/system/cpu/cpu6/sched_prefer_idle 0
-    write /sys/devices/system/cpu/cpu7/sched_prefer_idle 0
 
     write /sys/class/devfreq/soc:qcom,cpubw/governor bw_hwmon
     write /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/io_percent 20
@@ -76,7 +50,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "1 960000:85 1094400:90 1344000:80"
     write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
-    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/sampling_down_factor 40000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 960000
 
     # Enable governor for power cluster
@@ -89,7 +62,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy 0
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads "1 768000:90"
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time 40000
-    write /sys/devices/system/cpu/cpu4/cpufreq/interactive/sampling_down_factor 40000
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 768000
 
     # Disable L2-GDHS low power modes
@@ -106,9 +78,6 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu5/online 1
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
-
-    # Enable power_efficient workqueue
-    write /sys/module/workqueue/parameters/power_efficient 1
 
     # Enable low power modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0

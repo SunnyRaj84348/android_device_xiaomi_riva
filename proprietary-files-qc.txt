@@ -368,7 +368,7 @@ vendor/bin/mm-pp-dpps
 vendor/lib/libdisp-aba.so
 vendor/lib64/libdisp-aba.so
 
-# QMI - from garlic (YUREKA BLACK)
+# QMI - from santoni (Redmi 4X)
 bin/ATFWD-daemon
 bin/irsc_util
 etc/permissions/qti_permissions.xml
@@ -412,14 +412,14 @@ vendor/lib/libqmiservices.so
 vendor/lib/libquipc_os_api.so
 vendor/lib/libsmemlog.so
 
-# Radio - from garlic (YUREKA BLACK)
+# Radio - from santoni (Redmi 4X)
 -app/datastatusnotification/datastatusnotification.apk
 -app/fastdormancy/fastdormancy.apk
 -app/QtiTelephonyService/QtiTelephonyService.apk
 -app/shutdownlistener/shutdownlistener.apk
 -framework/embmslibrary.jar
 -framework/qcrilhook.jar
--framework/qti-telephony-common.jar|37d692fb171d0ee3269676a9e9998d2e3bfd9488
+-framework/qti-telephony-common.jar|6a8b6e3b0240429bc9b947bcc4246c837aff06f1
 -framework/QtiTelephonyServicelibrary.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 bin/netmgrd
@@ -447,9 +447,9 @@ vendor/lib64/libsystem_health_mon.so
 vendor/lib/libmdmdetect.so
 vendor/qcril.db
 
-# Radio - IMS - from garlic (YUREKA BLACK)
+# Radio - IMS - from santoni (Redmi 4X)
 -framework/imscmlibrary.jar
--priv-app/ims/ims.apk|66fa3ab695d7be55a334cbee6e9c94d60089ac2a
+-vendor/app/ims/ims.apk
 -vendor/app/imssettings/imssettings.apk
 -vendor/framework/qti-vzw-ims-internal.jar
 bin/ims_rtp_daemon

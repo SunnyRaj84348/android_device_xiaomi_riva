@@ -22,6 +22,14 @@ vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so|b9f68e320d24e9c51871a20
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|3e9c52069ff07e50191d3b3afb33b30409241ab6
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 
+# ANT+
+lib64/com.qualcomm.qti.ant@1.0.so
+-lib64/libantradio.so
+lib/com.qualcomm.qti.ant@1.0.so
+-lib/libantradio.so
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
+vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
+
 # Alarm - from tissot 8.1.0 OPM1.171019.026
 etc/permissions/vendor-qti-hardware-alarm.xml:vendor/etc/permissions/vendor-qti-hardware-alarm.xml|99ea2b3abffc975fb9875b5b3befabfb6eead7b9
 -vendor/app/PowerOffAlarm/PowerOffAlarm.apk|ef2832a5261078eb6f9444b7939b1aa819849736

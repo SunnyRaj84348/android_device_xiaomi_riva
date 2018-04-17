@@ -110,6 +110,10 @@ on boot
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
 
+    # DT2W
+    chmod 0660 /proc/gesture/onoff
+    chown system system /proc/gesture/onoff
+
     # IR blaster
     chown root system /sys/class/leds/infrared/transmit
     chown root system /sys/class/leds/infrared/brightness

@@ -130,6 +130,10 @@ TARGET_PROVIDES_LIBLIGHT := true
 # Lineage Hardware
 BOARD_HARDWARE_CLASS += $(VENDOR_PATH)/lineagehw
 
+# Tap2Wake
+
+TARGET_TAP_TO_WAKE_NODE := "/proc/gesture/onoff"
+
 # Malloc
 MALLOC_SVELTE := true
 

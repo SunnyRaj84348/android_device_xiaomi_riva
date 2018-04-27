@@ -305,7 +305,7 @@ on property:hw.fm.init=1
 service vendor.netmgrd /vendor/bin/netmgrd
     class main
 
-service qti /vendor/bin/qti
+service vendor.dataqti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 usb

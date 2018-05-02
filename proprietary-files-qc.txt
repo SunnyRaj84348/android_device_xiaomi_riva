@@ -414,6 +414,7 @@ etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
 -framework/qcrilhook.jar|cb56e114f8f8ecf1c7ea5f35107bafc6bf49a194
 -framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|f313f243661c8e516ecc6a5785e8f0829daedb1c
+vendor/bin/ATFWD-daemon|9778a62bb94f9eeb49190908bb9b74060acd4fa6
 vendor/bin/netmgrd|748b87d905aa6727e812694de559e54b958f3832
 vendor/bin/qti|a67280f22725799c47d78e07570d9e173e6624f1
 vendor/bin/rmt_storage|5b821f0aa673febf158892a6c8ec97a35817f876

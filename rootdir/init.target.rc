@@ -49,6 +49,13 @@ on post-fs-data
     mkdir /data/misc/hbtp 0750 system system
     mkdir /data/misc/dts 0770 media audio
 
+on boot
+    # USB controller configuration
+    setprop vendor.usb.rndis.func.name "rndis"
+    setprop vendor.usb.rmnet.func.name "rmnet_bam"
+    setprop vendor.usb.rmnet.inst.name "rmnet_bam_dmux"
+    setprop vendor.usb.dpl.inst.name "dpl_bam_dmux"
+
 # Start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class main

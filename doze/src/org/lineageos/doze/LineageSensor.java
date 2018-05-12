@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.doze;
+package org.lineageos.doze;
 
 import android.content.Context;
 import android.content.Intent;
@@ -24,10 +24,10 @@ import android.hardware.SensorManager;
 import android.os.UserHandle;
 import android.util.Log;
 
-public abstract class CMSensor {
+public abstract class LineageSensor {
 
     private static final boolean DEBUG = false;
-    private static final String TAG = CMSensor.class.getSimpleName();
+    private static final String TAG = LineageSensor.class.getSimpleName();
 
     private static final String DOZE_INTENT = "com.android.systemui.doze.pulse";
     private static final int BATCH_LATENCY_IN_MS = 100;
@@ -48,7 +48,7 @@ public abstract class CMSensor {
         }
     };
 
-    CMSensor(Context context, int type) {
+    LineageSensor(Context context, int type) {
         mContext = context;
         mSensorManager = (SensorManager) mContext.getSystemService(Context.SENSOR_SERVICE);
         mSensor = mSensorManager.getDefaultSensor(type);

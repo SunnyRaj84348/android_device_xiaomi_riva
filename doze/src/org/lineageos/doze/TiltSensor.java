@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.cyanogenmod.doze;
+package org.lineageos.doze;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -21,7 +21,7 @@ import android.hardware.SensorEvent;
 import android.os.SystemClock;
 import android.util.Log;
 
-public class TiltSensor extends CMSensor {
+public class TiltSensor extends LineageSensor {
 
     private static final int MIN_PULSE_INTERVAL_MS = 2500;
 

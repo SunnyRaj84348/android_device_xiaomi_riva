@@ -314,8 +314,6 @@ on property:hw.fm.init=1
 
 service netmgrd /vendor/bin/netmgrd
     class main
-    user root
-    group root wifi wakelock radio inet
     writepid /dev/cpuset/system-background/tasks
 
 service qti /vendor/bin/qti

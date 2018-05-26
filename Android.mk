@@ -72,32 +72,6 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 
-GOODIX_IMAGES := \
-    goodixfp.b00 goodixfp.b01 goodixfp.b02 goodixfp.b03 \
-    goodixfp.b04 goodixfp.b05 goodixfp.b06 goodixfp.mdt
-
-GOODIX_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(GOODIX_IMAGES)))
-$(GOODIX_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Goodix firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(GOODIX_SYMLINKS)
-
-FPC_IMAGES := \
-    fpcta.b00 fpcta.b01 fpcta.b02 fpcta.b03 \
-    fpcta.b04 fpcta.b05 fpcta.b06 fpcta.mdt
-
-FPC_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FPC_IMAGES)))
-$(FPC_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Fpc firmware link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /firmware/image/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FPC_SYMLINKS)
-
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating RFS MSM ADSP folder structure: $@"

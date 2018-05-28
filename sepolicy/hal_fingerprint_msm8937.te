@@ -1,0 +1,27 @@
+type hal_fingerprint_msm8937, domain, binder_in_vendor_violators;
+hal_server_domain(hal_fingerprint_msm8937, hal_fingerprint)
+ 
+type hal_fingerprint_msm8937_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_fingerprint_msm8937)
+
+binder_use(hal_fingerprint_msm8937)
+add_service(hal_fingerprint_msm8937, hal_fingerprint_msm8937_service)
+binder_call(hal_fingerprint_msm8937, gx_fpd)
+
+allow hal_fingerprint_msm8937 gx_fpd_service:service_manager find;
+
+allow gx_fpd hal_fingerprint_msm8937:binder call;
+
+allow hal_fingerprint_msm8937 fingerprint_service:service_manager find;
+allow hal_fingerprint_msm8937 keystore_service:service_manager find;
+
+allow hal_fingerprint_msm8937 fpc_sysfs:file rw_file_perms;
+allow hal_fingerprint_msm8937 fpc_sysfs:dir rw_dir_perms;
+allow hal_fingerprint_msm8937 tee_device:chr_file rw_file_perms;
+allow hal_fingerprint_msm8937 uhid_device:chr_file rw_file_perms;
+allow hal_fingerprint_msm8937 fpc_data_file:dir rw_dir_perms;
+allow hal_fingerprint_msm8937 fpc_data_file:sock_file create_file_perms;
+
+r_dir_file(hal_fingerprint_msm8937, firmware_file)
+
+use_keystore(hal_fingerprint_msm8937)

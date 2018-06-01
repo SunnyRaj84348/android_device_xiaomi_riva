@@ -49,8 +49,9 @@ vendor/lib64/soundfx/libqcvirt.so
 
 # Bluetooth - from tissot - OPR1.170623.026
 vendor/bin/hci_qcomm_init
-vendor/lib64/libbtnv.so
 vendor/lib/libbtnv.so
+vendor/lib64/libbtnv.so
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
 # CNE - from vince 8.1.0 OPM1.171019.019
 etc/cne/andsfCne.xml

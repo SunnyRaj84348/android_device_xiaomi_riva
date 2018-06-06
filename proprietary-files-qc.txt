@@ -412,6 +412,12 @@ vendor/lib64/libqmi.so|8ef0d8398863b95e5b1e1a93ae2c70dddd314054
 vendor/lib64/libqmiservices.so|d0e960626c0819113bfc023dd704523867091c77
 vendor/lib64/libsmemlog.so|512653d3d9563fda55acb84d76006c298eb78ba2
 
+# QTEE - from vince 8.1.0 OPM1.171019.019
+vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service
+vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
+
 # Radio - from tissot - OPR1.170623.026
 -app/QtiTelephonyService/QtiTelephonyService.apk|7d7104c26c7c1e9487d9c41d48f0e0348135cb61
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5

@@ -106,8 +106,8 @@ vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so
 
-# Charger - from santoni (Redmi 4X)
-bin/hvdcp_opti:vendor/bin/hvdcp_opti
+# Charger - from vince 8.1.0 OPM1.171019.019
+vendor/bin/hvdcp_opti
 
 # Consumer IR - from santoni (Redmi 4X)
 lib/hw/consumerir.default.so

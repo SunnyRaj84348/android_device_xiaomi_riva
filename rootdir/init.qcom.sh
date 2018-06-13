@@ -58,7 +58,7 @@ if [ ! -f /firmware/verinfo/ver_info.txt -o "$prev_version_info" != "$cur_versio
     chown -hR radio.root /data/vendor/modem_config/*
 fi
 chmod g-w /data/vendor/modem_config
-setprop ro.runtime.mbn_copy_completed 1
+setprop ro.vendor.ril.mbn_copy_completed 1
 
 # Grep the modem partition for baseband version and set it
 setprop gsm.version.baseband `strings /firmware/image/modem.b12 | grep "^MPSS.JO." | head -1`

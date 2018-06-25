@@ -403,3 +403,9 @@ service time_daemon /vendor/bin/time_daemon
     class main
     user root
     group root
+
+on property:init.svc.media=restarting
+    restart qcamerasvr
+
+on property:init.svc.servicemanager=restarting
+    restart qcamerasvr

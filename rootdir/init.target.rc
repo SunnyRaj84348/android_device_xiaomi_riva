@@ -28,10 +28,7 @@
 #
 
 on early-init
-    mkdir /firmware 0771 system system
-    mkdir /system 0777 root root
     symlink /data/tombstones /tombstones
-    mkdir /dsp 0771 media media
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -43,7 +40,6 @@ on fs
     write /proc/sys/vm/swappiness 100
 
     mkdir /persist/data 0700 system system
-    mkdir /persist/bms 0700 root system
     restorecon_recursive /persist
 
 on post-fs-data
@@ -71,7 +67,7 @@ service qseecomd /vendor/bin/qseecomd
     user root
     group root
 
-service thermal-engine /system/vendor/bin/thermal-engine -c ${sys.qcom.thermalcfg:-/vendor/etc/thermal-engine.conf}
+service thermal-engine /vendor/bin/thermal-engine -c ${sys.qcom.thermalcfg:-/vendor/etc/thermal-engine.conf}
     class main
     user root
     socket thermal-send-client stream 0666 system system
@@ -106,14 +102,13 @@ on property:vendor.ims.QMI_DAEMON_STATUS=1
 service ims_rtp_daemon /vendor/bin/ims_rtp_daemon
     class main
     user system
-    socket ims_rtpd stream 0660 system radio
     group radio diag inet log
     disabled
 
 service vendor.imsrcsservice /vendor/bin/imsrcsd
     class main
     user system
-    group radio inet log
+    group radio diag inet log
     writepid /dev/cpuset/system-background/tasks
     disabled
 
@@ -121,7 +116,7 @@ on property:vendor.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
     start vendor.imsrcsservice
 
-service ppd /system/vendor/bin/mm-pp-dpps
+service ppd /vendor/bin/mm-pp-dpps
     class late_start
     disabled
     user system
@@ -155,12 +150,6 @@ on charger
     setprop sys.usb.configfs 0
     setprop persist.sys.usb.config mass_storage
     start hvdcp_opti
-
-service hbtp /system/vendor/bin/hbtp_daemon
-    class main
-    user system
-    group system
-    disabled
 
 service adsprpcd /vendor/bin/adsprpcd
     class main

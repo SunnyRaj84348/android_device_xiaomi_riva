@@ -364,3 +364,7 @@ on property:init.svc.media=restarting
 
 on property:init.svc.servicemanager=restarting
     restart qcamerasvr
+
+#Set gpu available frequencies property
+on property:vendor.gpu.available_frequencies=*
+    setprop ro.gpu.available_frequencies ${vendor.gpu.available_frequencies}

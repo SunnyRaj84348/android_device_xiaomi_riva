@@ -245,6 +245,18 @@ on property:vold.decrypt=trigger_restart_framework
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
 
+on property:persist.vendor.data.shs_ko_load=1
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules rmnet_shs
+
+on property:persist.vendor.data.shs_ko_load=0
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -r -d /vendor/lib/modules rmnet_shs
+
+on property:persist.vendor.data.perf_ko_load=1
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules rmnet_perf
+
+on property:persist.vendor.data.perf_ko_load=0
+    exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -r -d /vendor/lib/modules rmnet_perf
+
 service vendor.cnd /vendor/bin/cnd
     class main
     user system

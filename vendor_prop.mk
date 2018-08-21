@@ -86,7 +86,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     persist.hwc.enable_vds=1 \
-    persist.sys.wfd.virtual=0
+    persist.sys.wfd.virtual=0 \
+    sdm.debug.disable_rotator_split=1 \
+    sdm.debug.disable_skip_validate=1 \
+    sdm.perf_hint_window=50
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \

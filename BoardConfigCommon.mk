@@ -131,7 +131,7 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8917
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Lineage Hardware
-BOARD_HARDWARE_CLASS += $(VENDOR_PATH)/lineagehw
+JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(VENDOR_PATH)/lineagehw|**/*.java
 
 # Tap2Wake
 

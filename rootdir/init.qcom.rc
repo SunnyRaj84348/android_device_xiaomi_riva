@@ -37,10 +37,6 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
-
-    # Support legacy path
-    symlink /sdcard /storage/sdcard0
-
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
     start graphics-sh

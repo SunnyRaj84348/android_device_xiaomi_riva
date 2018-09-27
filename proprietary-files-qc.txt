@@ -59,7 +59,6 @@ vendor/lib64/soundfx/libqcvirt.so|54ef8e9f310df831066103ab5c8bd24e9c30565f
 
 # Bluetooth - from tissot 8.1.0 OPM1.171019.026
 vendor/bin/hci_qcomm_init|bb2a52dac8b0cd86f4cdbb9c49b6745f05dac6ac
-vendor/bin/wcnss_filter|c00bfd553410e2093d7dab3f066c8e745e9aa7ae
 vendor/lib/libbtnv.so|a8ba43e968374b0f24bf5e08cf64f281918d80bd
 vendor/lib64/libbtnv.so|3d234c73102896e6493c5805d65238ece1d29f58
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|9276c1b258c142cb6a4c13ad14b3cbdf35737735

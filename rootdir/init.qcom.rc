@@ -68,7 +68,6 @@ on boot
     mkdir /dev/socket/qmux_bluetooth 2770 bluetooth bluetooth
     mkdir /dev/socket/qmux_gps 2770 gps gps
 
-    mkdir /persist/display 0770 system graphics
     mkdir /persist/drm 0770 system system
     mkdir /persist/misc 0770 system system
     mkdir /persist/alarm 0770 system system

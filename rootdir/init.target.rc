@@ -152,6 +152,7 @@ on property:init.svc.vendor.per_mgr=running
 
 on property:sys.powerctl=*
     stop vendor.per_proxy
+    stop vendor.ims_rtp_daemon
 
 on property:sys.boot_completed=1
    # Enable ZRAM on boot_complete

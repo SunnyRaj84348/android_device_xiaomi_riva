@@ -521,10 +521,10 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0_vendor.so|cd7713df15e6ae976cea11460bcd3af430fd6f13
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0_vendor.so|359b87c1daad8c430005c86c451a7b095a934d91
 
-# Widevine - from tissot 8.1.0 OPM1.171019.026
-vendor/bin/hw/android.hardware.drm@1.0-service.widevine|f54f2a4fb4aaaa0fbabac1096fdf0957b7f93f1b
-vendor/etc/init/android.hardware.drm@1.0-service.widevine.rc|51a3168a0dbc064d78ee11ca83614c0cd2e6daa5
-vendor/lib/libwvhidl.so|b60b46fb99c3a75fec785239d0a9e1780bab3463
+# Widevine - from daisy - PKQ1.180917.001
+vendor/bin/hw/android.hardware.drm@1.1-service.widevine|9743c4ecd0fb8773795bcbfbb406f25616c04129
+vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
+vendor/lib64/libwvhidl.so|a3444ac0deb8144a08ba2ed1dad2f2369096c7af
 
 # Wi-Fi - from tissot 8.1.0 OPM1.171019.026
 vendor/bin/wcnss_service|183c15394d1d6df2e5f6d712df80b2b2aa9f5ea6

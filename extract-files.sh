@@ -67,4 +67,12 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
     extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
 fi
 
+# Hax for disable colorspace
+sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib/egl/eglSubDriverAndroid.so
+sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib/egl/eglsubAndroid.so
+sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib/egl/libRBEGL_adreno.so
+sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib64/egl/eglSubDriverAndroid.so
+sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib64/egl/eglsubAndroid.so
+sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib64/egl/libRBEGL_adreno.so
+
 "$MY_DIR"/setup-makefiles.sh

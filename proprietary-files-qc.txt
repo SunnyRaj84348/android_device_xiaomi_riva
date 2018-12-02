@@ -394,7 +394,7 @@ etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 etc/permissions/telephonyservice.xml|b297c8a27443570377d78586b00198839ce326bb
 framework/QtiTelephonyServicelibrary.jar|7e6810bf7747778dc8b88da8e4357531ba9ed815
 framework/qcrilhook.jar|cb56e114f8f8ecf1c7ea5f35107bafc6bf49a194
-framework/qti-telephony-common.jar|2eba987ae297a892e895ec1e9a302b41dbe0232e
+framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|f313f243661c8e516ecc6a5785e8f0829daedb1c
 vendor/bin/ATFWD-daemon|9778a62bb94f9eeb49190908bb9b74060acd4fa6
 vendor/bin/netmgrd|748b87d905aa6727e812694de559e54b958f3832
@@ -437,7 +437,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so|e9bcbdf65
 vendor/radio/qcril_database/qcril.db|8405d20c8e1184c79eba1c4f19ecfb92d7529bdf
 
 # Radio IMS - from tissot - OPR1.170623.026
--app/ims/ims.apk|42881dc3adfd5e4f716bdb4d510ca45a0b415b74
 -app/imssettings/imssettings.apk|e09821a12dc92d138e82d68b0d63e67f497b6106
 etc/permissions/qti-vzw-ims-internal.xml|3e41b645dd4ad8bad6775c103a34bfd7a507a4f7
 lib/com.qualcomm.qti.imscmservice@1.0.so|1dec77e0803ea99d85c87874c81c54688d4bd59d
@@ -461,6 +460,7 @@ lib64/libimscamera_jni.so|3e53b8d01268da279829abbf7c1b93e5a4179d92
 lib64/libimsmedia_jni.so|c895e5e439f33f509f0529edee5f5273785bc14b
 lib64/librcc.so|fc24d9e5e0b3d6b858911d2640373ed530556861
 lib64/vendor.qti.imsrtpservice@1.0.so|4513f234548a66f5493f211e0e0fc41a5bf0f1a3
+-priv-app/ims/ims.apk|eef47c0b6f250e7f96e7155d84274b1c83940d8f
 vendor/bin/ims_rtp_daemon|46439ac81e5580bf46d0d161e6a63da6a204cdf4
 vendor/bin/imsdatadaemon|88c6bc5a1c7d4d030ede2b78cfe8968fe7bc6c5d
 vendor/bin/imsqmidaemon|93ab259162d5c1c050d328e85af2e28c0165720b

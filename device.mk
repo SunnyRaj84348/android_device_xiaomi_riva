@@ -19,8 +19,7 @@ DEVICE_PATH := device/xiaomi/riva
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-lineage
+    $(DEVICE_PATH)/overlay
 
 # Properties
 -include $(DEVICE_PATH)/vendor_prop.mk

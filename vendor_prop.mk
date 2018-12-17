@@ -81,7 +81,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
-    debug.gralloc.enable_fb_ubwc=1 \
+    vendor.gralloc.enable_fb_ubwc=1 \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
@@ -90,7 +90,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.hwc.enable_vds=1 \
     persist.sys.wfd.virtual=0 \
     sdm.debug.disable_rotator_split=1 \
-    sdm.debug.disable_skip_validate=1 \
+    vendor.display.disable_skip_validate=1 \
     sdm.perf_hint_window=50
 
 # IMS

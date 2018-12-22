@@ -109,6 +109,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.narrow.searchrange=1 \
     vendor.vidc.disable.split.mode=1
 
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.sys.fw.bservice_enable=true
+
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \

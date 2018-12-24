@@ -111,6 +111,9 @@ on enable-low-power
     write /sys/devices/system/cpu/cpu6/online 1
     write /sys/devices/system/cpu/cpu7/online 1
 
+    # Re-enable thermal core_control
+    write /sys/module/msm_thermal/core_control/enabled 1
+
     # Enable power_efficient workqueue
     write /sys/module/workqueue/parameters/power_efficient 1
 

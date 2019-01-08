@@ -130,6 +130,7 @@ on charger
     load_system_props
     setprop sys.usb.configfs 0
     setprop persist.sys.usb.config mass_storage
+    start vendor.power_off_alarm
 
 service adsprpcd /vendor/bin/adsprpcd
     class main

@@ -144,8 +144,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.delta_time.enable=true \
-    persist.timed.enable=true
+    persist.vendor.delta_time.enable=true \
 
 # Trim properties
 PRODUCT_PROPERTY_OVERRIDES += \

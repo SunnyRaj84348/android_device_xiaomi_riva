@@ -291,35 +291,25 @@ vendor/lib64/libtinyxml2_1.so|b743b93bbb47bb2d80322fcfb985b7b8c696fa1b
 vendor/lib/hw/vulkan.msm8953.so:vendor/lib/hw/vulkan.msm8937.so|6259874ee4fe1a414b5e2109ec63af55a70d3733
 vendor/lib64/hw/vulkan.msm8953.so:vendor/lib64/hw/vulkan.msm8937.so|e1905916771354829868a65e6757615c7de20b71
 
-# Perf - from TA-1025_00WW 8.1.0 OPR1.170623.026
--lib/vendor.qti.hardware.iop@1.0.so|122ec67a39da6977cdde9d2a5c9e8b370b9ab023
-lib/vendor.qti.hardware.perf@1.0.so|86a267b582710c9ff653a16bd0b292327dc64ead
--lib64/vendor.qti.hardware.iop@1.0.so|8f6115594d941e1b356f29c8e79c97bbc060d155
-lib64/vendor.qti.hardware.perf@1.0.so|3ac7bcfcb6eed93d50f35b49de05ee77255d92e6
-vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|b8cad5f3bdf49c215f2f6a499710d29a7fa18a0d
-vendor/bin/msm_irqbalance|8bab50c65ed3db7e3ea8c050498fd37f2b857405
+# Perf - from daisy - PKQ1.180917.001
+vendor/bin/energy-awareness|d9b3f1cc791e0e9612a5ff5df6836af4c921a52b
+vendor/bin/msm_irqbalance|bf933b58332cf94fe4a2072bc3e976a6a82efe3c
+vendor/bin/hw/vendor.qti.hardware.perf@1.0-service|3f4cf13499019e7e3747679220b280f4f204b8de
 vendor/etc/init/vendor.qti.hardware.perf@1.0-service.rc|b50182aadab2e31409df61c523d0fb914a394e43
-vendor/etc/perf/perfboostsconfig.xml|9ca7d867f05b4a0b1efc780b04c1892826004854
-vendor/lib/hw/vendor.qti.hardware.iop@1.0-impl.so|a7acd6b7e3afa32a0d41bbc422f491830a1050ff
-vendor/lib/libfeedbackhandler.so|5400c090d77d596642347f3fa5269e12f5f06632
-vendor/lib/libperfgluelayer.so|deb4d538e0f812bf7a806cec2a9811f48a5b68f9
-vendor/lib/libqti-iopd-client.so|d7f2f84c2bcb9bfed749b67b40b9d96a788e9788
-vendor/lib/libqti-iopd.so|d71ddcfb6f51868f1a41c39536ba95d206b2030b
-vendor/lib/libqti-perfd-client.so|d7582c491b1121341beffc6fc3f3ef333f5bc69c
-vendor/lib/libqti-perfd.so|4e4b421c478b40d19dc16d1926e0fa9b74f06dff
-vendor/lib/libqti-util.so|f1b44fac3afbcac35b4fdc691c1a125b5e5302d7
-vendor/lib/vendor.qti.hardware.iop@1.0_vendor.so|d6b63738ddac4b597356c83b057b3d65d15554ea
-vendor/lib/vendor.qti.hardware.perf@1.0_vendor.so|c0cc3f681e52159da8e7a7a67478fe5c09ec4a81
-vendor/lib64/hw/vendor.qti.hardware.iop@1.0-impl.so|be8cf62a03b5acd84dca7bc2f15c6c06b6cfbfe7
-vendor/lib64/libfeedbackhandler.so|e9f304413a5a446e01f80be92fe4c3ac8ba9e242
-vendor/lib64/libperfgluelayer.so|82dd5994f15c3f882ecff7a098f5e194d4b03bda
-vendor/lib64/libqti-iopd-client.so|47a951e9c64b3fedb274befdbaba77a8498397ee
-vendor/lib64/libqti-iopd.so|4a102b00163c43216856721c0ef64e4fea7358a4
-vendor/lib64/libqti-perfd-client.so|b7b749d736470ccbca12ac2492f595ec35efb229
-vendor/lib64/libqti-perfd.so|f757c80b719a07ecf08af6c5a0cce8e4fe74e0f3
-vendor/lib64/libqti-util.so|dbb96954a50d36822ddf77a2ff886938d32cbb28
-vendor/lib64/vendor.qti.hardware.iop@1.0_vendor.so|06bacffa87ddcf855578079147bc802907b7374e
-vendor/lib64/vendor.qti.hardware.perf@1.0_vendor.so|75f2b67fe4ef59eb1a7db3f14620fd2dd5fc20e7
+vendor/etc/perf/commonresourceconfigs.xml|20280e40ca43784316e96be09fe2d2296d79e972
+vendor/etc/perf/perfboostsconfig.xml|2ed8d78b096b9da23afde5acfcacd561ab4f9b4b
+vendor/etc/perf/targetconfig.xml|1e240759319696ae5920a35d675317b7a4456685
+vendor/etc/perf/targetresourceconfigs.xml|f905a4f59091686d732d7121a9066e79d395056d
+vendor/lib/libperfgluelayer.so|0cda8dd77f3c00b70ad50b7764adfb7869d3537e
+vendor/lib/libqti-perfd-client.so|a4a6da47ee26fcd5116c514f7fed15b91306aea3
+vendor/lib/libqti-perfd.so|2c8af66cbcb941b9da2edb68f428776cbbabdff6
+vendor/lib/libqti-util.so|459a7375feb57c2e11d012c5fb65befd94e91d06
+vendor/lib/vendor.qti.hardware.perf@1.0.so|39a81e7cc35f542e5e2eeed6f38152b44063928f
+vendor/lib64/libperfgluelayer.so|e8bc850cbb8d2c2b9ed8c6b9c48eb4b1fd197622
+vendor/lib64/libqti-perfd-client.so|d9fb126fb7aff2db61978f46f78e0284e95183be
+vendor/lib64/libqti-perfd.so|96806732f4e5f8c25ba2e12a3a939fc2889c7341
+vendor/lib64/libqti-util.so|30dc90c1636fd100a8e101dfa659e0b7299ff813
+vendor/lib64/vendor.qti.hardware.perf@1.0.so|978a16bc6f27967f6345c5b51386d50768553ab5
 
 # Peripheral manager - from tissot 8.1.0 OPM1.171019.026
 vendor/bin/pm-proxy|3a6e03b81206ac445f70bd04309131e2e6757a53

@@ -28,9 +28,9 @@ lib64/com.qualcomm.qti.ant@1.0.so|199481b290856fb63f5c5bf6def426b43309becb
 lib/com.qualcomm.qti.ant@1.0.so|fcd6a7130c480bfe4e4d9cc00702ed8444cddc82
 -lib/libantradio.so|7506f2577f2f1068688b623ca85e432be9c3dac9
 
-# ANT+ (vendor) - from gemini - OPR1.170623.032
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|10444ef8178cbe0b2afebf08cf5102355ff78bd2
-vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so|a2264d386f65012a23b91478e4d4c05ba846b6dc
+# ANT+ (vendor) - from enchilada - PKQ1.180716.001
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|c446ab1634776adc390d559d601aeb32a958284d
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|ae9e681bd4bf50726f10a50cce10698c94649147
 
 # Audio - from tissot 8.1.0 OPM1.171019.026
 vendor/lib/libacdb-fts.so|17a5d7a23eca76b046142504a7ebe6d0d89d56ed
@@ -57,11 +57,15 @@ vendor/lib64/soundfx/libqcbassboost.so|d3575c0e909ef52442f64289deffa95923a69bbd
 vendor/lib64/soundfx/libqcreverb.so|8bdd74d69593cd838e4b92d9b2884e0c4140226f
 vendor/lib64/soundfx/libqcvirt.so|54ef8e9f310df831066103ab5c8bd24e9c30565f
 
-# Bluetooth - from tissot 8.1.0 OPM1.171019.026
-vendor/bin/hci_qcomm_init|bb2a52dac8b0cd86f4cdbb9c49b6745f05dac6ac
-vendor/lib/libbtnv.so|a8ba43e968374b0f24bf5e08cf64f281918d80bd
-vendor/lib64/libbtnv.so|3d234c73102896e6493c5805d65238ece1d29f58
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|9276c1b258c142cb6a4c13ad14b3cbdf35737735
+# Bluetooth - from daisy - PKQ1.180917.001
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|9178856dc8651b499d1b155825b6115a486ee05e
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|20e66aaca57c6ba6df8009404abdfacb608dc341
+vendor/lib64/libbtnv.so|136dc47f7d16a841e9c6ad909753e96a41392534
+vendor/lib64/libbt-hidlclient.so|0b0b69ef9787e3cd5409f0050cad03698dd6ce26
+
+# Bluetooth (shared dependencies) - from daisy - PKQ1.180917.001
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|dc576dfcb0bf390a106b5ed8861e7f547110cbf1
 
 # CNE - from daisy - PKQ1.180917.001
 etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9

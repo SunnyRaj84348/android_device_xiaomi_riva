@@ -125,11 +125,7 @@ on property:init.svc.surfaceflinger=restarting
     restart vendor.hwcomposer-2-1
 
 on charger
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
-    load_system_props
     setprop sys.usb.configfs 0
-    setprop persist.sys.usb.config mass_storage
     start vendor.power_off_alarm
 
 service adsprpcd /vendor/bin/adsprpcd

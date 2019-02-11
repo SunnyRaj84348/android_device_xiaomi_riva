@@ -121,8 +121,7 @@ service ppd /vendor/bin/mm-pp-dpps
     socket pps stream 0660 system system
 
 on property:init.svc.surfaceflinger=restarting
-    stop vendor.hwcomposer-2-1
-    start vendor.hwcomposer-2-1
+    restart vendor.hwcomposer-2-1
 
 on charger
     wait /dev/block/bootdevice/by-name/system

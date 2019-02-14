@@ -68,14 +68,6 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
 fi
 
 #
-# Hax libaudcal.so to store acdbdata in new path
-#
-sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
-    "$BLOB_ROOT"/vendor/lib/libaudcal.so
-sed -i "s|\/data\/vendor\/misc\/audio\/acdbdata\/delta\/|\/data\/vendor\/audio\/acdbdata\/delta\/\x00\x00\x00\x00\x00|g" \
-    "$BLOB_ROOT"/vendor/lib64/libaudcal.so
-
-#
 # Remove unused libmedia.so dependency in the IMS stack
 #
 DPLMEDIA="$BLOB_ROOT"/vendor/lib64/lib-dplmedia.so

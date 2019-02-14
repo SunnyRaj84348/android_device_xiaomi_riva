@@ -67,10 +67,4 @@ if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
     extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
 fi
 
-#
-# Remove unused libmedia.so dependency in the IMS stack
-#
-DPLMEDIA="$BLOB_ROOT"/vendor/lib64/lib-dplmedia.so
-patchelf --remove-needed libmedia.so "$DPLMEDIA"
-
 "$MY_DIR"/setup-makefiles.sh

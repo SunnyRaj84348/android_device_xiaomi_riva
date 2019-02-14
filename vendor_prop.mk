@@ -121,26 +121,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.control_privapp_permissions=enforce
 
-# Netmgrd
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.use_data_netmgrd=true \
-    persist.data.netmgrd.qos.enable=true \
-    persist.data.mode=concurrent
-
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    DEVICE_PROVISIONED=1 \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
-    ril.subscription.types=NV,RUIM \
-    ro.telephony.call_ring.multiple=false \
-    ro.telephony.default_network=22,22 \
     persist.radio.apm_sim_not_pwdn=1 \
-    persist.radio.aosp_usr_pref_sel=true \
     persist.radio.multisim.config=dsds \
+    ro.telephony.default_network=9,1 \
+    ro.telephony.call_ring.multiple=false \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
-    telephony.lteOnCdmaDevice=1
+    persist.vendor.data.mode=concurrent
 
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \

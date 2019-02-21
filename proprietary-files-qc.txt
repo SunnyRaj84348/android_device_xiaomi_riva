@@ -409,18 +409,18 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|f3a3051e4a904268
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|ab552724f7d723a70a4e730dba52ab220d33a33e
 vendor/radio/qcril_database/qcril.db|f25a9215fcc2445e73d1aa0b7ef9bdbd97e33f56
 
-# Sensors - from tissot 8.1.0 OPM1.171019.026
-vendor/bin/sensors.qcom|91015649bef2900c60450d88fab03d3021879bc0
-vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|54902f3d7ed97868ac889f58dc95935546131877
-vendor/lib/libsensor1.so|0a5d17ecbb85bc856076a20dfcc2868e487bc83e
-vendor/lib/libsensor_reg.so|69693bcaf14083d47da2aa6fbd84117a5d088766
-vendor/lib/libsensor_user_cal.so|f27bbdecc4ba1c97d58eee164fd94af18c98cd3d
-vendor/lib/sensors.ssc.so|afb867fbc41eeea2f4e4b3a9a2afa1514a3c14eb
-vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|a3d335daaf3f2707c708e1c97459e71687bbaecf
-vendor/lib64/libsensor1.so|21ec53b4969210b7588a4353a96c13f7bddafd88
-vendor/lib64/libsensor_reg.so|99f62b70bd484c58493ae7cb3a505c05e9364f18
-vendor/lib64/libsensor_user_cal.so|b50089c887ebe7857ae10857dfe3753b94e0c6f3
-vendor/lib64/sensors.ssc.so|c081f1315325cc85fc11d13e8a4bba94964f14c6
+# Sensors - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
+vendor/bin/sensors.qti|3f6368e8d7484f5610fbf899dbe2a95e7cd6855e
+vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|f9247646a5e2b28473753da06f832ae5f702f7c4
+vendor/lib/libsensor1.so|48727a05c1b91051d5ec53860124f1f1c0d8ca53
+vendor/lib/libsensor_reg.so|8ae3b9d1a54feb9f0af55a8fff50410f53660318
+vendor/lib/libsensor_user_cal.so|df85342393b56994b4f4b4c33aad97928bc6f023
+vendor/lib/sensors.ssc.so|c4b5ee167e5b06fde7143007b87ea5dbe90b0565
+vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|5531da4cf2451f899602fb7e3f0e80775bb7e5ff
+vendor/lib64/libsensor1.so|48dedf69781fb146fc35e622f1c80a635530da22
+vendor/lib64/libsensor_reg.so|74659858f5abcfa0d8c826af2e2e46addc9f5f87
+vendor/lib64/libsensor_user_cal.so|92de798c64f9e23ca1069a5a4bec5895fafa9a22
+vendor/lib64/sensors.ssc.so|3d6eed945ab3ec2d91517cd6e9941df17a290445
 
 # Thermal - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 vendor/bin/thermal-engine|bbf772d4acf6c11413d2f728140aae63a49d3eae

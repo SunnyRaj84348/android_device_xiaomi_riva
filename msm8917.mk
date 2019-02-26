@@ -381,6 +381,9 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/wifi/firmware/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
 # Wi-Fi Display
+PRODUCT_PACKAGES += \
+     libnl
+
 PRODUCT_BOOT_JARS += \
     WfdCommon
 

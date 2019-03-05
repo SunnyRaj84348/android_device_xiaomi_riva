@@ -178,16 +178,11 @@ vendor/lib64/libxtwifi_ulp_adaptor.so|078124cc018badf89c1f5588e9102e9f7c034da2
 vendor/lib64/vendor.qti.gnss@1.0_vendor.so|07fffa6ef6d22981cd37d2067e9e8f20490213be
 
 # Graphics - from bardock-pro - OPM1.171019.026/1082
-vendor/lib/egl/eglSubDriverAndroid.so|df793571f098118d17791ba41ef6665622537420
-vendor/lib/egl/libEGL_adreno.so|19850eb12e4380deb2d04a0e1835e5aafcc35291
-vendor/lib/egl/libGLESv1_CM_adreno.so|343de28213ae734d68958fa6dd10073361a4fc04
-vendor/lib/egl/libGLESv2_adreno.so|3b0ac2dcfb79c388183a38736f699b5d498a8769
-vendor/lib/egl/libq3dtools_adreno.so|d5e24aefea281a38763b74bb897ff4a6af868175
-vendor/lib/egl/libQTapGLES.so|cbb7efc834622cf761a149a206c530ecaf723673
 vendor/lib/libadreno_utils.so|8b9a1e376af9843d6462fcd1628261a49bebdd06
 vendor/lib/libbccQTI.so|7bfe04f475cdd11cfade9672fabbaff9cad9de20
 vendor/lib/libC2D2.so|b8d66dbddd687454d2dc545b3dcb487e2ede221a
 vendor/lib/libc2d30_bltlib.so|5458491b7222ca5da745a05438012227e198bd57
+vendor/lib/libc2d30-a3xx.so|1496650f2c94f5b290a62dea91a4d854811f6c2e
 vendor/lib/libc2d30-a5xx.so|21ed4d64146083542ebe3cdd9061ed7fab80f007
 vendor/lib/libCB.so|7779d1a9a4b9157067ef9c4234eb1121e4b0adf4
 vendor/lib/libgsl.so|8779d078b6a2f559fbe97e479eed476bdd31457b
@@ -204,16 +199,11 @@ vendor/lib/libsdm-color.so|63e514fbb696234e775ba98d13872fa6e2bb19e8
 vendor/lib/libsdm-diag.so|340c59c6fc3374ae4aa11c7874e6f4d41ababb4f
 vendor/lib/libsdmextension.so|bf2753500f88b14e50b1d812007b619582b999cc
 vendor/lib/libtinyxml2_1.so|3ee768813f5b351b71bd7dd2367b13a3698a591a
-vendor/lib64/egl/eglSubDriverAndroid.so|7a51837cf3df8e18d3b305e2f0e7c5981dd39bf3
-vendor/lib64/egl/libEGL_adreno.so|cddfe278d4922a72af8c6936079c4f68d84ce735
-vendor/lib64/egl/libGLESv1_CM_adreno.so|bd5e311e73b32192051f033408f0e9e2a2beeb15
-vendor/lib64/egl/libGLESv2_adreno.so|f66000c38701c78203ed1883dd1b5282cd93748d
-vendor/lib64/egl/libq3dtools_adreno.so|5e02bcc77c594656506bb11ec956f617395ef2a5
-vendor/lib64/egl/libQTapGLES.so|31adbc0a03ec01576229c2c3bb7d806acaf39e36
 vendor/lib64/libadreno_utils.so|03287f41aa8302918c3bd480f28cbfbf6125b3b9
 vendor/lib64/libbccQTI.so|096c6ed5276b37917219dd88019f4cb114de68e2
 vendor/lib64/libC2D2.so|4e768b4a6c9889e61e0e92771701c9f338efaf03
 vendor/lib64/libc2d30_bltlib.so|617d70d1a1751df15b518d3d36b98088125ccacb
+vendor/lib64/libc2d30-a3xx.so|c7ca81d1afb1e8023039fdd2518531f2fd7497c3
 vendor/lib64/libc2d30-a5xx.so|6a3d1c5cf99ab8a8de14efb9bad565f99d272cb0
 vendor/lib64/libCB.so|6a35a1ca71a5eb24b44e625e1a3039d6db119c15
 vendor/lib64/libgsl.so|2dbb19cabda19eacb6c1812f0ec5db29777b71fa

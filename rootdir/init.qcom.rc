@@ -122,13 +122,6 @@ on boot
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
 
-    # Goodix Fingerprint
-    chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp
-
-    setprop persist.sys.fp.vendor none
-    start gx_fpd
-
     # IR blaster
     chown root system /sys/class/leds/infrared/transmit
     chown root system /sys/class/leds/infrared/brightness
@@ -150,12 +143,6 @@ on post-fs-data
 
     # Create directory used by media clients
     mkdir /data/vendor/media 0770 mediacodec media
-
-    #Create directories for Fingerprint
-    mkdir /data/misc/stargate 0770 system system
-    mkdir /data/misc/stargate/bg_estimation 0770 system system
-    mkdir /data/misc/stargate/calib_test 0770 system system
-    mkdir /data/misc/stargate/database 0770 system system
 
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
@@ -395,24 +382,6 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
-
-service gx_fpd /vendor/bin/gx_fpd
-    class core
-    user root
-    group system system
-    disabled
-
-on property:persist.sys.fp.vendor=switchf
-    stop gx_fpd
-    setprop persist.sys.fp.vendor searchf
-    setprop ro.boot.fpsensor fpc
-    start fps_hal
-
-on property:persist.sys.fp.vendor=goodix
-    setprop persist.sys.fp.onstart 1
-    setprop ro.boot.fpsensor gdx
-    setprop ro.hardware.fingerprint goodix
-    start fps_hal
 
 service time_daemon /vendor/bin/time_daemon
     class main

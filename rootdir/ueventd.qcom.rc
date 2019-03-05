@@ -257,9 +257,6 @@
 # Ramdump devices
 /dev/ramdump*             0640   system     system
 
-# Fingerprint device
-/dev/qbt1000              0660   system     system
-
 #ImproveTouch device
 /dev/hbtp_input           0660   system     system
 /dev/hbtp_vm              0660   system     system
@@ -269,9 +266,3 @@
 /dev/block/platform/soc/7464900.sdhci/by-name/frp       0600   system     system
 /dev/block/platform/soc/624000.ufshc/by-name/frp        0600   system     system
 /dev/block/platform/soc/1da4000.ufshc/by-name/frp       0600   system     system
-
-# fpc Fingerprint
-/sys/devices/soc/soc:fpc1020		hw_reset			0220   system     system
-/sys/devices/soc/soc:fpc1020		irq	                        0660   system     system
-/sys/devices/soc/soc:fpc1020            wakeup_enable	                0220   system     system
-/sys/devices/soc/soc:fpc1020            compatible_all	                0220   system     system

@@ -120,10 +120,6 @@ vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so|9f0ccc560f84682b08e1
 # Charger - from tissot 8.1.0 OPM1.171019.026
 vendor/bin/hvdcp_opti|57e6c5bd929173d537c7003096cab430e9422aff
 
-# Consumer IR - from santoni (Redmi 4X)
-lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.default.so|53830d64d63d6cc405209d8d4cafea102dcd7b54
-lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so|f7c90fd1d6a0c5e6cf620aa23a862e780feaaf6c
-
 # DPM - from tissot 8.1.0 OPM1.171019.026
 vendor/bin/dpmQmiMgr|e4c66e1111b1d1ca0ef3912730dfcca7d8654f88
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so|6f55fc94e316cae982b83130dd1a9e80d86813f0

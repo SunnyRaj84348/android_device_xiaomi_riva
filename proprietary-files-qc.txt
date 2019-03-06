@@ -194,6 +194,7 @@ vendor/lib/libOpenCL.so|8d699bb6d1245596182b89d5f774fde09372fe61
 vendor/lib/librs_adreno_sha1.so|571fec6e13da25a440cac538754d6b4449c358d3
 vendor/lib/librs_adreno.so|3cdff80b7ddfbd3fa148727c12c1b08cae4400ce
 vendor/lib/libRSDriver_adreno.so|c0551aea7d32e21efde69a6a43b8b45bf69e0528
+vendor/lib/libsc-a3xx.so|99f7d81029e1d4d6f5e074cb9ad98fc750457348
 vendor/lib/libscalar.so|04bd08e3c814687226287d167351bf76e233fd86
 vendor/lib/libsdm-color.so|63e514fbb696234e775ba98d13872fa6e2bb19e8
 vendor/lib/libsdm-diag.so|340c59c6fc3374ae4aa11c7874e6f4d41ababb4f
@@ -216,6 +217,7 @@ vendor/lib64/librs_adreno_sha1.so|f4135f7695ecf1c67b115e83528dcdbe6dc931a1
 vendor/lib64/librs_adreno.so|d43c5ee0526452e64e5b80e7ddef71625eda90d5
 vendor/lib64/libRSDriver_adreno.so|bfb3bc3396f3b94dd3ba4a8d7fa0b6e9c100daae
 vendor/lib64/libscalar.so|a48bf0845cc4c2cbffc3c4a2fac6e11f3acf48ec
+vendir/lib64/libsc-a3xx.so|b5adb05d08af30107dcb7cad11abf447322235c8
 vendor/lib64/libsdm-color.so|6305527de13c7f33c6cc469f01f6346f5627be82
 vendor/lib64/libsdm-diag.so|73713b128751534fa8f25d00c4d56644e8a7868a
 vendor/lib64/libsdmextension.so|4a08716a13e344c7b02818bbd9e88c0849215dd5

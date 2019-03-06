@@ -227,15 +227,43 @@ vendor/lib64/libtinyxml2_1.so|5ffb12fd2162910fc95be463fcde04ab5c427045
 vendor/lib/hw/vulkan.msm8953.so:vendor/lib/hw/vulkan.msm8937.so|01d012fe87dfa830f9e308a82869658a12c6b271
 vendor/lib64/hw/vulkan.msm8953.so:vendor/lib64/hw/vulkan.msm8937.so|86ea6308b3bd296669765673ecdeac1a37751509
 
-# Graphics firmware - from tissot 8.1.0 OPM1.171019.026
-vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
-vendor/firmware/a530_pfp.fw|448f9db8271fefb08348cbc50409e8e95bd93f78
-vendor/firmware/a530_pm4.fw|5741a28752355b478d455635bab008028ff7e1c6
-vendor/firmware/a530v1_pfp.fw|0864291b99bed712edfcffa94be7b4595d3af306
-vendor/firmware/a530v1_pm4.fw|6a82a4fb4035fa2a933c1a26b5535d7ec7c0ac4c
-vendor/firmware/a530v2_seq.fw2|63b6d25594a5c1f4217d996a2b636e17a29fc840
-vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
-vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
+# Graphics firmware - from riva OPM1.171019.026 - 8.11.6
+vendor/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw 
+vendor/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw 
+vendor/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw
+vendor/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw
+
+# Graphics - from riva OPM1.171019.026 - 8.11.6
+vendor/lib/egl/eglSubDriverAndroid.so 
+vendor/lib/egl/libEGL_adreno.so 
+vendor/lib/egl/libESXEGL_adreno.so 
+vendor/lib/egl/libESXGLESv1_CM_adreno.so 
+vendor/lib/egl/libESXGLESv2_adreno.so 
+vendor/lib/egl/libGLESv1_CM_adreno.so 
+vendor/lib/egl/libGLESv2_adreno.so 
+vendor/lib/egl/libQTapGLES.so 
+vendor/lib/egl/libRBEGL_adreno.so 
+vendor/lib/egl/libRBGLESv1_CM_adreno.so 
+vendor/lib/egl/libRBGLESv2_adreno.so 
+vendor/lib/egl/libq3dtools_adreno.so 
+vendor/lib/egl/libq3dtools_esx.so 
+vendor/lib64/egl/eglSubDriverAndroid.so 
+vendor/lib64/egl/libEGL_adreno.so 
+vendor/lib64/egl/libESXEGL_adreno.so 
+vendor/lib64/egl/libESXGLESv1_CM_adreno.so 
+vendor/lib64/egl/libESXGLESv2_adreno.so 
+vendor/lib64/egl/libGLESv1_CM_adreno.so 
+vendor/lib64/egl/libGLESv2_adreno.so 
+vendor/lib64/egl/libQTapGLES.so 
+vendor/lib64/egl/libRBEGL_adreno.so 
+vendor/lib64/egl/libRBGLESv1_CM_adreno.so 
+vendor/lib64/egl/libRBGLESv2_adreno.so 
+vendor/lib64/egl/libq3dtools_adreno.so
+vendor/lib64/egl/libq3dtools_esx.so 
+
+# Graphics (adreno 308) - from riva - OPM1.171019.026 - 8.11.6
+vendor/lib/egl/eglsubAndroid.so
+vendor/lib64/egl/eglsubAndroid.so
 
 # Keystore - from tissot 8.1.0 OPM1.171019.026
 vendor/lib/hw/keystore.msm8953.so:vendor/lib/hw/keystore.msm8937.so|00434c697f84fb0496b2fdbd7797e22ceb2bbed6

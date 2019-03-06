@@ -264,3 +264,5 @@
 
 # IR
 /dev/lirc0                0660   system     system
+/dev/spidev7.1            0660   system     system
+/dev/spidev6.1            0660   system     system

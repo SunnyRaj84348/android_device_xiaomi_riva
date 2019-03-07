@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/xiaomi/msm8937-common
+VENDOR_PATH := device/xiaomi/msm8917-common
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8937
@@ -110,8 +110,8 @@ DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(VENDOR_PATH)/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_msm8937
-TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8937
+TARGET_INIT_VENDOR_LIB := libinit_msm8917
+TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8917
 
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
@@ -190,4 +190,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the common proprietary files
--include vendor/xiaomi/msm8937-common/BoardConfigVendor.mk
+-include vendor/xiaomi/msm8917-common/BoardConfigVendor.mk

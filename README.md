@@ -1,4 +1,4 @@
-# Common device configuration for Xiaomi MSM8937
+# Common device configuration for Xiaomi MSM8917
 
 ## Copyright
 

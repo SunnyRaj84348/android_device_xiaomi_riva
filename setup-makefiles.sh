@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE_COMMON=msm8937-common
+DEVICE_COMMON=msm8917-common
 VENDOR=xiaomi
 
 INITIAL_COPYRIGHT_YEAR=2018
@@ -40,7 +40,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers "land santoni riva"
+write_headers "riva"
 
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files-qc.txt true

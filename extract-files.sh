@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE_COMMON=msm8937-common
+DEVICE_COMMON=msm8917-common
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

@@ -6,6 +6,12 @@ init_daemon_domain(init_graphics)
 allow init_graphics init_graphics_exec:file { rx_file_perms entrypoint };
 allow init_graphics vendor_shell_exec:file {rx_file_perms entrypoint };
 allow init_graphics vendor_toolbox_exec:file  rx_file_perms;
+allow init_graphics freq_prop:property_service set;
+allow init_graphics init:unix_stream_socket connectto;
+allow init_graphics property_socket:sock_file write;
+allow init_graphics self:capability { chown fowner fsetid };
+allow init_graphics sysfs:file { getattr setattr };
+allow init_graphics debug_gralloc_prop:property_service set;
 
 # For getting idle_time value
 # this is needed for dynamic_fps and bw_mode_bitmap

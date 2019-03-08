@@ -1,1 +1,2 @@
 allow hal_camera_default camera_data_file:sock_file read;
+allow hal_camera_default hal_power_default:binder call;

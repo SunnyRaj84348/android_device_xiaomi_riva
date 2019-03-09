@@ -65,7 +65,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=196610 \
+    ro.opengles.version=196608 \
     ro.qualcomm.cabl=2 \
     ro.sf.lcd_density=320 \
     vendor.display.enable_default_color_mode=1

@@ -117,9 +117,6 @@ vendor/lib64/libwqe.so|d8c310ba670d82577f089200a992335df7cb236a
 vendor/lib64/libxml.so|470cacf4ad8f23040286be15a08f1e6ccbd35f22
 vendor/lib64/vendor.qti.hardware.data.latency@1.0_vendor.so|9f0ccc560f84682b08e170e9f7bef7896218110f
 
-# Charger - from tissot 8.1.0 OPM1.171019.026
-vendor/bin/hvdcp_opti|57e6c5bd929173d537c7003096cab430e9422aff
-
 # DPM - from tissot 8.1.0 OPM1.171019.026
 vendor/bin/dpmQmiMgr|e4c66e1111b1d1ca0ef3912730dfcca7d8654f88
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0_vendor.so|6f55fc94e316cae982b83130dd1a9e80d86813f0

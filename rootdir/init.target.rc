@@ -128,7 +128,6 @@ on charger
     load_system_props
     setprop sys.usb.configfs 0
     setprop persist.sys.usb.config mass_storage
-    start hvdcp_opti
 
 service adsprpcd /vendor/bin/adsprpcd
     class main
@@ -139,11 +138,6 @@ service per_mgr /vendor/bin/pm-service
     class core
     user system
     group system net_raw
-
-service hvdcp_opti /vendor/bin/hvdcp_opti
-    class main
-    user root
-    group root
 
 on property:sys.boot_completed=1
    # Enable ZRAM on boot_complete

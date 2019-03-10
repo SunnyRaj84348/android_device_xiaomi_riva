@@ -303,7 +303,6 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.recovery.qcom.rc \
     init.target.rc \
-    init.qcom.baseband.sh \
     init.qcom.graphics.sh \
     ueventd.qcom.rc
 

@@ -57,3 +57,6 @@ fi
 cp /firmware/image/modem_pr/mbn_ota.txt /data/vendor/radio/modem_config
 chown radio.radio /data/vendor/radio/modem_config/mbn_ota.txt
 echo 1 > /data/vendor/radio/copy_complete
+
+# Grep the modem partition for baseband version and set it
+setprop gsm.version.baseband `strings /firmware/image/modem.b12 | grep "^MPSS.JO." | head -1`

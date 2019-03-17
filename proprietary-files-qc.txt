@@ -483,3 +483,6 @@ vendor/lib/libwfdhdcpcp.so|73497564f7e1bc80c1110d56d0d49d47ffd21da8
 vendor/lib/libwfdmmservice.so|a99c38be9f6a6ce4a2767fb066191c2017fcb341
 vendor/lib/libwfdmodulehdcpsession.so|89fc62ee8f41bde6b2dcc9bcde3e52954ae5253d
 vendor/lib64/libwfdhdcpcp.so|c4f8b9368ca91157695144438d02fe5f31af635d
+
+# Wi-Fi - from tissot PKQ1.180917.001
+vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8

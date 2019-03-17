@@ -367,7 +367,6 @@ PRODUCT_PACKAGES += \
 # WiFi
 PRODUCT_PACKAGES += \
     libwpa_client \
-    wcnss_service
 
 PRODUCT_PACKAGES += \
     hostapd \

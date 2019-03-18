@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014, 2017 The  Linux Foundation. All rights reserved.
+ * Copyright (C) 2014, 2017-2018 The  Linux Foundation. All rights reserved.
  * Not a contribution
  * Copyright (C) 2008 The Android Open Source Project
  *
@@ -19,8 +19,8 @@
 
 // #define LOG_NDEBUG 0
 
-#include <cutils/log.h>
-
+#include <log/log.h>
+#include <cutils/properties.h>
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
@@ -225,15 +225,15 @@ set_speaker_light_locked(struct light_device_t* dev,
         if (red) {
             if (write_int(RED_BLINK_FILE, blink))
                 write_int(RED_LED_FILE, 0);
-	}
+        }
         if (green) {
             if (write_int(GREEN_BLINK_FILE, blink))
                 write_int(GREEN_LED_FILE, 0);
-	}
+        }
         if (blue) {
             if (write_int(BLUE_BLINK_FILE, blink))
                 write_int(BLUE_LED_FILE, 0);
-	}
+        }
     } else {
         write_int(RED_LED_FILE, red);
         write_int(GREEN_LED_FILE, green);
@@ -328,14 +328,20 @@ static int open_lights(const struct hw_module_t* module, char const* name,
     int (*set_light)(struct light_device_t* dev,
             struct light_state_t const* state);
 
-    if (0 == strcmp(LIGHT_ID_BACKLIGHT, name))
+    if (0 == strcmp(LIGHT_ID_BACKLIGHT, name)) {
         set_light = set_light_backlight;
-    else if (0 == strcmp(LIGHT_ID_BATTERY, name))
+    } else if (0 == strcmp(LIGHT_ID_BATTERY, name))
         set_light = set_light_battery;
     else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
         set_light = set_light_notifications;
-    else if (0 == strcmp(LIGHT_ID_BUTTONS, name))
-        set_light = set_light_buttons;
+    else if (0 == strcmp(LIGHT_ID_BUTTONS, name)) {
+        if (!access(BUTTON_FILE, F_OK)) {
+          // enable light button when the file is present
+          set_light = set_light_buttons;
+        } else {
+          return -EINVAL;
+        }
+    }
     else if (0 == strcmp(LIGHT_ID_ATTENTION, name))
         set_light = set_light_attention;
     else

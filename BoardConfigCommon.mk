@@ -187,7 +187,7 @@ VENDOR_SECURITY_PATCH := 2019-03-01
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-#BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
+BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true

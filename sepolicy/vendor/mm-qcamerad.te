@@ -4,6 +4,6 @@ allow mm-qcamerad binder_device:chr_file rw_file_perms;
 allow mm-qcamerad sensorservice_service:service_manager find;
 allow mm-qcamerad system_server:unix_stream_socket { read write };
 allow mm-qcamerad camera_data_file:dir { add_name remove_name search write };
-allow mm-qcamerad camera_data_file:sock_file unlink;
+allow mm-qcamerad camera_data_file:sock_file { unlink create };
 allow mm-qcamerad default_prop:property_service set;
 binder_use(mm-qcamerad)

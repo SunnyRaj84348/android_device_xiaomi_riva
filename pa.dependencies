@@ -1,10 +1,20 @@
 [
  {
-   "repository": "android_packages_resources_devicesettings",
-   "target_path": "packages/resources/devicesettings"
+   "remote": "aospa",
+   "repository": "AOSPA/android_hardware_qcom_audio",
+   "target_path": "hardware/qcom/audio",
+   "revision":     "pie-8996"
 },
  {
-   "repository": "android_kernel_xiaomi_msm8937",
-   "target_path": "kernel/xiaomi/msm8917"
+  "remote": "aospa",
+  "repository": "AOSPA/android_hardware_qcom_display",
+  "target_path": "hardware/qcom/display",
+  "revision":     "pie-8996"
+},
+ {
+  "remote": "aospa",
+  "repository": "AOSPA/android_hardware_qcom_media",
+  "target_path": "hardware/qcom/media",
+  "revision":     "pie-8996"
  }
 ]

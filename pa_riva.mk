@@ -15,13 +15,26 @@
 # limitations under the License.
 #
 
+# Check for the target product.
+ifeq (pa_riva,$(TARGET_PRODUCT))
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_m.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Set bootanimation to 720p display
+TARGET_BOOT_ANIMATION_RES := 720
+
+# Inherit some common Aospa stuff.
+TARGET_ARCH := arm64
+TARGET_DENSITY := xhdpi
+
+# Most advanced platform features, first.
+#TARGET_WANTS_EXTENDED_DPM_PLATFORM := true
+
+# Inherit from our common CAF device tree.
+include device/qcom/common/common.mk
 
 # Inherit from riva device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -30,7 +43,7 @@ PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := riva
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi 5A
-PRODUCT_NAME := lineage_riva
+PRODUCT_NAME := pa_riva
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
@@ -42,3 +55,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="riva-user 7.1.2 N2G47H V9.5.6.0.NCKMIFA release-keys"
 
 BUILD_FINGERPRINT := Xiaomi/riva/riva:7.1.2/N2G47H/V9.5.6.0.NCKMIFA:user/release-keys
+
+# Paranoid Android platform
+include vendor/pa/main.mk
+
+endif

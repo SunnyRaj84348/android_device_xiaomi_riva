@@ -61,4 +61,4 @@ chmod g-w /data/vendor/modem_config
 setprop ro.vendor.ril.mbn_copy_completed 1
 
 # Grep the modem partition for baseband version and set it
-setprop gsm.version.baseband `strings /firmware/image/modem.b12 | grep "^MPSS.JO." | head -1`
+setprop gsm.version.baseband `strings /vendor/firmware_mnt/image/modem.b12 | grep "^MPSS.JO." | head -1`

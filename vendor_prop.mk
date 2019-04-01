@@ -95,9 +95,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=false \
     persist.hwc.disable_vds=1 \
     persist.sys.wfd.virtual=0 \
-    sdm.debug.disable_rotator_split=1 \
+    vendor.display.disable_rotator_split=1 \
     vendor.display.disable_skip_validate=1 \
-    sdm.perf_hint_window=50
+    vendor.display.perf_hint_window=50
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \

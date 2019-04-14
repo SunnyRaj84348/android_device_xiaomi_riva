@@ -11,7 +11,7 @@ allow init_graphics init:unix_stream_socket connectto;
 allow init_graphics property_socket:sock_file write;
 allow init_graphics self:capability { chown fowner fsetid };
 allow init_graphics sysfs:file { getattr setattr };
-allow init_graphics default_prop:property_service set;
+allow init_graphics vendor_gpu_prop:property_service set;
 allow init_graphics vendor_gralloc_prop:property_service set;
 
 # For getting idle_time value

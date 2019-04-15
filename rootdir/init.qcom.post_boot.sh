@@ -3357,8 +3357,6 @@ case "$target" in
         start mpdecision
     ;;
     "msm8916")
-        setprop sys.post_boot.parsed 1
-
         if [ -f /sys/devices/soc0/soc_id ]; then
            soc_id=`cat /sys/devices/soc0/soc_id`
         else
@@ -3374,15 +3372,7 @@ case "$target" in
         ;;
         esac
     ;;
-    "msm8909")
-        setprop sys.post_boot.parsed 1
-    ;;
-    "msm8952")
-        setprop sys.post_boot.parsed 1
-    ;;
     "msm8937" | "msm8953")
-        setprop sys.post_boot.parsed 1
-
         low_ram_enable=`getprop ro.config.low_ram`
 
         if [ "$low_ram_enable" != "true" ]; then
@@ -3392,9 +3382,6 @@ case "$target" in
     "msm8974")
         start mpdecision
         echo 512 > /sys/block/mmcblk0/bdi/read_ahead_kb
-    ;;
-    "msm8994" | "msm8992" | "msm8996" | "msm8998" | "sdm660" | "apq8098_latv" | "sdm845")
-        setprop sys.post_boot.parsed 1
     ;;
     "apq8084")
         rm /data/system/perfd/default_values

@@ -222,42 +222,6 @@ function 8937_sched_dcvs_hmp()
 }
 target=`getprop ro.board.platform`
 
-function configure_zram_parameters() {
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
-
-    low_ram=`getprop ro.config.low_ram`
-
-    # Zram disk - 75% for Go devices.
-    # For 512MB Go device, size = 384MB
-    # For 1GB Go device, size = 768MB
-    # For >3GB Non-Go device, size = 1GB
-    # For <=3GB Non-Go device, size = 512MB
-    # And enable lz4 zram compression for Go devices
-    if [ -f /sys/block/zram0/disksize ]; then
-        if [ $MemTotal -le 524288 ] && [ "$low_ram" == "true" ]; then
-            echo lz4 > /sys/block/zram0/comp_algorithm
-            echo 402653184 > /sys/block/zram0/disksize
-        elif [ $MemTotal -le 1048576 ] && [ "$low_ram" == "true" ]; then
-            echo lz4 > /sys/block/zram0/comp_algorithm
-            echo 805306368 > /sys/block/zram0/disksize
-        else
-            # Set Zram disk size to 512MB for <=3GB
-            # and 1GB for >3GB Non-Go targets.
-            if [ $MemTotal -gt 3145728 ]; then
-                echo 1073741824 > /sys/block/zram0/disksize
-            else
-                echo 536870912 > /sys/block/zram0/disksize
-            fi
-        fi
-        mkswap /dev/block/zram0
-        swapon /dev/block/zram0 -p 32758
-
-        # Set swappiness to 100 for all targets
-        echo 100 > /proc/sys/vm/swappiness
-    fi
-}
-
 function configure_read_ahead_kb_values() {
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
@@ -308,8 +272,6 @@ if [ "$ProductName" == "msm8996" ]; then
       # Enable Adaptive LMK
       echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
       echo 80640 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
-
-      configure_zram_parameters
 
       configure_read_ahead_kb_values
 else
@@ -381,8 +343,6 @@ else
     if [ -f /sys/module/lowmemorykiller/parameters/oom_reaper ]; then
         echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
     fi
-
-    configure_zram_parameters
 
     configure_read_ahead_kb_values
 
@@ -3067,7 +3027,6 @@ case "$target" in
         echo N > /sys/module/lpm_levels/L3/cpu7/ret/idle_enabled
         # Turn on sleep modes.
         echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
-	echo 100 > /proc/sys/vm/swappiness
     ;;
 esac
 

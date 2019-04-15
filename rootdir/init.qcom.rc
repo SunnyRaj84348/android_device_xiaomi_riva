@@ -368,3 +368,6 @@ on property:init.svc.servicemanager=restarting
 #Set gpu available frequencies property
 on property:vendor.gpu.available_frequencies=*
     setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
+
+on property:dev.bootcomplete=1
+    swapon_all /vendor/etc/fstab.qcom

@@ -9,3 +9,5 @@ allow qti_init_shell self:capability dac_override;
 allow qti_init_shell system_prop:property_service set;
 allow qti_init_shell vendor_radio_data_file:dir search;
 allow qti_init_shell vendor_radio_data_file:file { open write };
+allow qti_init_shell default_prop:property_service set;
+allow qti_init_shell sysfs_net:file write;

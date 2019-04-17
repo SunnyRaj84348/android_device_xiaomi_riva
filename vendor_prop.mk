@@ -72,7 +72,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608 \
     ro.vendor.display.cabl=2 \
-    ro.sf.lcd_density=320 \
+    ro.sf.lcd_density=295 \
     vendor.display.enable_default_color_mode=1
 
 # Fm

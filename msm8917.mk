@@ -59,7 +59,6 @@ PRODUCT_PACKAGES += \
     audio.primary.msm8937 \
     audio.r_submix.default \
     audio.usb.default \
-    libaacwrapper \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing
@@ -379,13 +378,6 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf \
     $(VENDOR_PATH)/wifi/firmware/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(VENDOR_PATH)/wifi/firmware/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_cfg.ini
-
-# Wi-Fi Display
-PRODUCT_PACKAGES += \
-     libnl
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # Inherit common proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/msm8917-common/msm8917-common-vendor.mk)

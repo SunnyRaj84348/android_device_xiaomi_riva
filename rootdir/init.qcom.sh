@@ -60,3 +60,11 @@ echo 1 > /data/vendor/radio/copy_complete
 
 # Grep the modem partition for baseband version and set it
 setprop gsm.version.baseband `strings /firmware/image/modem.b12 | grep "^MPSS.JO." | head -1`
+
+on post-fs-data
+
+    # IR nodes
+    chown system system /dev/spidev7.1
+    chown system system /dev/spidev6.1
+    chmod 0666 /dev/spidev7.1
+    chmod 0666 /dev/spidev6.1

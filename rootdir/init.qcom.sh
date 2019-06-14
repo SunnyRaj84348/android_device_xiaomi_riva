@@ -62,3 +62,11 @@ setprop ro.vendor.ril.mbn_copy_completed 1
 
 # Grep the modem partition for baseband version and set it
 setprop gsm.version.baseband `strings /vendor/firmware_mnt/image/modem.b12 | grep "^MPSS.JO." | head -1`
+
+on post-fs-data
+
+    # IR nodes
+    chown system system /dev/spidev7.1
+    chown system system /dev/spidev6.1
+    chmod 0666 /dev/spidev7.1
+    chmod 0666 /dev/spidev6.1

@@ -1,0 +1,24 @@
+# Bluetooth
+/(vendor|system/vendor)/bin/hci_qcomm_init      u:object_r:bluetooth_loader_exec:s0
+
+# Block devices
+/dev/block/bootdevice/by-name/persist		u:object_r:persist_block_device:s0
+/dev/block/bootdevice/by-name/userdata          u:object_r:userdata_block_device:s0
+/dev/block/bootdevice/by-name/modem             u:object_r:modem_block_device:s0
+
+# DRM
+/vendor/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey u:object_r:hal_drm_clearkey_exec:s0
+/vendor/bin/hw/android\.hardware\.drm@1\.1-service\.widevine u:object_r:hal_drm_widevine_exec:s0
+
+# Ir
+/dev/lirc[0-9]*					u:object_r:lirc_device:s0
+
+# Rild
+/(vendor|system/vendor)/radio/qcril_database/qcril.db	u:object_r:rild_file:s0
+
+# Light
+/sys/devices/soc/78b6000\.i2c/i2c-2/2-[0-9a-f]+/leds(/.*)?    u:object_r:sysfs_leds:s0
+
+# IR
+/dev/spidev6.1                                  u:object_r:spidev_device:s0
+/dev/spidev7.1                                  u:object_r:spidev_device:s0

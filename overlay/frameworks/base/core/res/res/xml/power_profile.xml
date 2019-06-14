@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device name="Android">
+  <item name="screen.on">63</item>
+  <item name="screen.full">261</item>
+    <item name="wifi.on">0.1</item>
+    <item name="wifi.active">0.1</item>
+    <item name="wifi.scan">0.1</item>
+ <!-- Different CPU speeds as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
+  <array name="cpu.speeds">
+      <value>960000</value>
+      <value>1094400</value>
+      <value>1248000</value>
+      <value>1401000</value>
+  </array>
+  <!-- Current at each CPU speed, as per 'cpu.speeds' -->
+  <array name="cpu.active">
+      <value>151</value>
+      <value>169</value>
+      <value>177</value>
+      <value>195</value>
+      <value>259</value>
+      <value>307</value>
+      <value>353</value>
+  </array>
+  <!-- Current when CPU is awake -->
+  <item name="cpu.awake">1.6</item>
+  <!-- Current when CPU is idle -->
+  <item name="cpu.idle">1.6</item>
+  <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
+  <item name="battery.capacity">3000</item>
+</device>
+

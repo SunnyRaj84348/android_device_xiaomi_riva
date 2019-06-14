@@ -1,2 +1,0 @@
-allow hal_ir_default sysfs_leds:dir search;
-allow hal_ir_default sysfs:file { open read write };

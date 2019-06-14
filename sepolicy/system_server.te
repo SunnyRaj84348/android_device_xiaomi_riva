@@ -1,0 +1,4 @@
+allow system_server lirc_device:chr_file rw_file_perms;
+allow system_server vendor_file:file r_file_perms;
+allow system_server sysfs:file { open read getattr };
+allow system_server spidev_device:chr_file rw_file_perms;

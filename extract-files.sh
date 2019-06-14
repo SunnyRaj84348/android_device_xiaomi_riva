@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE_COMMON=msm8917-common
+DEVICE=riva
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks
@@ -55,24 +55,25 @@ if [ -z "$SRC" ]; then
     SRC=adb
 fi
 
-# Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
+# Initialize the helper
+setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
 
+extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 extract "$MY_DIR"/proprietary-files-qc.txt "$SRC" "$SECTION"
 
-if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
-    # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
+# Hax for cam configs
+CAMERA2_SENSOR_MODULES="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/libmmcamera2_sensor_modules.so
 
-    extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
-fi
+sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
 
 # Hax for disable colorspace
-sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib/egl/eglSubDriverAndroid.so
-sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib/egl/eglsubAndroid.so
-sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib/egl/libRBEGL_adreno.so
-sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib64/egl/eglSubDriverAndroid.so
-sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib64/egl/eglsubAndroid.so
-sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" $BLOB_ROOT/vendor/lib64/egl/libRBEGL_adreno.so
+EGL_BLOB_1="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/egl/eglSubDriverAndroid.so 
+EGL_BLOB_2="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/egl/eglsubAndroid.so
+EGL_BLOB_3="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib64/egl/libRBEGL_adreno.so
+EGL_BLOB_4="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/egl/eglSubDriverAndroid.so
+EGL_BLOB_5="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/egl/eglsubAndroid.so
+EGL_BLOB_6="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/vendor/lib/egl/libRBEGL_adreno.so
+
+sed -i "s|EGL_KHR_gl_colorspace|DIS_ABL_ED_colorspace|g" "$EGL_BLOB_1" "$EGL_BLOB_2" "$EGL_BLOB_3" "$EGL_BLOB_4" "$EGL_BLOB_5" "$EGL_BLOB_6"
 
 "$MY_DIR"/setup-makefiles.sh

@@ -1,4 +1,4 @@
-/* Copyright (c) 2012-2017, The Linux Foundation. All rights reserved.
+/* Copyright (c) 2012-2017, 2019, The Linux Foundation. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -2482,13 +2482,13 @@ typedef struct {
 
 static module_debug_t cam_loginfo[(int)CAM_LAST_MODULE] = {
   {CAM_GLBL_DBG_ERR, 1,
-      "",         "persist.camera.global.debug"     }, /* CAM_NO_MODULE     */
+      "",         "persist.vendor.camera.global.debug"     }, /* CAM_NO_MODULE     */
   {CAM_GLBL_DBG_ERR, 1,
-      "<HAL>", "persist.camera.hal.debug"        }, /* CAM_HAL_MODULE    */
+      "<HAL>", "persist.vendor.camera.hal.debug"        }, /* CAM_HAL_MODULE    */
   {CAM_GLBL_DBG_ERR, 1,
-      "<MCI>", "persist.camera.mci.debug"        }, /* CAM_MCI_MODULE    */
+      "<MCI>", "persist.vendor.camera.mci.debug"        }, /* CAM_MCI_MODULE    */
   {CAM_GLBL_DBG_ERR, 1,
-      "<JPEG>", "persist.camera.mmstill.logs"     }, /* CAM_JPEG_MODULE   */
+      "<JPEG>", "persist.vendor.camera.mmstill.logs"     }, /* CAM_JPEG_MODULE   */
 };
 
 /** cam_get_dbg_level

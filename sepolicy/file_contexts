@@ -1,6 +1,3 @@
-# Bluetooth
-/(vendor|system/vendor)/bin/hci_qcomm_init      u:object_r:bluetooth_loader_exec:s0
-
 # Block devices
 /dev/block/bootdevice/by-name/persist		u:object_r:persist_block_device:s0
 /dev/block/bootdevice/by-name/userdata          u:object_r:userdata_block_device:s0
@@ -10,13 +7,21 @@
 /vendor/bin/hw/android\.hardware\.drm@1\.1-service\.clearkey u:object_r:hal_drm_clearkey_exec:s0
 /vendor/bin/hw/android\.hardware\.drm@1\.1-service\.widevine u:object_r:hal_drm_widevine_exec:s0
 
+# Input
+/sys/board_properties/virtualkeys.*             u:object_r:touch_sysfs:s0
+/vendor/usr/keylayout(/.*)?                     u:object_r:input_file:s0
+
 # Ir
 /dev/lirc[0-9]*					u:object_r:lirc_device:s0
 
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db	u:object_r:rild_file:s0
 
+# RTC
+/sys/devices/soc/qpnp-rtc-8/rtc/rtc0/hctosys            u:object_r:sysfs_rtc:s0
+
 # Touch
+/sys/devices/soc/78b7000.i2c/i2c-3/3-[0-9a-f]+/disable_keys   u:object_r:touch_sysfs:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.riva u:object_r:hal_lineage_touch_default_exec:s0
 
 # Light

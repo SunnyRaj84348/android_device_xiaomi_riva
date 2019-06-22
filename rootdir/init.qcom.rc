@@ -25,10 +25,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import /vendor/etc/init/hw/init.qcom.power.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.device.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -43,8 +41,6 @@ on init
 
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
-    start graphics-sh
-
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
@@ -54,6 +50,8 @@ on early-boot
  
     write /sys/kernel/boot_adsp/boot 1
     chown root audio /sys/kernel/boot_adsp/boot
+
+    exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
 
     # SSR setup
     write /sys/bus/msm_subsys/devices/subsys0/restart_level "related"
@@ -226,6 +224,8 @@ on post-fs-data
     chmod 0775 /data/misc/sensors
 
 on property:sys.boot_completed=1
+    start qcom-post-boot
+
     write /dev/kmsg "Boot completed "
     # Reset read ahead for dm-0 and dm-1 to 512kb
     write /sys/block/dm-0/queue/read_ahead_kb 512
@@ -252,6 +252,12 @@ service dpmQmiMgr /vendor/bin/dpmQmiMgr
     class main
     user system
     group radio system
+
+service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh class late_start 
+    user root
+    group root system wakelock graphics
+    disabled
+    oneshot
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
@@ -310,12 +316,6 @@ service qti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 usb
-
-service graphics-sh /vendor/bin/init.qcom.graphics.sh
-    class core
-    user root
-    disabled
-    oneshot
 
 service sensors /vendor/bin/sensors.qcom
     class core

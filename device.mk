@@ -305,13 +305,12 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.qcom.power.rc \
-    init.recovery.qcom.rc \
     init.target.rc \
-    init.qcom.graphics.sh \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
     init.qcom.sh \
     init.qcom.usb.sh
 

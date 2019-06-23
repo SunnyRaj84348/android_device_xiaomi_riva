@@ -100,20 +100,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.hw=1 \
-    vendor.gralloc.enable_fb_ubwc=1 \
-    debug.enable.sglscale=1 \
+    debug.cpurend.vsync=false \
+    debug.gralloc.gfx_ubwc_disable=0 \
     debug.hwui.use_buffer_age=false \
+    debug.sdm.support_writeback=0 \
+    debug.sf.disable_backpressure=1 \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
     debug.sf.recomputecrop=0 \
-    debug.sdm.support_writeback=0 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     persist.hwc.enable_vds=1 \
     persist.hwc.mdpcomp.enable=true \
     vendor.display.disable_rotator_split=1 \
     vendor.display.disable_skip_validate=1 \
-    vendor.display.perf_hint_window=50
+    vendor.display.perf_hint_window=50 \
+    vendor.gralloc.enable_fb_ubwc=1
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \

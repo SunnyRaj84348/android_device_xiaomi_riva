@@ -114,6 +114,9 @@ Only the three quirks included above are recognized at this point:
     <Settings>
         <Setting name="max-video-encoder-input-buffers" value="9" />
     </Settings>
+    <Settings>
+        <Variant name="slow-cpu" enabled="true" />
+    </Settings>
     <Encoders>
         <!-- Video Hardware  -->
         <MediaCodec name="OMX.qcom.video.encoder.avc" type="video/avc" >
@@ -254,6 +257,14 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="16" />
             <Limit name="performance-point-720x480" value="30" />
             <Limit name="performance-point-720x576" value="25" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.vp9.decoder" type="video/x-vnd.on2.vp9" variant="slow-cpu" update="true">
+            <Variant name="slow-cpu">
+                <Limit name="size" min="2x2" max="1920x1920" />
+                <Limit name="block-count" range="1-14400" />
+                <Limit name="blocks-per-second" range="1-300000" />
+                <Limit name="bitrate" range="1-40000000" />
+            </Variant>
         </MediaCodec>
     </Decoders>
     <Include href="media_codecs_google_video_le.xml" />

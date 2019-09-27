@@ -242,6 +242,8 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
     # CPE fw_name used by sound trigger HAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
+    # Move sysfs node to audio group
+    chown media audio /sys/kernel/aud_dev/state
 
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4

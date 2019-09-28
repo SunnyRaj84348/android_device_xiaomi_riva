@@ -36,7 +36,15 @@ on early-init
     chown root system /dev/kmsg
     chmod 0620 /dev/kmsg
 
+    # create symlink for vendor mount points
+    symlink /vendor/firmware_mnt /firmware
+    symlink /vendor/dsp /dsp
+
 on init
+    # Support legacy paths
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
+
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
 on post-fs
@@ -139,6 +147,10 @@ on boot
 
     # Create vpp directory
     mkdir /mnt/vendor/persist/vpp 0770 media media
+
+    #sensors log dir
+    mkdir /data/vendor/sensors
+    chown system system /data/vendor/sensors
 
 # msm specific files that need to be created on /data
 on post-fs-data
@@ -394,7 +406,7 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     class hal
     user audioserver
     # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock system
+    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
     capabilities BLOCK_SUSPEND
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
@@ -402,6 +414,7 @@ service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     #and its .rc file has an "onrestart restart audio-hal" rule, thus
     #an additional auto-restart from the init process isn't needed.
     oneshot
+    interface android.hardware.audio@5.0::IDevicesFactory default
     interface android.hardware.audio@4.0::IDevicesFactory default
     interface android.hardware.audio@2.0::IDevicesFactory default
 

@@ -1,0 +1,69 @@
+[
+  {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_display-caf-msm8996",
+    "target_path": "hardware/qcom/display-caf-msm8996",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_audio-caf-msm8996",
+    "target_path": "hardware/qcom/audio-caf-msm8996",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_hardware_qcom_media-caf-msm8996",
+    "target_path": "hardware/qcom/media-caf-msm8996",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "vendor_qcom_opensource_dataservices",
+    "target_path": "vendor/qcom/opensource/dataservices",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_device_qcom_caf-sepolicy",
+    "target_path": "device/qcom/sepolicy",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_vendor_qcom_opensource_commonsys",
+    "target_path": "vendor/qcom/opensource/commonsys",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_external_ant-wireless_ant_native",
+    "target_path": "external/ant-wireless/ant_native",
+    "revision": "android-9.0"
+  },
+  { 
+    "remote": "omnirom",
+    "repository": "android_external_ant-wireless_antradio-library",
+    "target_path": "external/ant-wireless/antradio-library",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_external_ant-wireless_ant_service",
+    "target_path": "external/ant-wireless/ant_service",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository": "android_external_json-c",
+    "target_path": "external/json-c",
+    "revision": "android-9.0"
+  },
+  {
+    "remote": "omnirom",
+    "repository: "android_vendor_qcom_opensource_audio",
+    "target_path": "vendor/qcom/opensource/audio",
+    "revision": "android-9.0"
+  }
+]
+

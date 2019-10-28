@@ -61,7 +61,7 @@
   },
   {
     "remote": "omnirom",
-    "repository: "android_vendor_qcom_opensource_audio",
+    "repository": "android_vendor_qcom_opensource_audio",
     "target_path": "vendor/qcom/opensource/audio",
     "revision": "android-9.0"
   }

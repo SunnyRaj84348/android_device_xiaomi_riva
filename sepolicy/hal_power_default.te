@@ -1,2 +1,0 @@
-r_dir_file(hal_power_default, debugfs_wlan)
-allow hal_power_default proc:file { open write };

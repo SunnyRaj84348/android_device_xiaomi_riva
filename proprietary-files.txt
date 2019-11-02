@@ -1901,48 +1901,6 @@ vendor/firmware/cpp_firmware_v1_12_0.fw:vendor/firmware/cpp_firmware_v1_12_0.fw|
 vendor/lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.default.so|b2e014de968f65e013b4dae3fad67f16aa3b0a09
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so|bed46204c8200d5f0ec1b37c14ecbc06f424db93
 
-# Display calibration
-vendor/etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3b.xml
-vendor/etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3b.xml
-
-# Graphics firmware - from riva OPM1.171019.026 - 8.11.6
-vendor/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw|899dbfad4812084971cfc1ff30f06a4b45c2d34c
-vendor/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw|94529206b45b6e9f6ed30dadabe4244a88a60975
-vendor/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
-vendor/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
-
-# Graphics - from riva OPM1.171019.026 - 8.11.6
-vendor/lib/egl/eglSubDriverAndroid.so|9479557cbf64fd9d00b4dc9bae457394b74fdb7f
-vendor/lib/egl/libEGL_adreno.so|095c0ca2f5d3b0da4c8bdc370cd53244e859a1ee
-vendor/lib/egl/libESXEGL_adreno.so|863ba76e8f0f821706b03d3a9aff61c15227fce7
-vendor/lib/egl/libESXGLESv1_CM_adreno.so|6f7e122fc9fd42cc0840068d52fb3c678ee674d0
-vendor/lib/egl/libESXGLESv2_adreno.so|58108938bfcfd7bab8274624b28c820f3a959223
-vendor/lib/egl/libGLESv1_CM_adreno.so|0f3ab19a2572658f78826bfa6fe6149b0554fa9f
-vendor/lib/egl/libGLESv2_adreno.so|2f7b8abc7def59c607b58a03e091d92427c0da25
-vendor/lib/egl/libQTapGLES.so|cbb7efc834622cf761a149a206c530ecaf723673
-vendor/lib/egl/libRBEGL_adreno.so|01c3e1c2a640a5f883f8e9a6693fb35bdd076092
-vendor/lib/egl/libRBGLESv1_CM_adreno.so|10c18d6ad691bbaa751c805e4722daae47c467a1
-vendor/lib/egl/libRBGLESv2_adreno.so|cf95caaf03ccd599b0d360a6c1f3b2d9af6f2e34
-vendor/lib/egl/libq3dtools_adreno.so|a936a91b92d0130bdeb18505caf11a49985b1885
-vendor/lib/egl/libq3dtools_esx.so|66c273ea65d3e6d10e021817ae73f0ea79a21be4
-vendor/lib64/egl/eglSubDriverAndroid.so|a89a004a5d529cfecc6432b1fcb18d0a2e479d7c
-vendor/lib64/egl/libEGL_adreno.so|4f2537cca19b11e6aa7f85b3c3ceeebfa1bcb423
-vendor/lib64/egl/libESXEGL_adreno.so|0b414e24e3503e738c027ae4766deb5f7a7943fb
-vendor/lib64/egl/libESXGLESv1_CM_adreno.so|9935dbf58dcfe01c52e1e42c770dddb5725a309e
-vendor/lib64/egl/libESXGLESv2_adreno.so|175bd05582b5389dad054a5ac97c7a82a5ab96af
-vendor/lib64/egl/libGLESv1_CM_adreno.so|f4f2adb5226ce167c66c5dc633ff8d51848aed6e
-vendor/lib64/egl/libGLESv2_adreno.so|63d49ecefb4630a76b32dab2edd7715d2bba2221
-vendor/lib64/egl/libQTapGLES.so|9a123fa4efd73a607b6003c0917ed22f07e41364
-vendor/lib64/egl/libRBEGL_adreno.so|ad78f0686b8206e86bdf536a8665121496146f62
-vendor/lib64/egl/libRBGLESv1_CM_adreno.so|c3a83c0dcbc9e7e377890539eedfaae461eeba44
-vendor/lib64/egl/libRBGLESv2_adreno.so|88951c34481d835e644d3fca5290d45a32cf4d39
-vendor/lib64/egl/libq3dtools_adreno.so|3744681a9056755540803a0429c5fb41d39de9ec
-vendor/lib64/egl/libq3dtools_esx.so|5445798c7d08e4cd2ce79f4b8323504e1d321a73
-vendor/lib/libc2d30-a3xx.so|1496650f2c94f5b290a62dea91a4d854811f6c2e
-vendor/lib/libsc-a3xx.so|99f7d81029e1d4d6f5e074cb9ad98fc750457348
-vendor/lib64/libc2d30-a3xx.so|c7ca81d1afb1e8023039fdd2518531f2fd7497c3
-vendor/lib64/libsc-a3xx.so|b5adb05d08af30107dcb7cad11abf447322235c8
-
-# Graphics (adreno 308) - from riva - OPM1.171019.026 - 8.11.6
-vendor/lib/egl/eglsubAndroid.so|47e624dc5dce36d730551090c708dd1aa7f83fc9
-vendor/lib64/egl/eglsubAndroid.so|2da54c43577e048f89a5eb16c52a63fc5d2629a5
+# Display calibration - from riva - V9.2.4.0.NCKMIEK
+vendor/etc/qdcm_calib_data_hx8394F_HD720p_video_BOE_c3b.xml|1483bbcd78dfaa723c0c15caad7f1cbce41fdf1d
+vendor/etc/qdcm_calib_data_ili9881c_HD720p_video_Ebbg_c3b.xml|814bc2ee08678f07a2065a4e911964c1fd5a298a

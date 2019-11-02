@@ -169,6 +169,32 @@ vendor/lib64/librs_adreno_sha1.so|35c26aecafd9a12d84ff6f89b1891699c19eb88f
 vendor/lib64/librs_adreno.so|5b853ae3692fc3d8cf7c5b63d45320533c194cde
 vendor/lib64/libRSDriver_adreno.so|eb72d1cabfb31ee3362c9832a40b265e42858dc9
 
+# Graphics (ADRENO 308) - from dpl - PKQ1.190202.001
+vendor/lib/libc2d30-a3xx.so|1d4a18879b27229526390705a0d6ffd89a79ed11
+vendor/lib64/libc2d30-a3xx.so|95b0af29b3a5e1a4e8b63f785b0cec13a29016d8
+
+# Graphics (EGL) - from dpl - PKQ1.190202.001
+vendor/lib/egl/eglSubDriverAndroid.so|2dc3ea90fd0e6c7ad1864a23cf736eedcfa4c985
+vendor/lib/egl/libEGL_adreno.so|adfa25a02996babb29fe6752ef01a25d9482f7d8
+vendor/lib/egl/libGLESv1_CM_adreno.so|0930a64d8889c184de31a085539e1b8b28520a31
+vendor/lib/egl/libGLESv2_adreno.so|2b806e15155de54e12bbdf788ab55cdf8c496bd5
+vendor/lib/egl/libQTapGLES.so|7641cd4f894d86f53394bcdc421ecae254afaf30
+vendor/lib/egl/libq3dtools_adreno.so|a2506b94eb0fe3c2bccc7c8e6d8b8d21bd314ae8
+vendor/lib/egl/libq3dtools_esx.so|9116ff1328163d82ca624ea02f09d80ec0f055dc
+vendor/lib64/egl/eglSubDriverAndroid.so|2f3edc8062166bc55cdfbc27fc2e5dc0dd3c5cbc
+vendor/lib64/egl/libEGL_adreno.so|62929bf23ecea823418910defed80bad5fc3416c
+vendor/lib64/egl/libGLESv1_CM_adreno.so|95497830d4e08c02a3b6d82bc7623f926d2ef9ed
+vendor/lib64/egl/libGLESv2_adreno.so|dd8e76264c4dd24086829c2146a35e5ab9b591a5
+vendor/lib64/egl/libQTapGLES.so|dac820eea4d54f98f7e20a49b82404de6f09743b
+vendor/lib64/egl/libq3dtools_adreno.so|4bd18c19a4d8376311983303b0971a7aa1334897
+vendor/lib64/egl/libq3dtools_esx.so|19d96756fda3f1ba0251c041120d1d4f3a5a8d03
+
+# Graphics firmware - from dpl - PKQ1.190202.001
+vendor/firmware/a300_pfp.fw:vendor/firmware/a300_pfp.fw|899dbfad4812084971cfc1ff30f06a4b45c2d34c
+vendor/firmware/a300_pm4.fw:vendor/firmware/a300_pm4.fw|94529206b45b6e9f6ed30dadabe4244a88a60975
+vendor/firmware/a330_pfp.fw:vendor/firmware/a330_pfp.fw|3e2fcee7276ded819cf2d95864fdd6788a484ee1
+vendor/firmware/a330_pm4.fw:vendor/firmware/a330_pm4.fw|ae739ea812f9e4462d7bba8b9ead5782d4496618
+
 # Graphics (HDR) - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 vendor/lib/libhdr_tm.so|8060a5d9ed0283c7b89716165ba8af4b86ef0210
 vendor/lib64/libhdr_tm.so|df15d487e73560f81017bcf4a73c28c9697b1ed9

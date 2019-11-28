@@ -1,8 +1,8 @@
 [
  {
     "remote":      "github",
-    "repository":  "rulim34/android_kernel_xiaomi_msm8937",
-    "target_path": "kernel/xiaomi/msm8953",
+    "repository":  "rulim34/android_kernel_xiaomi_msm8917",
+    "target_path": "kernel/xiaomi/msm8917",
     "branch":      "lineage-17.0"
   },
   {

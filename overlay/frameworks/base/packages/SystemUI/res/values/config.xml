@@ -15,6 +15,47 @@
     limitations under the License.
 -->
 <resources>
+
     <!-- Doze: does this device support STATE_DOZE and STATE_DOZE_SUSPEND?  -->
     <bool name="doze_display_state_supported">true</bool>
+
+    <!-- List of Carrier one mcc mncs-->
+    <string-array name="config_carrier_one_networks" translatable="false">
+        <item>405840</item>
+        <item>405854</item>
+        <item>405855</item>
+        <item>405856</item>
+        <item>405857</item>
+        <item>405858</item>
+        <item>405859</item>
+        <item>405860</item>
+        <item>405861</item>
+        <item>405862</item>
+        <item>405863</item>
+        <item>405864</item>
+        <item>405865</item>
+        <item>405866</item>
+        <item>405867</item>
+        <item>405868</item>
+        <item>405869</item>
+        <item>405870</item>
+        <item>405871</item>
+        <item>405872</item>
+        <item>405873</item>
+        <item>405874</item>
+    </string-array>
+
+    <!-- Doze: check proximity sensor before pulsing? -->
+    <bool name="doze_proximity_check_before_pulse">true</bool>
+
+    <!-- Max visible notification icons -->
+    <integer name="config_maxVisibleNotificationIcons">8</integer>
+    <integer name="config_maxVisibleNotificationIconsWhenDark">8</integer>
+
+    <!-- Whether SystemUI ignores notch -->
+    <bool name="hide_view_behind_notch">true</bool>
+
+    <!-- Show battery icon in the QS Panel instead of in the header -->
+    <bool name="config_batteryInQSPanel">false</bool>
+
 </resources>

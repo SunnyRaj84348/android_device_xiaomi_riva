@@ -47,8 +47,6 @@ on init
 
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
-    start graphics-sh
-
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
@@ -59,7 +57,7 @@ on early-boot
     write /sys/kernel/boot_adsp/boot 1
     chown root audio /sys/kernel/boot_adsp/boot
 
-    exec u:r:qti_init_shell:s0 -- /vendor/bin/init.qcom.early_boot.sh
+    exec -- /vendor/bin/init.qcom.early_boot.sh
 
     # for backward compatibility
     chown system system /persist/sensors
@@ -312,12 +310,6 @@ service vendor.dataqti /vendor/bin/qti
     class main
     user radio
     group radio oem_2901 usb
-
-service graphics-sh /vendor/bin/init.qcom.graphics.sh
-    class core
-    user root
-    disabled
-    oneshot
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core

@@ -193,11 +193,6 @@ VENDOR_SECURITY_PATCH := 2019-06-01
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy_base
 
-# We modify several neverallows, so let the build proceed
-#ifneq ($(TARGET_BUILD_VARIANT),user)
-#SELINUX_IGNORE_NEVERALLOWS := true
-#endif
-
 # Treble
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
 PRODUCT_FULL_TREBLE_OVERRIDE := true

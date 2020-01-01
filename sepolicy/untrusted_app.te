@@ -1,1 +1,0 @@
-allow untrusted_app sysfs_kgsl:dir search;

@@ -1,3 +1,1 @@
-allow init sysfs_devices_system_cpu:dir write;
-allow init sysfs:file setattr;
-allow init hal_wifi_supplicant_default:process noatsecure;
+allow init sysfs_devices_system_cpu:dir r_dir_perms;

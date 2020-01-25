@@ -1,2 +1,6 @@
 genfscon debugfs /rmt_storage u:object_r:debugfs_rmt:s0
 genfscon debugfs /wlan0   u:object_r:debugfs_wlan:s0
+
+genfscon sysfs /devices/soc/78db000.usb/power_supply   u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/7af5000.i2c/i2c-5/5-0055/power_supply   u:object_r:sysfs_batteryinfo:s0
+genfscon sysfs /devices/soc/7af5000.i2c/i2c-5/5-006b/power_supply   u:object_r:sysfs_batteryinfo:s0

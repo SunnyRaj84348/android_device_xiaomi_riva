@@ -13,6 +13,7 @@ vendor/lib/libacdbrtac.so|8a469a26ed1ecff8e22ee141d98bde97513a6212
 vendor/lib/libadiertac.so|e8e2c208abafc6d6c34717aee3d822bfb3a23f76
 vendor/lib/libadm.so|01e2316dfa1afcb000984e9f68903ba6a1220159
 vendor/lib/libaudcal.so|5a6b0fa75e274b07f2dabdcc7381879e1a59898c
+vendor/lib/soundfx/libasphere.so|72c4e50e1e0058721e213387975f3dde5372d610
 vendor/lib/soundfx/libqcbassboost.so|0a730813a7335208a5368f48de4790abda536c59
 vendor/lib/soundfx/libqcreverb.so|3cbf222a205e4ccbe812fc69d580abd2237e64d5
 vendor/lib/soundfx/libqcvirt.so|8f60a539fe18de5944d5f1dcd6d0ec5e56b336ea

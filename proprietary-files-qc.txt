@@ -226,11 +226,8 @@ lib64/lib-imsvt.so|7dfc533fc3c439a608b219838281d6c5f605ee22
 lib64/lib-imsvtextutils.so|dc3340321ee2543bb35248d0f9dac4718116a073
 lib64/lib-imsvtutils.so|13480b644ed5290f7ddc2f7c304c0e912f416098
 lib64/libdiag_system.so|811c30efa526e8e3828b112487b1d203cca5ed6e
-lib64/libimscamera_jni.so|133fec4e7be337eb255eb226c4ff96ae53b94be7
-lib64/libimsmedia_jni.so|577b1ed68e2a26e50e9e4dfed9fe1ca685979a56
 lib64/librcc.so|4d732d9211e3139ed17fae059edfcd71f0e13d7e
 lib64/vendor.qti.imsrtpservice@1.0.so|559a2dbf409d86746ed4303f2e0089256bb91a07
--priv-app/ims/ims.apk|10d64cbbd275431b5e346296c66d894685f8ff8e
 vendor/bin/ims_rtp_daemon|174be7387753db4b72fa4de305edaa80fe79b6a9
 vendor/bin/imsdatadaemon|56e1ab6f6f6679261bcd36dd218097632da866b6
 vendor/bin/imsqmidaemon|0e5cf08e7cbd4e34fb69e6644a8c7d5e6715c306
@@ -255,6 +252,15 @@ vendor/lib64/lib-uceservice.so|31dae56817e9a47849cac15a8812b12ebec6bca9
 vendor/lib64/vendor.qti.ims.callinfo@1.0.so|5862ab34c0d040dba63eced727146dd233cf92ee
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|f4eef520bbf98e6e1ac8697ef7eef0109487dba1
 vendor/lib64/vendor.qti.imsrtpservice@1.0.so|559a2dbf409d86746ed4303f2e0089256bb91a07
+
+# IMS - from daisy - QKQ1.191002.002 V11.0.2.0.QDLMIXM
+product/lib64/libimscamera_jni.so|7cb89110cca94d37d68c705f12a7a5a4ee106139
+product/lib64/libimsmedia_jni.so|3540752cc3658261ea3c909f03018eea4398f84e
+-product/priv-app/ims/ims.apk|9c4ca91e0ec7a567d22251d7ca0640abf13fdd7b
+vendor/etc/init/imsdatadaemon.rc|29face37c174aebcd1358f7d7ad0bd4baf83063b
+vendor/etc/init/imsqmidaemon.rc|dda16d842b7c65296e97bc9921b723a43b152ba3
+vendor/etc/init/imsrcsd.rc|2dc42ff6e4b6dd389bd3bc9a7af30dec2f1a45df
+vendor/etc/init/ims_rtp_daemon.rc|b3c3a380204d7b1b3a58937db8c8e76c00ac8825
 
 # Keymaster - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|f71f1439c9c356ce05d88b876253b4e3dcb10f4b
@@ -319,9 +325,6 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|df138b77fb116a1a786a70c9c76b69d61b5c04d2
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|5761eae471e8dcd94ce139e831a1aa5b23f133c6
 
-# Qcrilmsgtunnel - from mata - QP1A.190711.148-446-release-keys
--priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|956a4017d0ba7f68e6d225e57b40d3b2bcbb4837
-
 # QMI - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
@@ -360,7 +363,6 @@ vendor/lib64/libqmiservices.so|842a1b61fad7dd34753e945ee2ada0fdc9589c09
 -app/QtiTelephonyService/QtiTelephonyService.apk|420b39e20a5166940c1e2e55e8d9c92ec910cebb
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 framework/qcrilhook.jar|784df5e6aa9df0127700b9a6f1083440ebfac057
-framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
 vendor/bin/ATFWD-daemon|390c764ab1b425e836f2b98cf039086d6729d751
 vendor/bin/netmgrd|48d3b006b85cf3b30ec5c4b972e64f2003c52e60
 vendor/bin/qti|28c5da423ba2e0c7873c24e6eca4bb4db7f41fe8
@@ -397,6 +399,12 @@ vendor/lib64/vendor.qti.hardware.radio.uim@1.1.so|b3cc0c6d4eaf6db13ac37118e0b812
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|f3a3051e4a904268e349a8b5adc91b748e8e0ade
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|ab552724f7d723a70a4e730dba52ab220d33a33e
 vendor/radio/qcril_database/qcril.db|f25a9215fcc2445e73d1aa0b7ef9bdbd97e33f56
+
+# RIL - from daisy - QKQ1.191002.002-V11.0.2.0.QDLMIXM
+product/framework/qti-telephony-common.jar|11d6b89b31a9bf65218b3676c2bbd296275b1932
+-product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|20c011ffc54539161fa7cc05c55c9c5ed3f936b4
+vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
+vendor/etc/init/netmgrd.rc|fd3457c69a9fab11b87d0d1b494188fe089684cd
 
 # Sensors - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 vendor/bin/sensors.qti|3f6368e8d7484f5610fbf899dbe2a95e7cd6855e

@@ -415,18 +415,18 @@ product/framework/qti-telephony-common.jar|11d6b89b31a9bf65218b3676c2bbd296275b1
 vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
 vendor/etc/init/netmgrd.rc|fd3457c69a9fab11b87d0d1b494188fe089684cd
 
-# Sensors - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
-vendor/bin/sensors.qti|3f6368e8d7484f5610fbf899dbe2a95e7cd6855e
-vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|f9247646a5e2b28473753da06f832ae5f702f7c4
-vendor/lib/libsensor1.so|48727a05c1b91051d5ec53860124f1f1c0d8ca53
-vendor/lib/libsensor_reg.so|8ae3b9d1a54feb9f0af55a8fff50410f53660318
-vendor/lib/libsensor_user_cal.so|df85342393b56994b4f4b4c33aad97928bc6f023
-vendor/lib/sensors.ssc.so|c4b5ee167e5b06fde7143007b87ea5dbe90b0565
-vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|5531da4cf2451f899602fb7e3f0e80775bb7e5ff
-vendor/lib64/libsensor1.so|48dedf69781fb146fc35e622f1c80a635530da22
-vendor/lib64/libsensor_reg.so|74659858f5abcfa0d8c826af2e2e46addc9f5f87
-vendor/lib64/libsensor_user_cal.so|92de798c64f9e23ca1069a5a4bec5895fafa9a22
-vendor/lib64/sensors.ssc.so|3d6eed945ab3ec2d91517cd6e9941df17a290445
+# Sensors - from daisy - QKQ1.191002.002 V11.0.2.0.QDLMIXM
+vendor/bin/sensors.qti|710b95b8fbec649b63204372988e0d4f4641fcf4
+vendor/lib/hw/activity_recognition.msm8953.so:vendor/lib/hw/activity_recognition.msm8937.so|1c7334f56182513bddefcb3b655064cca1121e21
+vendor/lib/libsensor1.so|a3bff5966ef0dd0623d385da9a8809f6dabb11f3
+vendor/lib/libsensor_reg.so|8f113416861ab8c14613ebf3ea6eeb9997971624
+vendor/lib/libsensor_user_cal.so|e76bc983cce7711bbb62a0f6062078fe7fb954eb
+vendor/lib/sensors.ssc.so|302e5aee38e1296dfba32b681681492d5070f509
+vendor/lib64/hw/activity_recognition.msm8953.so:vendor/lib64/hw/activity_recognition.msm8937.so|51a67f37dc2f7c9654fa3efe6a193e8dd93846c2
+vendor/lib64/libsensor1.so|24a1ee61b8d8d9494c7ce637bfdc280b428da5c8
+vendor/lib64/libsensor_reg.so|54baa94535e7dd96804019810e90cfbec5519bf5
+vendor/lib64/libsensor_user_cal.so|aea178debd6562e4f9e352aede494429c68ffcec
+vendor/lib64/sensors.ssc.so|9affbc5130223a63c7c8ee33a1b7408d739e1466
 
 # Thermal - from deen_sprout - 10-QPK30.54-22-6add
 vendor/bin/thermal-engine|c46250c2a0cba9066c3e366f305621bfa1536c41

@@ -165,9 +165,13 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    libbatching \
+    libgeofencing \
     libgnss \
     libgnsspps \
-    libsensorndkbridge
+    libjson \
+    libsensorndkbridge \
+    libwifi-hal-ctrl
 
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl-qti \

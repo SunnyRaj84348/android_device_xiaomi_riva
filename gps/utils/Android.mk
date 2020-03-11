@@ -2,8 +2,10 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+
 ## Libs
 LOCAL_SHARED_LIBRARIES := \
+    libdl \
     libutils \
     libcutils \
     liblog \
@@ -21,16 +23,13 @@ LOCAL_SRC_FILES += \
     MsgTask.cpp \
     loc_misc_utils.cpp \
     loc_nmea.cpp \
-    LocIpc.cpp
+    LocIpc.cpp \
+    LogBuffer.cpp
 
 # Flag -std=c++11 is not accepted by compiler when LOCAL_CLANG is set to true
 LOCAL_CFLAGS += \
      -fno-short-enums \
      -D_ANDROID_
-
-ifeq ($(TARGET_BUILD_VARIANT),user)
-   LOCAL_CFLAGS += -DTARGET_BUILD_VARIANT_USER
-endif
 
 LOCAL_LDFLAGS += -Wl,--export-dynamic
 
@@ -41,8 +40,13 @@ LOCAL_HEADER_LIBRARIES := \
     liblocation_api_headers
 
 LOCAL_MODULE := libgps.utils
+LOCAL_SANITIZE += $(GNSS_SANITIZE)
+# activate the following line for debug purposes only, comment out for production
+#LOCAL_SANITIZE_DIAG += $(GNSS_SANITIZE_DIAG)
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_TAGS := optional
+
+LOCAL_PRELINK_MODULE := false
 
 LOCAL_CFLAGS += $(GNSS_CFLAGS)
 

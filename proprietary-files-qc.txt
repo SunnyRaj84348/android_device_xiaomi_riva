@@ -368,7 +368,9 @@ vendor/lib64/libqmi_encdec.so|68fb631317150d66fd1a39c48f8ef9e0405bbdf2
 vendor/lib64/libqmiservices.so|842a1b61fad7dd34753e945ee2ada0fdc9589c09
 
 # QMI - from daisy - QKQ1.191002.002-V11.0.2.0.QDLMIXM
+vendor/lib/libpdmapper.so|39fecb52d748ed95e9e747ff911cd8a370d67e50
 vendor/lib/libqmi_cci.so|a921e84ec500f7cfb7fe88a4ffba149581410a44
+vendor/lib64/libpdmapper.so|cdc5b101e8f6a4e0cc18be02e1a4d95527ba9d9c
 vendor/lib64/libqmi_cci.so|411a074dc765fb263bec50531ce5c408dd72388f
 
 # RIL - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM

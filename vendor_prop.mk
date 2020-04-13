@@ -132,16 +132,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable.pq=true \
     vendor.vidc.enc.narrow.searchrange=1
 
-# Memory optimizations
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.sys.fw.bservice_enable=true \
-    ro.vendor.qti.am.reschedule_service=true
-
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.qti.sys.fw.bg_apps_limit=60 \
-    vendor.perf.gestureflingboost.enable=true
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -158,18 +151,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Time Services
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true \
-
-# Trim properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.qti.sys.fw.use_trim_settings=true \
-    ro.vendor.qti.sys.fw.empty_app_percent=50 \
-    ro.vendor.qti.sys.fw.trim_empty_percent=100 \
-    ro.vendor.qti.sys.fw.trim_cache_percent=100 \
-    ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
-
-# UI
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.use_fifo_ui=1
 
 # Usb
 PRODUCT_PROPERTY_OVERRIDES += \

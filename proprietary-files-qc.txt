@@ -227,10 +227,6 @@ vendor/lib64/libsdm-diag.so|87373a043267b9b3bb923931a910119a9deb425f
 vendor/lib64/libsdmextension.so|544f08d91ae5f50184b4f5661f327ce85ca74a72
 vendor/lib64/libtinyxml2_1.so|56d4d5d0ea010f951de219c7b9fd2c9695a5b9d2
 
-# Graphics (Vulkan) - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
-vendor/lib/hw/vulkan.msm8937.so|28480c37b9a012fa89c598040be0ddfe0450b4d4
-vendor/lib64/hw/vulkan.msm8937.so|354adc0a680810380c0ccd7d1168c0f6119aaf48
-
 # IMS - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 -app/uceShimService/uceShimService.apk|d2ecdb607749b0496664db52b706e9340bd9b9f0
 lib64/lib-imscamera.so|6d9c63ad43e5dca62dea7a47e7b121bc4df317f9

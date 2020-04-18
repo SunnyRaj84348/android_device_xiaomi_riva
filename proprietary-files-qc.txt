@@ -440,8 +440,8 @@ vendor/lib64/sensors.ssc.so|9affbc5130223a63c7c8ee33a1b7408d739e1466
 
 # Thermal - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
 vendor/bin/thermal-engine|1adec8c5de1a095ed790879e5aabe1e249c816e3
-vendor/lib/libthermalclient.so|5366dedac700727f05ed1729bf00c855d0777de4
-vendor/lib64/libthermalclient.so|fead3fb780b175ef478c7ab120639dea5b37a802
+-vendor/lib/libthermalclient.so|5366dedac700727f05ed1729bf00c855d0777de4
+-vendor/lib64/libthermalclient.so|fead3fb780b175ef478c7ab120639dea5b37a802
 vendor/lib64/libthermalioctl.so|dbb89b6990fed7373cbfcfeac9c90a5dd2bc2bdd
 
 # Time services - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330

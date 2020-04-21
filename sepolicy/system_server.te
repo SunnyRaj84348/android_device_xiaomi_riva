@@ -1,5 +1,5 @@
-allow system_server input_file:dir r_dir_perms;
-allow system_server input_file:file r_file_perms;
+allow system_server vendor_keylayout_file:dir r_dir_perms;
+allow system_server vendor_keylayout_file:file r_file_perms;
 allow system_server lirc_device:chr_file rw_file_perms;
 allow system_server spidev_device:chr_file rw_file_perms;
 allow system_server sysfs_rtc:file r_file_perms;

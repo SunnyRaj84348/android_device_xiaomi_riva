@@ -9,7 +9,7 @@
 
 # Input
 /sys/board_properties/virtualkeys.*             u:object_r:touch_sysfs:s0
-/vendor/usr/keylayout(/.*)?                     u:object_r:input_file:s0
+/vendor/usr/keylayout(/.*)?                     u:object_r:vendor_keylayout_file:s0
 
 # Ir
 /dev/lirc[0-9]*					u:object_r:lirc_device:s0

@@ -327,6 +327,16 @@ vendor/lib64/libqti-util.so|4911109f327c4bf9d1d34acc14082f78e69b4ccb
 vendor/lib64/vendor.qti.hardware.perf@1.0.so|125a5c14b4e768ef7ce1d89abee9b2421f17b7ba
 vendor/lib64/vendor.qti.hardware.perf@2.0.so|d4f082dcf0fedec3376144f91bc163c3c863ebd4
 
+# Perf-IOP - from X00RD - QKQ1.191002.002 17.07.2003.405-2020033
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|c16cde136194fd07c75aaadb6be5a0dbd8b315a4
+vendor/lib/libqti-iopd-client.so|98c1aafb71fc5cf05197831deeb1456572d7cb77
+vendor/lib/vendor.qti.hardware.iop@1.0.so|f522603e1b741ff8dcf643e8fe9ce407316dfbe4
+vendor/lib/vendor.qti.hardware.iop@2.0.so|ddd07fb38fa22976e2dc9860fb52c5ce1f1a0bde
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|5bb2e93e988da810ff12c539996111632542b403
+vendor/lib64/libqti-iopd-client.so|c7296f02c126f8c7402eae0f79737908901afa36
+vendor/lib64/vendor.qti.hardware.iop@1.0.so|3f738546cbdebf7d7a769568c4c5b43f3d8e2c54
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|f40ce3fe82f85dba57df0185cc42e491da585329
+
 # Peripheral manager - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
 vendor/bin/pm-proxy|68133bb8341042b803e0f16ec77ab64734acbdb8
 vendor/bin/pm-service|47743f969a47df00b5c77e6b4f57fed5764a82fc

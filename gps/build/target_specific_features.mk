@@ -14,7 +14,3 @@ GNSS_CFLAGS := \
     -Wno-error=tautological-compare \
     -Wno-error=switch \
     -Wno-error=date-time
-
-# GPS-HIDL
-GNSS_HIDL_VERSION = 2.0
-GNSS_HIDL_LEGACY_MEASURMENTS = true

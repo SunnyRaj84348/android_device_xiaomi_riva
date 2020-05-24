@@ -2,7 +2,6 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-
 ## Libs
 LOCAL_SHARED_LIBRARIES := \
     libdl \
@@ -31,6 +30,10 @@ LOCAL_CFLAGS += \
      -fno-short-enums \
      -D_ANDROID_
 
+ifeq ($(TARGET_BUILD_VARIANT),user)
+   LOCAL_CFLAGS += -DTARGET_BUILD_VARIANT_USER
+endif
+
 LOCAL_LDFLAGS += -Wl,--export-dynamic
 
 ## Includes
@@ -45,8 +48,6 @@ LOCAL_SANITIZE += $(GNSS_SANITIZE)
 #LOCAL_SANITIZE_DIAG += $(GNSS_SANITIZE_DIAG)
 LOCAL_VENDOR_MODULE := true
 LOCAL_MODULE_TAGS := optional
-
-LOCAL_PRELINK_MODULE := false
 
 LOCAL_CFLAGS += $(GNSS_CFLAGS)
 

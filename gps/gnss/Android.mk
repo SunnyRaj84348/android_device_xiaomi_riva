@@ -24,7 +24,11 @@ LOCAL_SRC_FILES += \
     XtraSystemStatusObserver.cpp
 
 LOCAL_CFLAGS += \
-     -fno-short-enums \
+     -fno-short-enums
+
+ifeq ($(TARGET_BUILD_VARIANT),user)
+   LOCAL_CFLAGS += -DTARGET_BUILD_VARIANT_USER
+endif
 
 LOCAL_HEADER_LIBRARIES := \
     libgps.utils_headers \

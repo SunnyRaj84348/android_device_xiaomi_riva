@@ -66,4 +66,18 @@ CAMERA2_SENSOR_MODULES="$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/ve
 
 sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
 
+DEVICE_BLOB_ROOT="$LINEAGE_ROOT"/vendor/"${VENDOR}"/"${DEVICE}"/proprietary
+
+# Camera data
+for CAMERA_LIB in libmmcamera2_cpp_module.so libmmcamera2_dcrf.so libmmcamera2_iface_modules.so libmmcamera2_imglib_modules.so libmmcamera2_mct.so libmmcamera2_pproc_modules.so libmmcamera2_q3a_core.so libmmcamera2_sensor_modules.so libmmcamera2_stats_algorithm.so libmmcamera2_stats_modules.so libmmcamera_dbg.so libmmcamera_imglib.so libmmcamera_interface.so libmmcamera_pdaf.so libmmcamera_pdafcamif.so libmmcamera_tintless_algo.so libmmcamera_tintless_bg_pca_algo.so libmmcamera_tuning.so; do
+    sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "${DEVICE_BLOB_ROOT}"/vendor/lib/${CAMERA_LIB}
+done
+
+for CAMERA_LIB64 in libmmcamera2_q3a_core.so libmmcamera2_stats_algorithm.so libmmcamera_dbg.so libmmcamera_tintless_algo.so libmmcamera_tintless_bg_pca_algo.so; do
+    sed -i "s|/data/misc/camera|/data/vendor/qcam|g" "${DEVICE_BLOB_ROOT}"/vendor/lib64/${CAMERA_LIB64}
+done
+
+# Camera socket
+sed -i "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" "$DEVICE_BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
+
 "$MY_DIR"/setup-makefiles.sh

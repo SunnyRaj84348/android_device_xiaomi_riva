@@ -334,6 +334,52 @@ vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|4f91100fd7b0b69a0bc13677af
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|486f5f34e8dd05c327d1be5fb3909a68ab6bc313
 
 # QMI - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
+
+# Perf-IOP - from X00P - QKQ1.191002.002-17.00.2003.23-20200401
+vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|c16cde136194fd07c75aaadb6be5a0dbd8b315a4
+vendor/lib/libqti-iopd-client.so|98c1aafb71fc5cf05197831deeb1456572d7cb77
+vendor/lib/vendor.qti.hardware.iop@1.0.so|f522603e1b741ff8dcf643e8fe9ce407316dfbe4
+vendor/lib/vendor.qti.hardware.iop@2.0.so|ddd07fb38fa22976e2dc9860fb52c5ce1f1a0bde
+vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|5bb2e93e988da810ff12c539996111632542b403
+vendor/lib64/libqti-iopd-client.so|c7296f02c126f8c7402eae0f79737908901afa36
+vendor/lib64/vendor.qti.hardware.iop@1.0.so|3f738546cbdebf7d7a769568c4c5b43f3d8e2c54
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|f40ce3fe82f85dba57df0185cc42e491da585329
+
+# Peripheral manager - from LA.UM.8.6.2.r1-06600-89xx.0
+vendor/bin/pm-proxy|5bc15d8ed4fffab8b8fa8c721ecc2ab955422d32
+vendor/bin/pm-service|76e55a1f4be7063bb3a22530d1f75f90ec263096
+vendor/lib/libperipheral_client.so|572a1a6b166c3debe8af73cb6c4c4fde3d0f17ce
+vendor/lib64/libperipheral_client.so|e0964ca47b6edff2f4c198f610bcb1511a04c03e
+
+# Postprocessing - from X00HD - Pie beta
+vendor/bin/hw/vendor.display.color@1.0-service|2dbbb46a62ac5cf8d3a084c8350457442f5741eb
+vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|ff19b4cd6e8c6cd096d660ed9ac2eefc6641d321
+vendor/bin/mm-pp-dpps|c77efdefd958adc67502a090e9e7fa99096f46fa
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/etc/init/vendor.qti.hardware.qdutils_disp@1.0-service-qti.rc|69d9cbc54f8ac0a0fb010f92bfa7de5981d643cf
+vendor/lib/libdisp-aba.so|899f5fa3875c7c536df030dfa1db3b84041131b0
+vendor/lib/vendor.display.color@1.0.so|5910d16429426831799379bef45a91fb73f1b96b
+vendor/lib/vendor.display.color@1.1.so|1da0048a245ba5b0e7726899fbff9c7df58566c9
+vendor/lib/vendor.display.color@1.2.so|39a2a7d7c39a23da59072113722c461f3a3daee4
+vendor/lib/vendor.display.postproc@1.0.so|787ce9e6e5bfff372d7ea30ac5bb4435935c5436
+vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so|bd0b6716e25b85b63626e0f02c2259b82f9b593a
+vendor/lib64/libdisp-aba.so|4cb7ee774d41f7e4f5e9c6ebc30ba19897975da8
+vendor/lib64/vendor.display.color@1.0.so|346620084ad60243985250d4082945e6b267c501
+vendor/lib64/vendor.display.color@1.1.so|8fda7c6969fa1ea2104c0c3ebb61f89bf3e22c7b
+vendor/lib64/vendor.display.color@1.2.so|796116f179007448a9fe71c63a18b29030322337
+vendor/lib64/vendor.display.postproc@1.0.so|c6e7afb4b638425e68ca7cecd0931369db506851
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|cf8835d9c1f0d1dccdcc2730d75e9b6e8f0cc7df
+
+# Power-off alarm - from LA.UM.8.6.2.r1-06600-89xx.0
+product/framework/vendor.qti.hardware.alarm-V1.0-java.jar|69dedc62181ae26bb2fac4eaacb1f2c38eb21c31
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|c214e1f7de878aeebe642857d6283bbeca0c7a3e
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|09991c52c26538bd8fa46492e7e55a6938ac05ac
+vendor/bin/power_off_alarm|21d09b2c83d227072e11e0f0a594baf2ecca9eed
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|fbf078c47a2a67be329e8390c988255dd578949c
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|f48d221f6678ff39bdb3e667c6e1a0f399c29232
+
+# QMI - from X00P - QKQ1.191002.002 17.00.2003.23-20200401
 etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
 etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 vendor/bin/irsc_util|3966b101150b54078b3e004212122a24f3fa0d82

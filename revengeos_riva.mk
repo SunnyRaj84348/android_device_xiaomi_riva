@@ -26,6 +26,8 @@ $(call inherit-product, vendor/revengeos/config/common_full_phone.mk)
 # Inherit from riva device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+TARGET_BOOT_ANIMATION_RES := 720
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := riva
 PRODUCT_MANUFACTURER := Xiaomi

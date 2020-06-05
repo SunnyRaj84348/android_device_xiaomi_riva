@@ -14,7 +14,7 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_riva.mk
+    $(LOCAL_DIR)/revengeos_riva.mk
 
 COMMON_LUNCH_CHOICES := \
-     lineage_riva-userdebug
+     revengeos_riva-userdebug

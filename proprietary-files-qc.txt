@@ -129,29 +129,29 @@ vendor/lib64/libssd.so|2f9371b25a9774a4f4b1d1879aa47aa8b6f02195
 # Gatekeeper - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
 vendor/lib64/hw/gatekeeper.msm8937.so|dab0948ea31925e39ff723e0438f8f6c015c9946
 
-# GPS - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
-vendor/bin/loc_launcher|6fe9d0230143f4aa96ddb9c047abe3d003cc815a
-vendor/bin/lowi-server|5ba1d56afba2bc250c85f538fb8679b4e2f87bb9
-vendor/bin/xtra-daemon|d5ec5ab088d9828ec3c162636c97c7da60e7f631
-vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so|46da2010fedc9af1e1bf4a75a7d287a3edbe3643
-vendor/lib64/libdataitems.so|daae21e97efdf7baadf209e31e885a699fb8f7f7
-vendor/lib64/libizat_client_api.so|cdfbe6f95d5946b3304e3ded021cb761c7a6269e
-vendor/lib64/libizat_core.so|61389b85daef8098c264ed84c2c6b390a840fa94
-vendor/lib64/liblbs_core.so|9f89acd02d84b0ad1088abc800bd8edc01dc65bb
-vendor/lib64/liblocationservice.so|8f8998f1c2c34d8bba5ba47bb0c78da7db0bfdbb
-vendor/lib64/liblocationservice_glue.so|9dac35c16a6a88c8374a2f0659837f6e1efcc796
-vendor/lib64/libloc_api_v02.so|9801c4af6a44b529b671f65ecc6f2a2a0f4a088e
-vendor/lib64/liblowi_client.so|0113557002de0692e64ba853b2560fe926449463
-vendor/lib64/libqdma.so|55420caca27bcafa785f7c9698d622cc56a619e8
-vendor/lib64/libqdma_file_agent.so|8bb728b595a3bac39cdbd3c456d523f35a10ef1d
-vendor/lib64/libxtadapter.so|5085a7d7986abc5f64b67ad42065d326662d0c2c
-vendor/lib64/vendor.qti.gnss@1.0.so|0f9cd900de9144d3d77f13b7eee292d5c74fcf33
-vendor/lib64/vendor.qti.gnss@1.1.so|fa9bd02c0acf9a3bc694b9349cf19a88f0db57c1
-vendor/lib64/vendor.qti.gnss@1.2.so|f70035b17f3bad9f4c50a95930d928b5c6df6702
-vendor/lib64/vendor.qti.gnss@2.0.so|7f6717ddf0c82f56a16e7428df5f791a6ca52dd4
-vendor/lib64/vendor.qti.gnss@2.1.so|1420869a83af19215eeec765b32bbfd209bb05a6
-vendor/lib64/vendor.qti.gnss@3.0-service.so|53f5c24b57a3157b6b48fc56e6ab67b70ed8fa48
-vendor/lib64/vendor.qti.gnss@3.0.so|8aed1c3bd1453ad3ca268008e9ec47e7e2afb5f5
+# GPS - from LA.UM.8.6.r1-04400-89xx
+vendor/bin/loc_launcher|02a92d6fca9790d7056f9a40c8b9e7435994e41c
+vendor/bin/lowi-server|7caa1883e34195801f9b9017e4ff2e3497bf80b3
+vendor/bin/xtra-daemon|0920b4f3dfe9d13568d81d50cf7afda5b48e2a32
+vendor/lib64/hw/vendor.qti.gnss@3.0-impl.so|1c6239eb23527319891236db62c28e39c49e69d3
+vendor/lib64/libdataitems.so|337e5eeb79af955fe668cebef2d5bc81afff1c17
+vendor/lib64/libizat_client_api.so|7e7efb717262a018f4e7692b00baa79a25b88cc2
+vendor/lib64/libizat_core.so|a6fc0bcd2c18ce0f96c0cef41c42945b24e8af6c
+vendor/lib64/liblbs_core.so|d7479589c4859529d3a4f4d93ad152441ad6f233
+vendor/lib64/liblocationservice.so|231aaf7d88a50f85de01b48fedb25a28c8bdd0f6
+vendor/lib64/liblocationservice_glue.so|072e1a46e90b01bc2b2477445c6175778d59dc39
+vendor/lib64/libloc_api_v02.so|847ffb9792908fc1c6c105dc3f43c24a8d6de3b1
+vendor/lib64/liblowi_client.so|ce2ca750e0caf328010e52ec4e2aa53ba6252505
+vendor/lib64/libqdma.so|be43961b04901af1c800eb5b27ab1409685aa510
+vendor/lib64/libqdma_file_agent.so|b9e67ec9c150f9257ed494ea004b4199c9286e64
+vendor/lib64/libxtadapter.so|fd97a58325297458b44de532237caed23347806b
+vendor/lib64/vendor.qti.gnss@1.0.so|163aaf35880cfc07a33c1d0c5c36fb7994c49901
+vendor/lib64/vendor.qti.gnss@1.1.so|8886a577b689d63b5acb98965d80d2e0e260814a
+vendor/lib64/vendor.qti.gnss@1.2.so|b36eed8118bc13d92453af66d3d0fbee87cb5b5e
+vendor/lib64/vendor.qti.gnss@2.0.so|90f78b89b05113266fb52d0026af0e90ebdcd37f
+vendor/lib64/vendor.qti.gnss@2.1.so|a9c36068205172d776926ea102bd0fdffd899aa1
+vendor/lib64/vendor.qti.gnss@3.0-service.so|06d50479c8f65e8ab703363add34cb3aff5eb934
+vendor/lib64/vendor.qti.gnss@3.0.so|007737b9f9a70439a5afa399de151afb8cd7c984
 
 # Graphics - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
 vendor/lib/libadreno_utils.so|3a09e6720121f5b459a1fc7f9639b632da5832ec

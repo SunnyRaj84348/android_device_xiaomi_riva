@@ -333,24 +333,6 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|4f91100fd7b0b69a0bc13677af9f8b7b7c354f2c
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|486f5f34e8dd05c327d1be5fb3909a68ab6bc313
 
-# QMI - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
-
-# Perf-IOP - from X00P - QKQ1.191002.002-17.00.2003.23-20200401
-vendor/lib/hw/vendor.qti.hardware.iop@2.0-impl.so|c16cde136194fd07c75aaadb6be5a0dbd8b315a4
-vendor/lib/libqti-iopd-client.so|98c1aafb71fc5cf05197831deeb1456572d7cb77
-vendor/lib/vendor.qti.hardware.iop@1.0.so|f522603e1b741ff8dcf643e8fe9ce407316dfbe4
-vendor/lib/vendor.qti.hardware.iop@2.0.so|ddd07fb38fa22976e2dc9860fb52c5ce1f1a0bde
-vendor/lib64/hw/vendor.qti.hardware.iop@2.0-impl.so|5bb2e93e988da810ff12c539996111632542b403
-vendor/lib64/libqti-iopd-client.so|c7296f02c126f8c7402eae0f79737908901afa36
-vendor/lib64/vendor.qti.hardware.iop@1.0.so|3f738546cbdebf7d7a769568c4c5b43f3d8e2c54
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|f40ce3fe82f85dba57df0185cc42e491da585329
-
-# Peripheral manager - from LA.UM.8.6.2.r1-06600-89xx.0
-vendor/bin/pm-proxy|5bc15d8ed4fffab8b8fa8c721ecc2ab955422d32
-vendor/bin/pm-service|76e55a1f4be7063bb3a22530d1f75f90ec263096
-vendor/lib/libperipheral_client.so|572a1a6b166c3debe8af73cb6c4c4fde3d0f17ce
-vendor/lib64/libperipheral_client.so|e0964ca47b6edff2f4c198f610bcb1511a04c03e
-
 # Postprocessing - from X00HD - Pie beta
 vendor/bin/hw/vendor.display.color@1.0-service|2dbbb46a62ac5cf8d3a084c8350457442f5741eb
 vendor/bin/hw/vendor.qti.hardware.qdutils_disp@1.0-service-qti|ff19b4cd6e8c6cd096d660ed9ac2eefc6641d321
@@ -378,37 +360,6 @@ vendor/bin/power_off_alarm|21d09b2c83d227072e11e0f0a594baf2ecca9eed
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|fbf078c47a2a67be329e8390c988255dd578949c
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|f48d221f6678ff39bdb3e667c6e1a0f399c29232
-
-# QMI - from X00P - QKQ1.191002.002 17.00.2003.23-20200401
-etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
-etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
-vendor/bin/irsc_util|3966b101150b54078b3e004212122a24f3fa0d82
-vendor/lib/libdiag.so|5b7fe4d15ab64af813827020166474c3b77591ef
-vendor/lib/libdsi_netctrl.so|78206e2c94d0a9ceb69712aeec99ed90f8fc63b3
-vendor/lib/libdsutils.so|bfc2e8fb927ccd35158ceaf4389fe54186091132
-vendor/lib/libidl.so|6fe7c2a4e4ec0ac099a6306c3111e6497e2c501f
-vendor/lib/libqdi.so|6cb8c78aaa70a5fa9b83e260556bada097ca0d14
-vendor/lib/libqdp.so|ff0b9d7d1a72fc884264ca0487540c75af5b6c6a
-vendor/lib/libqmi.so|0b035dd37319391f27ce6647e707f4e7afaacec0
-vendor/lib/libqmi_client_helper.so|9815eaaffec80f83bfb6736e78a3baf44242aa0c
-vendor/lib/libqmi_client_qmux.so|8a5c4e165cdebce11a3492e72bc29e1d4bf184e1
-vendor/lib/libqmi_common_so.so|873e94bc4a028ad396f947efde042b4a26d28f63
-vendor/lib/libqmi_csi.so|faebc6bab9491a7287332aa87d7ba178fffd348c
-vendor/lib/libqmi_encdec.so|a6f46ac31fa48fbc0d406895b69e5239a1650ce5
-vendor/lib/libqmiservices.so|dcff643662bb3e36c2bcfcb831bffec057038c6f
-vendor/lib64/libdiag.so|4db001ef0168a5930b250f6cd917525df933827a
-vendor/lib64/libdsi_netctrl.so|3022d69494ad5b9400ed7188b72dc2d72dff9e24
-vendor/lib64/libdsutils.so|fe909f54243f07fc76382b0839f95f96e1abfef2
-vendor/lib64/libidl.so|3b1a7ca55ccfe06d12d62f2c214b5ac2ee0e69da
-vendor/lib64/libqdi.so|5e14939265c9f30c59f4a7964bf83da69ecfa38d
-vendor/lib64/libqdp.so|485c40c20d4421b5b2a1e2e87555c566f49ea944
-vendor/lib64/libqmi.so|f814a152f974b2305f74f90a4f1c0a20989fb253
-vendor/lib64/libqmi_client_helper.so|ed00314bd9d2f68af0508640bb647bfdf5d582b2
-vendor/lib64/libqmi_client_qmux.so|cf7986589f2e14cc3b9c3ddb22d46dd71c25c9df
-vendor/lib64/libqmi_common_so.so|aa27730010968b2e05e3e46684cdf193738c2c8e
-vendor/lib64/libqmi_csi.so|5e3d7a6c18f10c30d152bd87cd24b0c787f6ded3
-vendor/lib64/libqmi_encdec.so|68fb631317150d66fd1a39c48f8ef9e0405bbdf2
-vendor/lib64/libqmiservices.so|842a1b61fad7dd34753e945ee2ada0fdc9589c09
 
 # QMI - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
 vendor/lib/libpdmapper.so|557314e5159d4e1d4fe7f4776ae3c32ce75677db
@@ -458,11 +409,6 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0.so|f3a3051e4a904268
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so|ab552724f7d723a70a4e730dba52ab220d33a33e
 vendor/radio/qcril_database/qcril.db|f25a9215fcc2445e73d1aa0b7ef9bdbd97e33f56
 
-# RIL - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
-product/framework/qti-telephony-common.jar|60ff9e8328dbe5410139af57769aa697e90d1f6b
--product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|dbf5b100a90b577d0473749c6de1a1b5760c61f6
-vendor/etc/init/dataqti.rc|6abfd1a850d782adbbb6f42c9d8ca870036b2ad1
-vendor/etc/init/netmgrd.rc|fd3457c69a9fab11b87d0d1b494188fe089684cd
 
 # Sensors - from daisy - QKQ1.191002.002 V11.0.2.0.QDLMIXM
 vendor/bin/sensors.qti|710b95b8fbec649b63204372988e0d4f4641fcf4
@@ -478,7 +424,6 @@ vendor/lib64/libsensor_user_cal.so|aea178debd6562e4f9e352aede494429c68ffcec
 vendor/lib64/sensors.ssc.so|9affbc5130223a63c7c8ee33a1b7408d739e1466
 
 # Thermal - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
-=======
 vendor/etc/init/qcrild.rc|17cf4934bf443cf6469d8b3ff622eeb0e4a0aac6
 vendor/lib/libconfigdb.so|b58c359b19913d2b73e3125745ac68b2251060f9
 vendor/lib/libdsi_netctrl.so|5130e8f85767c111677d14b16b70ffe21eb6a71e
@@ -715,14 +660,6 @@ vendor/lib64/sensors.ssc.so|00c7c9cdb2936bd9cda709275ea64535cfa2252f
 vendor/lib64/sensor_calibrate.so|b544e53572af31a169635c2673be00886a7c6c12
 vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|72dec03dbf4f8f28a795e129a0c5d87640a4f666
 
-# Thermal - from X00P - QKQ1.191002.002 17.00.2003.23-20200401
-vendor/bin/hw/android.hardware.thermal@1.0-service|c025b2b3189b9499d8bdb06095bacc023a451d3b
->>>>>>> 0a40388... msm8937-common: import sensors HAL from X00HD
-vendor/bin/thermal-engine|1adec8c5de1a095ed790879e5aabe1e249c816e3
--vendor/lib/libthermalclient.so|5366dedac700727f05ed1729bf00c855d0777de4
--vendor/lib64/libthermalclient.so|fead3fb780b175ef478c7ab120639dea5b37a802
-vendor/lib64/libthermalioctl.so|dbb89b6990fed7373cbfcfeac9c90a5dd2bc2bdd
-
 # Time services - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
 -vendor/app/TimeService/TimeService.apk|4a37afd1395758d946580af184a738e3c657b1e2
 vendor/bin/time_daemon|7048574697718655cdcce0966d4c9543f9d0db90
@@ -735,12 +672,6 @@ vendor/lib64/libwvhidl.so|d02a20d8e95e64c391e0af86a32dad869ceeb3b4
 
 # Wi-Fi - from tissot PKQ1.180917.001
 vendor/bin/wcnss_service|f8ecd38a41b6b7f832380b489e0c9804c34174d8
-
-# TUI - from X00P - QKQ1.191002.002 17.00.2003.23-20200401
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|05c0a47f24e38b14fc7c1ccfa64c585692277ee5
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
-vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|54d52110bef564b6a0020752db35b4950d99cd84
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|dc232e873775cb175c2559d2efbdec4500aa1637
 
 # Wi-Fi Display - from LA.UM.8.6.2.r1-06600-89xx.0
 bin/wfdservice|934817e5689fe6f8b54032902de58c203b8ec2e7

@@ -114,6 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_skip_validate=1 \
     vendor.display.perf_hint_window=50 \
     vendor.gralloc.enable_fb_ubwc=1
+    sys.display-size=1920x1080
 
 # IMS
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -344,6 +344,7 @@ service time_daemon /vendor/bin/time_daemon
     class main
     user system
     group system
+    capabilities SYS_TIME
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core

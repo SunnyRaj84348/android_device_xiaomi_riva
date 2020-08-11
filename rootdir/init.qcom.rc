@@ -92,6 +92,11 @@ on boot
     mkdir /dev/socket/qmux_bluetooth 2770 bluetooth bluetooth
     mkdir /dev/socket/qmux_gps 2770 gps gps
 
+    mkdir /mnt/vendor/persist/alarm 0770 system system
+    mkdir /mnt/vendor/persist/bluetooth 0770 bluetooth bluetooth
+    mkdir /mnt/vendor/persist/display 0770 system graphics
+    mkdir /mnt/vendor/persist/time 0770 system system
+
     # Remove SUID bit for iproute2 ip tool
     chmod 0755 /system/bin/ip
 

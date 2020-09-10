@@ -19,3 +19,20 @@ cc_library_shared {
     shared_libs: ["libgui_vendor"],
     vendor: true,
 }
+
+cc_library_shared {
+    name: "libcamera_shim",
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "camera_shim.cpp",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wextra",
+        "-Wall",
+    ],
+    shared_libs: [
+        "libutils",
+    ],
+}

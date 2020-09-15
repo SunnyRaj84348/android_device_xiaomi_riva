@@ -3,3 +3,5 @@ genfscon debugfs /wlan0   u:object_r:debugfs_wlan:s0
 
 genfscon sysfs /devices/platform/soc/7af5000.i2c/i2c-5/5-0055/power_supply   u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/soc/7af5000.i2c/i2c-5/5-006b/power_supply   u:object_r:sysfs_batteryinfo:s0
+
+genfscon sysfs /devices/platform/soc/200f000.qcom,spmi/spmi-0/spmi0-00/200f000.qcom,spmi:qcom,pm8937@0:qcom,pm8937_rtc/rtc/rtc0/hctosys   u:object_r:sysfs_rtc:s0

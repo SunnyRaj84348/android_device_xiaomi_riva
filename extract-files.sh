@@ -80,4 +80,11 @@ done
 # Camera socket
 sed -i "s|/data/misc/camera/cam_socket|/data/vendor/qcam/cam_socket|g" "$DEVICE_BLOB_ROOT"/vendor/bin/mm-qcamera-daemon
 
+# VNDK
+for CAMERA_LIB in libmmsw_detail_enhancement.so libmmcamera2_stats_modules.so libmmsw_platform.so libmmcamera_ppeiscore.so; do
+    sed -i "s|libgui.so|libwui.so|g" "${DEVICE_BLOB_ROOT}"/vendor/lib/${CAMERA_LIB}
+done
+
+patchelf --remove-needed "libandroid.so" "${DEVICE_BLOB_ROOT}"/vendor/lib/libmmcamera2_stats_modules.so
+
 "$MY_DIR"/setup-makefiles.sh

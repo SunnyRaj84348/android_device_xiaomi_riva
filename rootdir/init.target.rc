@@ -78,7 +78,7 @@ service thermal-engine /vendor/bin/thermal-engine -c ${sys.qcom.thermalcfg:-/ven
     group root
 
 service wcnss-service /vendor/bin/wcnss_service
-    class late_start
+    class main
     user system
     group system wifi radio
     oneshot

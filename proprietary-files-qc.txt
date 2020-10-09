@@ -23,20 +23,20 @@ vendor/lib64/libacdbrtac.so|a60a1a35291e66a3e848362421a3131df849dd44
 vendor/lib64/libadiertac.so|e57093978640b9c8a1dff2c17706bb54b0fef00a
 vendor/lib64/libaudcal.so|e964733aa12b61f7706e56767317ad5f652d29bf
 
-# Bluetooth - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|365c3de57a8a655da6b0882bf5411558025883e1
+# Bluetooth - from dpl_sprout - QKQ1.191008.001 00WW_2_310
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|535491e4a8036125259bab4579a53cadcb08dcc3
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|3ac2829b9062e6d81a56d3c43a70d268b49166a4
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|4e188cd7cc009ced6af7901f357005623dd0875a
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|df20addad1f9c1c8b342aeee1ff9a5fbc5cf8bb8
-vendor/lib64/libbt-hidlclient.so|69414712e85c8fabf9be9c697f0eaba470ab70eb
-vendor/lib64/libbtnv.so|f5b41bac778fb0b60725686968043c6caf67079d
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|0a7c45e0218295bd204fe9ac5e9cb773d0e78870
-vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|9cb28854dccc80bf96b5f8ef4940b34f8d8ee76c
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|5d7ecc206682b4aeafc6d5d2cf3d5338e9af66c6
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so|d4de3f73589623428d37f7779d06d017c5243b99
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|a30699357a0932152db3baf6534940c9407c0a8a
+vendor/lib64/libbt-hidlclient.so|1ab2068ff7c71355e6cf7055f1d28a76da303742
+vendor/lib64/libbtnv.so|f180361505dea193b4195deee824f9727f42f5c8
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|07e04d7936f0463aede02eb8182ec0e22485f467
+vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|14791034bf680b532a4ac1502ed447d3742c04bd
 
-# Bluetooth (shared dependencies) - from X00RD - QKQ1.191002.002 17.07.2003.405-20200330
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|d374b4deb0df088dfc6151c37385a9b125bf3427
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|c190ec6ecb995b556c30a214a8a7cf4894e72e5f
+# Bluetooth (shared dependencies) - from dpl_sprout - QKQ1.191008.001 00WW_2_310
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|9ea9c15053bf6b3f30327855a655b4f8f5d30a07
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|b437aee7affdd6091bffcb995a791d1edd58467f
 
 # CNE - from olive - QKQ1.191014.001 V11.0.1.0.QCNCNXM
 etc/cne/Nexus/ATT/ATT_profiles.xml|33e568627fd3f94dc45bca1c01ad10e6d8fb5b52

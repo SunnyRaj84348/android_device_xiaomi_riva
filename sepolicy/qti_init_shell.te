@@ -5,3 +5,7 @@ allow qti_init_shell spidev_device:chr_file { getattr setattr };
 allow qti_init_shell sysfs:file write;
 allow qti_init_shell sysfs_devices_system_cpu:dir r_dir_perms;
 allow qti_init_shell sysfs_net:file write;
+allow qti_init_shell vendor_radio_data_file:dir w_dir_perms;
+allow qti_init_shell vendor_radio_data_file:file create_file_perms;
+allow qti_init_shell configfs:dir w_dir_perms;
+allow qti_init_shell configfs:file create_file_perms;
